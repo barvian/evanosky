@@ -25,10 +25,17 @@ RewriteRule ^site/(.*) error [R=301,L]
 # block all files in the kirby folder from being accessed directly
 RewriteRule ^kirby/(.*) error [R=301,L]
 
+# block all files in the assets folder from being accessed directly
+RewriteRule ^assets/(.*) error [R=301,L]
+
 # make panel links work
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^panel/(.*) panel/index.php [L]
+
+# remove /public/ from URL
+RewriteCond %{REQUEST_URI} !/public/ [NC]
+RewriteRule ^(.*?)/?$ public/$1 [L]
 
 # make site links work
 RewriteCond %{REQUEST_FILENAME} !-f
