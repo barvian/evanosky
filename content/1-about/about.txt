@@ -2,15 +2,23 @@ Title: About
 
 ----
 
-Text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+Text: 
 
-## Lorem Ipsum
-In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+(image: family.jpg)
 
-(image: about.jpg)
+Bob and Sonya Evanosky have three sons:  John and Christopher, who are identical twins, and Jack, who is 26 months younger. All three boys were diagnosed with a fatal genetic disease known as ***metachromatic leukodystrophy*** (MLD) in early 2005 when John and Christopher were three years old and Jack was one.
 
-### Lorem Ipsum
-In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+MLD results from the body not producing an enzyme known as ARSA.  The lack of this enzyme allows waste products such as sulfatides to build up in the body and destroy the white matter in the brain and myelin that surrounds the nerves.  Children affected by the infantile form of MLD typically lose their ability to move or speak in a very short amount of time.  Children become medically fragile quadriplegics and encounter a variety of respiratory, feeding and visual issues which ultimately result in death. 
 
-#### Lorem Ipsum
-In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+The Evanoskys were told that John and Christopher, who were diagnosed at age three, most likely would not live past the age of six.
+
+While researching the disease, the Evanoskys learned that cord blood stem cell transplants were being used to treat a variety of illnesses, including MLD, at the Duke University 
+Medical Center in Durham, North Carolina.  After an evaluation by the doctors at Duke, Jack was deemed eligible for a transplant but because  Christopher and John’s symptoms had progressed too far, they could not receive the treatment.  Jack received his stem cell transplant on April 1, 2005, making him the second youngest child with MLD to undergo this treatment.
+
+During this time, friends approached the Evanoskys with a proposal to form a foundation that would fund MLD research and develop programs to enhance the  overall quality of life for families affected by MLD or other leukodystrophies. Thus, The Evanosky Foundation was formally established in June 2005.  Since then, due to pioneering efforts at Duke, John Evanosky received a new type of transplant in July 2009 and Christopher Evanosky followed in the summer of 2011.  Both boys are doing well.  The Evanosky Foundation is working towards allowing this treatment to be available to other children. 
+
+To find out more about the slogan "We Win in the End", please click here.
+
+**The Evanosky family does not receive any direct benefits from The Evanosky Foundation.**
+
+All funds raised are used to support programs that will help cure MLD or support families that are dealing with a leukodystrophy.

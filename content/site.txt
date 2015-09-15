@@ -1,17 +1,13 @@
-Title: Kirby Starterkit
+Title: The Evanosky Foundation
 
 ----
 
-Author: Bastian Allgeier GmbH
+Description: Fighting MLD and Leukodystrophies.
 
 ----
 
-Description: This is Kirby's Starterkit.
+Keywords: MLD,metachromatic leukodystrophy,leukodystrophy,stem cell transplant,Duke University,metabolic disorder,stem cell,Dr. Joanne Kurtzberg,Dr. Suhag Parikh,MLD research,metachromatic leukodystrophy research,Evanosky,SCT,MLD treatment,genetic,leukodystrophies,ARSA,myelin,arylsulfatase A deficiency,neurological disorder,rare disorder,lysosomal storage disorder,autosomal recessive trait,demyelinating disease
 
 ----
 
-Keywords: Kirby, CMS, file-based
-
-----
-
-Copyright: © 2009-(date: Year) (link: http://getkirby.com text: Kirby)
+Copyright: © 2005-(date: Year)
