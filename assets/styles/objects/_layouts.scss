@@ -1,0 +1,51 @@
+// Layouts
+// =======
+
+$gutter: size(spacing) !default;
+
+@include b(layout) {
+  list-style-type: none;
+  margin: 0;
+  max-width: 52em;
+  padding: 0;
+  margin-left: -$gutter;
+
+  @include e(unit) {
+    display: inline-block;
+    padding-left: $gutter;
+    vertical-align: top;
+    width: 100%;
+  }
+
+  @include m(wide) {
+    max-width: 66em;
+  }
+
+  @include m(flush) {
+    margin-left: 0;
+
+    @include e(unit, true) {
+      padding-left: 0;
+    }
+  }
+
+  @include m(middle) {
+    @include e(unit, true) {
+      vertical-align: middle;
+    }
+  }
+
+  @include m(bottom) {
+    @include e(unit, true) {
+      vertical-align: bottom;
+    }
+  }
+
+  @include m(center) {
+    text-align: center;
+
+    @include e(unit, true) {
+      text-align: left;
+    }
+  }
+}

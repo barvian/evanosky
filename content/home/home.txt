@@ -2,4 +2,46 @@ Title: Home
 
 ----
 
-Text: The Evanosky Foundation supports pediatric leukodystrophy research, universal newborn screening, and children and families affected by a leukodystrophy, lysosomal storage disorders, or other disabling pediatric conditions. MLD is a rare, genetic, degenerative, neurometabolic disorder that affects approximately one in 40,000 people (primarily children) worldwide. It is an inherited disease, but parents are typically not affected. At present, it is a disease for which there is no cure, but we are actively fighting it on a number of fronts:
+Text: 
+
+----
+
+Ctas: 
+
+- 
+  callout: What is MLD?
+  action: Learn more
+  page: mld
+- 
+  callout: Ready to help?
+  action: Donate today
+  page: donate
+
+----
+
+Heading: Join us in the fight against MLD.
+
+----
+
+Intro: The Evanosky Foundation supports pediatric leukodystrophy research, universal newborn screening, and children and families affected by a leukodystrophy, lysosomal storage disorders, or other disabling pediatric conditions. MLD is a rare, genetic, degenerative, neurometabolic disorder that affects approximately one in 40,000 people (primarily children) worldwide. It is an inherited disease, but parents are typically not affected. At present, it is a disease for which there is no cure, but we are actively fighting it on a number of fronts:
+
+----
+
+Links: 
+
+- 
+  page: newborn
+  icon: baby.svg
+  label: 'focusing on early detection through **newborn screening**'
+- 
+  page: medical
+  icon: pills.svg
+  label: 'finding a cure through **medical research**'
+- 
+  page: donations
+  icon: home.svg
+  label: "donations to children's hospitals through **Jack's library**"
+- 
+  page: families
+  icon: family.svg
+  label: 'providing support, equipment, and housing to **affected families**'

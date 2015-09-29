@@ -7,17 +7,30 @@ $bem-condition-separator: '\\@' !default;
 
 $_currentBlock: null; $_currentMod: null; $_currentCond: null;
 
+@function b($block) {
+  @return unquote(".#{$block}");
+}
+@function be($block, $element) {
+  @return unquote(".#{$block + $bem-element-separator + $element}");
+}
+@function bm($block, $modifier) {
+  @return unquote(".#{$block + $bem-modifier-separator + $modifier}");
+}
+@function bem($block, $element, $modifier) {
+  @return selector-nest(bm($block, $modifier), be($block, $element));
+}
+
 @mixin b($block) {
   $_currentBlock: $block !global;
-  .#{$block} {
+  #{b($block)} {
     @content;
   }
   $_currentBlock: null;
 }
 
-@mixin e($element) {
+@mixin e($element, $child: false) {
   @if $_currentMod or $_currentCond {
-    .#{$_currentBlock + $bem-element-separator + $element} {
+    #{if($child, '> ', '') + be($_currentBlock, $element)} {
       @content;
     }
   } @else {

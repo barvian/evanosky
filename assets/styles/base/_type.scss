@@ -9,6 +9,7 @@ html {
   line-height: strip-units(size(medium));
   text-rendering: optimizeLegibility;
   font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: none;
 

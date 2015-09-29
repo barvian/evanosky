@@ -6,6 +6,9 @@ fields:
   title:
     label: Title
     type:  text
+  address:
+    label: Address
+    type:  textarea
   description:
     label: Description
     type:  textarea

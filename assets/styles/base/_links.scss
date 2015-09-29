@@ -17,7 +17,7 @@
 }
 
 %link {
-  color: $blue;
+  color: scale-color($blue, $lightness: -15%, $saturation: 10%);
   border-bottom: 1px solid currentColor;
   text-decoration: none;
 

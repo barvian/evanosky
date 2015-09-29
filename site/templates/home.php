@@ -1,15 +1,16 @@
 <?php snippet('header') ?>
 
-  <main class="main" role="main">
+  <main role="main">
 
-    <div class="text">
-      <h1><?php echo $page->title()->html() ?></h1>
-      <?php echo $page->text()->kirbytext() ?>
-    </div>
+    <?php snippet('hero', array(
+      'text' => $page->heading(),
+      'buttons' => $page->ctas()->yaml()
+    )) ?>
 
-    <hr>
-
+    <?php echo $page->intro()->kirbytext() ?>
     <?php snippet('projects') ?>
+
+    <?php echo $page->text()->kirbytext() ?>
 
   </main>
 

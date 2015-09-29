@@ -38,6 +38,14 @@ module.exports = {
     dest: dist+'scripts/'
   },
 
+  copy: {
+    base: src,
+    source: [
+      vendor+'modernizr*.js'
+    ],
+    dest: dist
+  },
+
   fonts: {
     source: src+'fonts/**/*',
     dest: dist+'fonts/'
