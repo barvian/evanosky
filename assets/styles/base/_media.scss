@@ -1,0 +1,28 @@
+// Media
+// =====
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+%aspect {
+  position: relative;
+
+  > * {
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+// Videos
+// ------
+
+.video {
+  @extend %aspect;
+
+  padding-bottom: 56.25%;
+}

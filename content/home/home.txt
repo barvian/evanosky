@@ -2,14 +2,4 @@ Title: Home
 
 ----
 
-Text: Yay! If you are seeing this, the installation of Kirby worked. :)
-
-## Get started
-
-- Go to the (link: panel text: panel) to give Kirby's admin interface a try
-- Check out the (link: http://getkirby.com/docs text: docs) and start building your own site
-- Follow (twitter: @getkirby) on Twitter for updates
-- Visit the (link: http://forum.getkirby.com text: forum) to connect with other Kirby users
-- (link: http://getkirby.com/support text: Get in contact) if you need support.
-
-**Have fun with Kirby!**
+Text: The Evanosky Foundation supports pediatric leukodystrophy research, universal newborn screening, and children and families affected by a leukodystrophy, lysosomal storage disorders, or other disabling pediatric conditions. MLD is a rare, genetic, degenerative, neurometabolic disorder that affects approximately one in 40,000 people (primarily children) worldwide. It is an inherited disease, but parents are typically not affected. At present, it is a disease for which there is no cure, but we are actively fighting it on a number of fronts:

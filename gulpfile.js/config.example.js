@@ -1,3 +1,5 @@
+var bower = require('bower');
+
 // Config
 // ------
 
@@ -17,6 +19,7 @@ module.exports = {
 
   styles: {
     source: src+'styles/main.scss',
+    includePaths: [bower.config.directory],
     tmp: tmp+'styles/',
     dest: dist+'styles/',
     autoprefixer: {

@@ -3,5 +3,9 @@
   "version": "0.0.0",
   "dependencies": {
     "jquery": "~2.1.4"
+  },
+  "devDependencies": {
+    "modular-scale": "~2.1.1",
+    "normalize-css": "normalize.css#~3.0.3"
   }
 }

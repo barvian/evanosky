@@ -1,0 +1,99 @@
+// Type
+// ====
+
+// Base
+// ----
+
+html {
+  color: $base;
+  line-height: strip-units(size(medium));
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: none;
+
+  @include font($serif, $size: percentage(13.5/16), $weight: normal);
+  @include query(charlie) {
+    font-size: percentage(15/16);
+  }
+}
+
+code {
+  font-size: size(small);
+}
+
+// Headings
+// --------
+//
+// Limit properties to the same in each heading style, and add extra embellishments
+// elsewhere.  This way, styles can be interchanged and overriden easily
+// regardless of HTML tag.
+//
+
+// This hidden class can be used to target all
+// headings in an element
+%heading {
+  line-height: 1.1;
+}
+
+%title {
+  @extend %heading;
+
+  letter-spacing: 0;
+  text-transform: none;
+
+  @include font($serif, $size: xxlarge, $style: normal, $weight: bold);
+}
+
+%section-divider {
+  @extend %heading;
+
+  letter-spacing: 0;
+  text-transform: none;
+
+  @include font($serif, $size: large, $style: italic, $weight: bold);
+}
+
+%sidekick {
+  @extend %heading;
+  @extend %uppercase;
+
+  @include font($sans, $size: big, $style: normal, $weight: normal);
+}
+
+%shrimp {
+  @extend %heading;
+
+  letter-spacing: 0;
+  text-transform: none;
+
+  @include font($serif, $size: medium, $style: normal, $weight: bold);
+}
+
+%label {
+  @extend %heading;
+  @extend %uppercase;
+
+  @include font($sans, $size: base, $style: normal, $weight: semibold);
+}
+
+
+h1 { @extend %title; }
+h2 { @extend %section-divider; }
+h3 { @extend %sidekick; }
+h4 { @extend %shrimp; }
+h5 { @extend %label; }
+
+// Misc
+// ----
+
+%uppercase {
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+%line {
+  max-width: 38em;
+}
+
+p, blockquote { @extend .line; }

@@ -1,0 +1,14 @@
+// Spacing
+// =======
+
+* {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @include trailing(size(spacing));
+}
+
+%landmark {
+  @include leading(size(xlarge));
+  @include trailing(size(xlarge));
+}

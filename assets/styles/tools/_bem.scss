@@ -1,0 +1,49 @@
+// BEM
+// ===
+
+$bem-element-separator: '__' !default;
+$bem-modifier-separator: '--' !default;
+$bem-condition-separator: '\\@' !default;
+
+$_currentBlock: null; $_currentMod: null; $_currentCond: null;
+
+@mixin b($block) {
+  $_currentBlock: $block !global;
+  .#{$block} {
+    @content;
+  }
+  $_currentBlock: null;
+}
+
+@mixin e($element) {
+  @if $_currentMod or $_currentCond {
+    .#{$_currentBlock + $bem-element-separator + $element} {
+      @content;
+    }
+  } @else {
+    &#{$bem-element-separator + $element} {
+      @content;
+    }
+  }
+}
+
+@mixin m($modifier) {
+  $_currentMod: $modifier !global;
+  &#{$bem-modifier-separator + $modifier} {
+    @content;
+  }
+  $_currentMod: null;
+}
+
+@mixin c($condition, $query: true) {
+  $_currentCond: $condition !global;
+  @if $query == true { $query: $condition; }
+  &#{$bem-condition-separator + $condition} {
+    @if $query {
+      @include query($query) { @content; }
+    } @else {
+      @content;
+    }
+  }
+  $_currentCond: null;
+}

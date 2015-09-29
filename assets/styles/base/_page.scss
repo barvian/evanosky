@@ -1,0 +1,6 @@
+// Page
+// ====
+
+html {
+  @include retina-background("../images/header.jpg", 1346px 9px, top center);
+}

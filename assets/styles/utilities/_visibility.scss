@@ -1,0 +1,43 @@
+// Visibility
+// ==========
+
+@mixin hidden {
+  display: none !important;
+
+  @include leading(0);
+  @include trailing(0);
+}
+
+.hidden {
+  @include hidden;
+}
+
+// Queries
+// -------
+
+$_sep: $bem-condition-separator;
+@each $breakpoint, $query in $breakpoints {
+  .visible#{$_sep}#{$breakpoint} {
+    &, &-up { @extend .hidden; }
+  }
+
+  @include query($breakpoint) {
+    @each $b, $query in $breakpoints {
+      @if $b != $breakpoint {
+        .visible#{$_sep}#{$b} {
+          display: none !important;
+        }
+        .hidden#{$_sep}#{$b} {
+          display: block !important;
+        }
+      }
+    }
+
+    .visible#{$_sep}#{$breakpoint} {
+      &, &-up { display: block !important; }
+    }
+    .hidden#{$_sep}#{$breakpoint} {
+      &, &-up { @include hidden; }
+    }
+  }
+}

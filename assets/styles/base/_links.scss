@@ -1,0 +1,39 @@
+// Links
+// =====
+
+@mixin attention($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+%link {
+  color: $blue;
+  border-bottom: 1px solid currentColor;
+  text-decoration: none;
+
+  &[href^="#"] {
+    border-bottom-style: dashed;
+  }
+
+  img {
+    border-bottom: none;
+  }
+}
+
+%unstyled-link {
+  &, &[href^="#"] {
+    border-bottom: none;
+  }
+}
+
+a { @extend %link; }

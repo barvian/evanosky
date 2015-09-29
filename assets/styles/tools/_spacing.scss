@@ -1,0 +1,36 @@
+// Spacing
+// =======
+
+// Specify the space before an element
+@mixin leading($space: spacing, $horizontal: false) {
+  @if type-of($space) == string { $space: size($space); }
+  * + & {
+    @if $horizontal { margin-left: $space; margin-top: 0; } @else { margin-top: $space; }
+  }
+}
+
+// Specify the space after an element
+@mixin trailing($space: spacing, $horizontal: false) {
+  @if type-of($space) == string { $space: size($space); }
+  & + * {
+    @if $horizontal { margin-left: $space; margin-top: 0; } @else { margin-top: $space; }
+  }
+}
+
+// Specify the space between all children in an element
+
+@mixin vertical($space: spacing) {
+  > * {
+    @include trailing($space);
+  }
+}
+
+@mixin horizontal($space: spacing) {
+  > * {
+    @include trailing($space, true);
+  }
+}
+
+@mixin flush {
+  @include vertical(0);
+}
