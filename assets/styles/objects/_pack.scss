@@ -1,0 +1,25 @@
+// Pack
+// ====
+
+@include b(pack) {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+
+  > * {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  @include m(middle) {
+    > * {
+      vertical-align: middle;
+    }
+  }
+
+  @include m(bottom) {
+    > * {
+      vertical-align: bottom;
+    }
+  }
+}

@@ -6,7 +6,7 @@
 
 html {
   color: $base;
-  line-height: strip-units(size(medium));
+  line-height: strip-units(ms(3));
   text-rendering: optimizeLegibility;
   font-kerning: normal;
   -webkit-font-smoothing: antialiased;

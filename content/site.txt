@@ -19,3 +19,11 @@ Address:
 The Evanosky Foundation
 234 Aspen Lane
 Aurora, IL  60504
+
+----
+
+Tax: The Evanosky Foundation is a nonprofit, 501(c)(3) organization, and all donations are tax deductible.  For more information, (link: tax text: click here).
+
+----
+
+Footerimage: boys.png

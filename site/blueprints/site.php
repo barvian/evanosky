@@ -18,3 +18,12 @@ fields:
   copyright:
     label: Copyright
     type:  textarea
+  tax:
+    label: Tax information
+    type:  textarea
+  footerImage:
+    label: Footer image
+    type: selector
+    mode: single
+    types:
+        - image

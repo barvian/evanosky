@@ -11,18 +11,6 @@
   @return $x;
 }
 
-@mixin rem($property, $pxs...) {
-  $rems: ();
-  $changed: false;
-  @each $pxlist in $pxs {
-    $remlist: ();
-    @each $px in $pxlist {
-      $rem: rem($px);
-      @if $rem != $px { $changed: true; }
-      $remlist: append($remlist, $rem, space);
-    }
-    $rems: append($rems, $remlist, comma);
-  }
-  @if $changed { #{$property}: $rems; }
-  #{$property}: $pxs;
+@function strip-units($value) {
+  @return ($value / ($value * 0 + 1));
 }
