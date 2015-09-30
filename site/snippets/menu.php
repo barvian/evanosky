@@ -1,6 +1,6 @@
 <nav class="site-nav" role="navigation">
   <ul class="site-nav__menu">
-    <?php foreach($pages->visible() as $p): ?>
+    <?php foreach($pages->visible() as $index=>$p): ?>
     <li class="<?php e($p->hasVisibleChildren(), 'has-sub') ?><?php e($p->isOpen(), ' is-active') ?>">
       <a href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
 
