@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="8px" viewBox="0 0 14 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>nav-caret</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Bright" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M13.2386068,1.05982588 C13.442552,1.2622604 13.4433074,1.5893281 13.2386068,1.79176261 L7.26527799,7.70617392 C7.06133277,7.90860844 6.73124366,7.90860844 6.52578774,7.70617392 L0.552458913,1.79176261 C0.348513696,1.5893281 0.348513696,1.2622604 0.552458913,1.05982588 C0.757159484,0.857391372 1.08800395,0.857391372 1.29194917,1.05982588 L6.89591054,6.45379922 L12.4991166,1.05982588 C12.7045725,0.857391372 13.0346616,0.857391372 13.2386068,1.05982588 Z" id="nav-caret" fill="#C6D5E7" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>
