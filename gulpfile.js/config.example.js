@@ -4,10 +4,10 @@ var bower = require('bower');
 // ------
 
 // Project paths
-var src     = './assets/';
-var tmp     = './tmp/';
-var vendor  = './assets/scripts/vendor/';
-var dist    = './public/';
+var src     = 'assets';
+var tmp     = 'tmp';
+var vendor  = 'assets/scripts/vendor';
+var dist    = 'public';
 
 module.exports = {
   sync: {
@@ -18,10 +18,9 @@ module.exports = {
   },
 
   styles: {
-    source: src+'styles/main.scss',
+    source: src+'/styles/main.scss',
     includePaths: [bower.config.directory],
-    tmp: tmp+'styles/',
-    dest: dist+'styles/',
+    dest: dist+'/styles',
     autoprefixer: {
       browsers: ['> 5%', 'last 2 versions'],
       cascade: false
@@ -29,53 +28,51 @@ module.exports = {
   },
 
   jshint: {
-    source: [src+'scripts/**/*.js', , '!'+vendor+'/**/*.js']
+    source: [src+'/scripts/**/*.js', , '!'+vendor+'/**/*.js']
   },
 
   scripts: {
     name: 'main',
-    source: [src+'scripts/**/*.js', '!'+vendor+'**/*.js'],
-    dest: dist+'scripts/'
+    source: [src+'/scripts/**/*.js', '!'+vendor+'/**/*.js'],
+    dest: dist+'/scripts'
   },
 
   copy: {
     base: src,
     source: [
-      vendor+'modernizr*.js'
+      vendor+'/modernizr*.js'
     ],
     dest: dist
   },
 
   fonts: {
-    source: src+'fonts/**/*',
-    dest: dist+'fonts/'
+    source: src+'/fonts/**/*',
+    dest: dist+'/fonts'
   },
 
   images: {
-    source: src+'images/**/*',
-    dest: dist+'images/'
+    source: src+'/images/**/*',
+    dest: dist+'/images'
   },
 
   wiredep: {
-    source: [vendor+'**/*.js', '!'+vendor+'modernizr*.*'],
-    dest: dist+'scripts/'
+    source: [vendor+'/**/*.js', '!'+vendor+'/modernizr*.js'],
+    dest: dist+'/scripts'
   },
 
   clean: {
     all: [
-      './.sass-cache',
-      dist+'images/*',
-      dist+'scripts/*',
-      dist+'styles/*',
+      '.sass-cache/',
+      dist,
     ]
   },
 
   watch: {
-    livereload: ['{assets,content,site}/**/*.{css,js,html,php}'],
-    styles: src+'styles/**/*.scss',
-    javascript: src+'scripts/**/*.js',
-    vendor_javascript: vendor+'**/*.js',
-    images: src+'images/**/*.*',
-    bower: './bower.json'
+    livereload: ['{'+dist+',content,site}/**/*.{css,js,html,php,txt,png,svg,jpg,gif}'],
+    styles: src+'/styles/**/*.scss',
+    javascript: src+'/scripts/**/*.js',
+    vendor_javascript: vendor+'/**/*.js',
+    images: src+'/images/**/*.*',
+    bower: 'bower.json'
   }
 };
