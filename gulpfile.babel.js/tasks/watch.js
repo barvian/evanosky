@@ -1,8 +1,8 @@
-var gulp = require('gulp');
-var config = require('../config').watch;
-var livereload = require('gulp-livereload');
+import gulp from 'gulp';
+import {watch as config} from '../config';
+import livereload from 'gulp-livereload';
 
-gulp.task('watch', function(){
+gulp.task('watch', () => {
   livereload.listen();
 
   gulp.watch(config.livereload).on('change', livereload.changed);

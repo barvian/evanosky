@@ -1,14 +1,14 @@
-var gulp = require('gulp');
-var config = require('../config').styles;
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var minifyCSS = require('gulp-minify-css');
-var sass = require('gulp-sass');
-var size = require('gulp-size');
-var gIf = require('gulp-if');
-var pixrem = require('gulp-pixrem');
+import gulp from 'gulp';
+import {styles as config} from '../config';
+import sourcemaps from 'gulp-sourcemaps';
+import autoprefixer from 'gulp-autoprefixer';
+import minifyCSS from 'gulp-minify-css';
+import sass from 'gulp-sass';
+import size from 'gulp-size';
+import gIf from 'gulp-if';
+import pixrem from 'gulp-pixrem';
 
-gulp.task('styles', function () {
+gulp.task('styles', () => {
   return gulp.src(config.source)
     .pipe(sourcemaps.init())
     .pipe(sass({

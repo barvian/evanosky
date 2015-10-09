@@ -1,10 +1,10 @@
-var gulp = require('gulp');
-var config = require('../config').images;
-var imagemin = require('gulp-imagemin');
-var cache = require('gulp-cache');
-var pngquant = require('imagemin-pngquant');
+import gulp from 'gulp';
+import imagemin from 'gulp-imagemin';
+import cache from 'gulp-cache';
+import pngquant from 'imagemin-pngquant';
+import {images as config} from '../config';
 
-gulp.task('images', function () {
+gulp.task('images', () => {
   return gulp.src(config.source)
     .pipe(cache(imagemin({
       progressive: true,

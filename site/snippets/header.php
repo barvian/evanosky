@@ -12,5 +12,5 @@
     <a class="site-logo" href="<?php echo url() ?>">
       <img srcset="<?php echo url('public/images/logo.png') ?> 1x, <?php echo url('public/images/logo@2x.png') ?> 2x" alt="<?php echo $site->title()->html() ?>" />
     </a>
-    <?php snippet('menu') ?>
+    <?php snippet('site-nav') ?>
   </header>
