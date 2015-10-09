@@ -4,10 +4,10 @@ import bower from 'bower';
 // ------
 
 // Project paths
-var src     = 'assets';
-var tmp     = 'tmp';
-var vendor  = 'assets/scripts/vendor';
-var dist    = 'public';
+const src     = 'assets';
+const tmp     = 'tmp';
+const vendor  = 'assets/scripts/vendor';
+const dist    = 'public';
 
 export default {
   sync: {

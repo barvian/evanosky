@@ -13,9 +13,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: none;
 
-  @include font($serif, $size: percentage(13.5/16), $weight: normal);
+  @include font($serif, $size: percentage(15/16), $weight: normal);
   @include query(charlie) {
-    font-size: percentage(15/16);
+    font-size: percentage(16/16);
   }
 }
 
