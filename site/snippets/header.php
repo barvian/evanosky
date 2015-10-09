@@ -5,6 +5,9 @@
   <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
   <meta name="description" content="<?php echo $site->description()->html() ?>">
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway:500,600" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic" rel="stylesheet" />
   <?php echo css('public/styles/evanosky.css') ?>
   <?php echo js('public/scripts/vendor/modernizr-custom.min.js') ?>
 
