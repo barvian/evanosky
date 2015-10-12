@@ -6,7 +6,7 @@ import bower from 'bower';
 // Project paths
 const src     = 'assets';
 const tmp     = 'tmp';
-const vendor  = 'assets/scripts/vendor';
+const vendor  = `${src}/scripts/vendor`;
 const dist    = 'public';
 
 export default {
@@ -25,10 +25,6 @@ export default {
       browsers: ['> 5%', 'last 2 versions'],
       cascade: false
     }
-  },
-
-  jshint: {
-    source: [`${src}/scripts/**/*.js`, , `!${vendor}/**/*.js`]
   },
 
   scripts: {
@@ -67,8 +63,24 @@ export default {
     ]
   },
 
+  browserSync: {
+    source: `{${dist},content,site}/**/*.{css,js,html,php,txt,png,svg,jpg,gif}`,
+    notify: false,
+    logPrefix: 'Evanosky',
+    scrollElementMapping: ['[role="main"]'],
+    proxy: 'evanosky.dev',
+    snippetOptions: {
+      rule: {
+        match: /<\/html>/i,
+        fn: function (snippet, match) {
+          return snippet + match;
+        }
+      }
+    }
+  }
+
   watch: {
-    livereload: `{${dist},content,site}/**/*.{css,js,html,php,txt,png,svg,jpg,gif}`,
+    browserSync:
     styles: `${src}/styles/**/*.scss`,
     javascript: `${src}/scripts/**/*.js`,
     vendor_javascript: `${vendor}/**/*.js`,
