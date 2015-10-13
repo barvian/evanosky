@@ -1,7 +1,8 @@
 import bower from 'bower';
+import sync from './sync';
 
 // Config
-// ------
+// ======
 
 // Project paths
 const src     = 'assets';
@@ -9,16 +10,9 @@ const tmp     = 'tmp';
 const vendor  = `${src}/scripts/vendor`;
 const dist    = 'public';
 
-export default {
-  sync: {
-    user: 'USERNAME',
-    host: 'DOMAIN.TLD',
-    dest: '/path/to/destination/folder/',
-    exclude_list: 'rsync-exclude.txt'
-  },
-
+export default Object.assign({}, {
   styles: {
-    source: `${src}/styles/main.scss`,
+    source: `${src}/styles/evanosky.scss`,
     includePaths: [bower.config.directory],
     dest:`${dist}/styles`,
     autoprefixer: {
@@ -29,10 +23,10 @@ export default {
   },
 
   scripts: {
-    source: `${src}/scripts/main.js`,
+    source: `${src}/scripts/evanosky.js`,
     babelIgnore: new RegExp(`(${bower.config.directory})|(${vendor})`),
     dest: `${dist}/scripts`,
-    bundle: 'main',
+    bundle: 'evanosky',
   },
 
   copy: {
@@ -56,7 +50,7 @@ export default {
   },
 
   clean: {
-    all: [
+    source: [
       '.sass-cache/',
       dist,
     ]
@@ -66,9 +60,9 @@ export default {
     needsReload: `{content,site}/**/*`,
     config: {
       notify: true,
-      logPrefix: 'Test',
+      logPrefix: 'Evanosky',
       scrollElementMapping: ['[role="main"]'],
-      proxy: 'test.dev',
+      proxy: 'evanosky.dev',
       snippetOptions: {
         rule: {
           match: /<\/html>/i,
@@ -79,4 +73,4 @@ export default {
       }
     }
   }
-};
+}, {sync: sync});

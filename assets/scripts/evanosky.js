@@ -1,3 +1,3 @@
 import pictureFill from 'picturefill';
 
-console.log('all those kinds');
+console.log('there was kinds');
