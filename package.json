@@ -3,7 +3,13 @@
   "version": "0.0.0",
   "description": "Website for the Evanosky Foundation.",
   "private": "true",
-  "dependencies": {
+  "scripts": {
+    "deploy": "gulp deploy",
+    "gulp": "gulp",
+    "build": "gulp build",
+    "watch": "gulp"
+  },
+  "devDependencies": {
     "gulpfile": "github:mbarvian/gulpfile.js"
   }
 }
