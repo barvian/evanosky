@@ -5,11 +5,13 @@ import autoprefixer from 'gulp-autoprefixer';
 import minifyCSS from 'gulp-minify-css';
 import sass from 'gulp-sass';
 import size from 'gulp-size';
-import gIf from 'gulp-if';
+import gulpif from 'gulp-if';
+import filter from 'gulp-filter';
 import pixrem from 'gulp-pixrem';
+import browserSync from 'browser-sync';
 
-gulp.task('styles', () => {
-  return gulp.src(config.source)
+const compile = watch => {
+  const pipeline = gulp.src(config.source)
     .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: config.includePaths,
@@ -18,8 +20,14 @@ gulp.task('styles', () => {
     .pipe(autoprefixer(config.autoprefixer))
     .pipe(pixrem())
     // Concatenate and minify styles
-    .pipe(gIf('*.css', minifyCSS()))
+    .pipe(gulpif('*.css', minifyCSS()))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.dest))
+    .pipe(filter('*.css'))
     .pipe(size({title: 'styles'}));
-});
+
+  return watch ? pipeline.pipe(browserSync.get('assets').stream()) : pipeline
+};
+
+gulp.task('styles', () => compile());
+gulp.task('styles:watch', () => compile(true));

@@ -9,6 +9,6 @@ components
 /thumbs/*
 
 /public/
-gulpfile.babel.js/config.js
+gulpfile.js/config.js
 
 tmp/

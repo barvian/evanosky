@@ -10,4 +10,6 @@
     </div>
   </footer>
 
+  <?php echo js('public/scripts/evanosky.js') ?>
+
 </html>

@@ -24,13 +24,15 @@ export default {
     autoprefixer: {
       browsers: ['> 5%', 'last 2 versions'],
       cascade: false
-    }
+    },
+    watchable: `${src}/styles/**/*.scss`
   },
 
   scripts: {
-    name: 'main',
-    source: [`${src}/scripts/**/*.js`, `!${vendor}/**/*.js`],
-    dest: `${dist}/scripts`
+    source: `${src}/scripts/main.js`,
+    babelIgnore: new RegExp(`(${bower.config.directory})|(${vendor})`),
+    dest: `${dist}/scripts`,
+    bundle: 'main',
   },
 
   copy: {
@@ -38,7 +40,8 @@ export default {
     source: [
       `${vendor}/modernizr*.js`
     ],
-    dest: dist
+    dest: dist,
+    watchable: true
   },
 
   fonts: {
@@ -48,12 +51,8 @@ export default {
 
   images: {
     source: `${src}/images/**/*`,
-    dest: `${dist}/images`
-  },
-
-  wiredep: {
-    source: [`${vendor}/**/*.js`, `!${vendor}/modernizr*.js`],
-    dest: `${dist}/scripts`
+    dest: `${dist}/images`,
+    watchable: true
   },
 
   clean: {
@@ -64,27 +63,20 @@ export default {
   },
 
   browserSync: {
-    source: `{${dist},content,site}/**/*.{css,js,html,php,txt,png,svg,jpg,gif}`,
-    notify: false,
-    logPrefix: 'Evanosky',
-    scrollElementMapping: ['[role="main"]'],
-    proxy: 'evanosky.dev',
-    snippetOptions: {
-      rule: {
-        match: /<\/html>/i,
-        fn: function (snippet, match) {
-          return snippet + match;
+    needsReload: `{content,site}/**/*`,
+    config: {
+      notify: true,
+      logPrefix: 'Test',
+      scrollElementMapping: ['[role="main"]'],
+      proxy: 'test.dev',
+      snippetOptions: {
+        rule: {
+          match: /<\/html>/i,
+          fn: function (snippet, match) {
+            return snippet + match;
+          }
         }
       }
     }
-  }
-
-  watch: {
-    browserSync:
-    styles: `${src}/styles/**/*.scss`,
-    javascript: `${src}/scripts/**/*.js`,
-    vendor_javascript: `${vendor}/**/*.js`,
-    images: `${src}/images/**/*.*`,
-    bower: 'bower.json'
   }
 };
