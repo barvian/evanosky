@@ -13,13 +13,13 @@ const dist    = 'public';
 export default Object.assign({}, {
   styles: {
     source: `${src}/styles/evanosky.scss`,
+    all: `${src}/styles/**/*.scss`,
     includePaths: [bower.config.directory],
     dest:`${dist}/styles`,
     autoprefixer: {
       browsers: ['> 5%', 'last 2 versions'],
       cascade: false
-    },
-    watchable: `${src}/styles/**/*.scss`
+    }
   },
 
   scripts: {
@@ -35,7 +35,6 @@ export default Object.assign({}, {
       `${vendor}/modernizr*.js`
     ],
     dest: dist,
-    watchable: true
   },
 
   fonts: {
@@ -46,7 +45,6 @@ export default Object.assign({}, {
   images: {
     source: `${src}/images/**/*`,
     dest: `${dist}/images`,
-    watchable: true
   },
 
   clean: {
@@ -56,9 +54,9 @@ export default Object.assign({}, {
     ]
   },
 
-  browserSync: {
+  watch: {
     needsReload: `{content,site}/**/*`,
-    config: {
+    browserSync: {
       notify: true,
       logPrefix: 'Evanosky',
       scrollElementMapping: ['[role="main"]'],
