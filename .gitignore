@@ -9,6 +9,6 @@ components
 /thumbs/*
 
 /public/
-gulpfile.babel.js/config/sync.js
+/secrets.yml
 
 tmp/

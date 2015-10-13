@@ -10,6 +10,8 @@
     "watch": "gulp"
   },
   "devDependencies": {
-    "gulpfile": "github:mbarvian/gulpfile.js"
+    "fs": "0.0.2",
+    "gulpfile": "github:mbarvian/gulpfile.js",
+    "js-yaml": "^3.4.3"
   }
 }

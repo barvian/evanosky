@@ -1,8 +1,11 @@
+import gulp from 'gulp';
 import bower from 'bower';
-import sync from './sync';
+import tasks from 'gulpfile';
+import fs from 'fs';
+import yaml from 'js-yaml';
 
-// Config
-// ======
+const secrets = yaml.safeLoad(fs.readFileSync('./secrets.yml', 'utf8'));
+const prod = secrets.servers.prod;
 
 // Project paths
 const src     = 'assets';
@@ -10,9 +13,16 @@ const tmp     = 'tmp';
 const vendor  = `${src}/scripts/vendor`;
 const dist    = 'public';
 
-export default Object.assign({}, {
+gulp.tasks = tasks({
+  deploy: {
+    src: '.',
+    username: prod.username,
+    host: prod.host,
+    dest: prod.root
+  },
+
   styles: {
-    source: `${src}/styles/evanosky.scss`,
+    src: `${src}/styles/evanosky.scss`,
     all: `${src}/styles/**/*.scss`,
     includePaths: [bower.config.directory],
     dest:`${dist}/styles`,
@@ -23,7 +33,7 @@ export default Object.assign({}, {
   },
 
   scripts: {
-    source: `${src}/scripts/evanosky.js`,
+    src: `${src}/scripts/evanosky.js`,
     babelIgnore: new RegExp(`(${bower.config.directory})|(${vendor})`),
     dest: `${dist}/scripts`,
     bundle: 'evanosky',
@@ -31,24 +41,24 @@ export default Object.assign({}, {
 
   copy: {
     base: src,
-    source: [
+    src: [
       `${vendor}/modernizr*.js`
     ],
     dest: dist,
   },
 
   fonts: {
-    source: `${src}/fonts/**/*`,
+    src: `${src}/fonts/**/*`,
     dest: `${dist}/fonts`
   },
 
   images: {
-    source: `${src}/images/**/*`,
+    src: `${src}/images/**/*`,
     dest: `${dist}/images`,
   },
 
   clean: {
-    source: [
+    target: [
       '.sass-cache/',
       dist,
     ]
@@ -71,4 +81,4 @@ export default Object.assign({}, {
       }
     }
   }
-}, {sync: sync});
+});
