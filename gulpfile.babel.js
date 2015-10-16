@@ -33,7 +33,8 @@ gulp.tasks = tasks({
       '/site/***',
       '/thumbs/',
       '/.htaccess',
-      '/index.php'
+      '/index.php',
+      '/secrets.yml'
     ],
     exclude: [
       '*', // everything not included

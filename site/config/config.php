@@ -1,5 +1,7 @@
 <?php
 
+if(!defined('DS')) define('DS', DIRECTORY_SEPARATOR);
+
 /*
 
 ---------------------------------------
@@ -15,7 +17,7 @@ for more information: http://getkirby.com/license
 
 */
 
-c::set('license', 'put your license key here');
+c::set('license', yaml::read(detect::documentRoot() . DS . 'secrets.yml')['licenses']['kirby']);
 
 /*
 

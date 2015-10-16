@@ -28,6 +28,9 @@ RewriteRule ^kirby/(.*) error [R=301,L]
 # block all uncompiled files in the assets folder from being accessed directly
 RewriteRule ^assets/(.*) error [R=301,L]
 
+# block secrets from being accessed directly
+RewriteRule ^secrets\.yml$ error [R=301,L]
+
 # make panel links work
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
