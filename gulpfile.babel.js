@@ -8,10 +8,10 @@ const secrets = yaml.safeLoad(fs.readFileSync('./secrets.yml', 'utf8'));
 const prod = secrets.servers.prod;
 
 // Project paths
-const src     = 'assets';
-const tmp     = 'tmp';
+const src     = './assets';
+const tmp     = './tmp';
 const vendor  = `${src}/scripts/vendor`;
-const dist    = 'public';
+const dist    = './public';
 
 gulp.tasks = tasks({
   deploy: {
@@ -24,12 +24,12 @@ gulp.tasks = tasks({
       '.DS_Store'
     ],
     include: [
-      '/assets/',
-      '/assets/avatars/',
+      `${src}/`,
+      `${src}/avatars/`,
       '/content/***',
       '/kirby/***',
       '/panel/***',
-      '/public/***',
+      `/${dist}/***`,
       '/site/***',
       '/thumbs/',
       '/.htaccess',
@@ -37,10 +37,9 @@ gulp.tasks = tasks({
     ],
     exclude: [
       '*', // everything not included
-      '/assets/*'
+      `${src}/*`
     ],
-    syncable: true,
-    dryRun: false
+    syncable: true
   },
 
   styles: {
