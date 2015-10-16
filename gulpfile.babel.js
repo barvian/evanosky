@@ -18,7 +18,29 @@ gulp.tasks = tasks({
     src: '.',
     username: prod.username,
     host: prod.host,
-    dest: prod.root
+    dest: prod.root,
+    excludeFirst: [
+      '/site/accounts/*',
+      '.DS_Store'
+    ],
+    include: [
+      '/assets/',
+      '/assets/avatars/',
+      '/content/***',
+      '/kirby/***',
+      '/panel/***',
+      '/public/***',
+      '/site/***',
+      '/thumbs/',
+      '/.htaccess',
+      '/index.php'
+    ],
+    exclude: [
+      '*', // everything not included
+      '/assets/*'
+    ],
+    syncable: true,
+    dryRun: false
   },
 
   styles: {
