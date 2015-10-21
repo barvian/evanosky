@@ -4,7 +4,7 @@
     <div class="hero__buttons">
       <?php foreach($hero['buttons'] as $button): ?>
       <a href="<?php echo url($button['page']) ?>" class="hero__button">
-        <span class="hero__button__question"><?php echo $button['callout'] ?></span>
+        <span class="hero__question"><?php echo $button['callout'] ?></span>
         <?php echo $button['action'] ?>.
       </a>
       <?php endforeach ?>

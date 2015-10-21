@@ -2,6 +2,8 @@
 // ====
 
 @include b(hero) {
+  @include retina-background('../images/hero.png', 100% 100%);
+
   @include e(box) {
     border: 0.8rem solid $purple;
     margin-left: auto;
@@ -10,11 +12,14 @@
   }
 
   @include e(text) {
+    $shadow: darken($purple, 10%);
+
     color: #fff;
     display: block;
     margin-left: -($wide - $layout)/2;
     margin-right: -($wide - $layout)/2;
     text-align: center;
+    text-shadow: 0px 1.6rem 1.26rem rgba($shadow, 0.47), 0px 0.4rem 0.6rem rgba($shadow, 0.2);
 
     @include font($script, $size: hero);
   }
@@ -26,18 +31,21 @@
   }
 
   @include e(button) {
+    @extend %unstyled-link;
+
     color: darken($purple, 10%);
     display: table-cell;
     padding: 2.25rem;
 
     @include font($serif, $size: big);
+  }
 
-    @include e(question) {
-      @extend %uppercase;
+  @include e(question) {
+    @extend %uppercase;
 
-      color: $purple;
+    color: $purple;
+    display: block;
 
-      @include font($sans, $size: base);
-    }
+    @include font($sans, $size: base);
   }
 }
