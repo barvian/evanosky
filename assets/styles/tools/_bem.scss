@@ -16,6 +16,9 @@ $_currentBlock: null; $_currentMod: null; $_currentCond: null;
 @function bm($block, $modifier) {
   @return unquote(".#{$block + $bem-modifier-separator + $modifier}");
 }
+@function bc($block, $element) {
+  @return unquote(".#{$block + $bem-condition-separator + $element}");
+}
 @function bem($block, $element, $modifier) {
   @return selector-nest(bm($block, $modifier), be($block, $element));
 }
@@ -25,12 +28,12 @@ $_currentBlock: null; $_currentMod: null; $_currentCond: null;
   #{b($block)} {
     @content;
   }
-  $_currentBlock: null;
+  $_currentBlock: null !global;
 }
 
 @mixin e($element, $child: false) {
-  @if $_currentMod or $_currentCond {
-    #{if($child, '> ', '') + be($_currentBlock, $element)} {
+  @if $_currentMod or $_currentCond or $child {
+    & #{if($child, '> ', '') + be($_currentBlock, $element)} {
       @content;
     }
   } @else {
@@ -45,7 +48,7 @@ $_currentBlock: null; $_currentMod: null; $_currentCond: null;
   &#{$bem-modifier-separator + $modifier} {
     @content;
   }
-  $_currentMod: null;
+  $_currentMod: null !global;
 }
 
 @mixin c($condition, $query: true) {
@@ -58,5 +61,5 @@ $_currentBlock: null; $_currentMod: null; $_currentCond: null;
       @content;
     }
   }
-  $_currentCond: null;
+  $_currentCond: null !global;
 }

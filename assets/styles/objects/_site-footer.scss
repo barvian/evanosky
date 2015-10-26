@@ -1,0 +1,14 @@
+// Site footer
+// ===========
+
+@include b(site-footer) {
+  color: desaturate(darken($gold, 35%), 25%);
+
+  @include retina-background("../images/footer.png", 1349px 50px, bottom center);
+
+  @include e(tax) {
+    @extend %small;
+
+    text-align: right;
+  }
+}

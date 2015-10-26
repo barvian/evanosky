@@ -2,22 +2,31 @@
 // ====
 
 @include b(hero) {
-  @include retina-background('../images/hero.png', 100% 100%);
+  $shadow: darken($purple, 10%);
+
+  padding-bottom: 6.5rem;
+  padding-top: 5rem;
+
+  @include retina-background('../images/hero.png', 1235px 100%);
 
   @include e(box) {
     border: 0.8rem solid $purple;
+    box-shadow: 0 19px 13px 0 rgba($shadow, 0.27);
     margin-left: auto;
     margin-right: auto;
-    max-width: $layout;
+    max-width: $layout - $gutter*2;
+    padding-top: 1.25rem;
+
+    @include flush;
   }
 
   @include e(text) {
-    $shadow: darken($purple, 10%);
-
     color: #fff;
     display: block;
     margin-left: -($wide - $layout)/2;
     margin-right: -($wide - $layout)/2;
+    position: relative;
+    z-index: 100;
     text-align: center;
     text-shadow: 0px 1.6rem 1.26rem rgba($shadow, 0.47), 0px 0.4rem 0.6rem rgba($shadow, 0.2);
 
@@ -31,19 +40,43 @@
   }
 
   @include e(button) {
+    $bg: lighten($purple, 42.5%);
     @extend %unstyled-link;
 
     color: darken($purple, 10%);
     display: table-cell;
     padding: 2.25rem;
+    position: relative;
+
+    &::before {
+      @extend %stretch;
+
+      content: '';
+      background-image: linear-gradient(to bottom, rgba($bg, 0), rgba($bg, 0.65));
+      opacity: 1;
+      transition: all 150ms ease-in-out;
+      z-index: -1;
+    }
 
     @include font($serif, $size: big);
+    @include attention {
+      &::before {
+        opacity: 0.25;
+        transition: none;
+      }
+    }
+
+    & + & {
+      border-width: 0 0 0 3px;
+      border-style: solid;
+      border-image: linear-gradient(to top, $purple, rgba($purple, 0));
+      border-image-slice: 1;
+    }
   }
 
   @include e(question) {
     @extend %uppercase;
 
-    color: $purple;
     display: block;
 
     @include font($sans, $size: base);

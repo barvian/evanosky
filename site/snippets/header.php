@@ -12,8 +12,10 @@
   <?php echo js('public/scripts/vendor/modernizr-custom.min.js') ?>
 
   <header class="site-header" role="banner">
-    <a class="site-logo" href="<?php echo url() ?>">
-      <img srcset="<?php echo url('public/images/logo.png') ?> 1x, <?php echo url('public/images/logo@2x.png') ?> 2x" alt="<?php echo $site->title()->html() ?>" />
-    </a>
+    <div class="hidden@alpha-up" data-set="site-logo">
+      <a class="site-logo" href="<?php echo url() ?>">
+        <img srcset="<?php echo url('public/images/logo.png') ?> 1x, <?php echo url('public/images/logo@2x.png') ?> 2x" alt="<?php echo $site->title()->html() ?>" />
+      </a>
+    </div>
     <?php snippet('site-nav') ?>
   </header>
