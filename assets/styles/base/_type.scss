@@ -101,4 +101,12 @@ h5 { @extend %label; }
   max-width: 38em;
 }
 
+%drop-cap {
+  float: left;
+  font-size: 3em;
+  line-height: 1;
+  margin-right: 0.1em;
+  margin-top: 0.05em;
+}
+
 p, blockquote { @extend .line; }

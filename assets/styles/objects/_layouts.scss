@@ -1,10 +1,6 @@
 // Layouts
 // =======
 
-$gutter: size(spacing) !default;
-$layout: 52rem;
-$wide: 66rem;
-
 @include b(layout) {
   list-style-type: none;
   margin-left: auto;
@@ -12,7 +8,7 @@ $wide: 66rem;
   max-width: $layout;
   padding-right: $gutter;
 
-  @include flush;
+  @include compact;
 
   @include e(unit) {
     display: inline-block;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page page--<?php e($page->isHomePage(), 'home', $page->slug()) ?>">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
@@ -11,9 +11,10 @@
   <?php echo css('public/styles/evanosky.css') ?>
   <?php echo js('public/scripts/vendor/modernizr-custom.min.js') ?>
 
+  <div class="invisible"><?php echo file_get_contents(url('public/sprites.svg')) ?></div>
   <header class="site-header" role="banner">
     <div class="hidden@alpha-up" data-set="site-logo">
-      <a class="site-logo" href="<?php echo url() ?>">
+      <a class="site-logo js-aa" href="<?php echo url() ?>">
         <img srcset="<?php echo url('public/images/logo.png') ?> 1x, <?php echo url('public/images/logo@2x.png') ?> 2x" alt="<?php echo $site->title()->html() ?>" />
       </a>
     </div>

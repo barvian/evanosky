@@ -1,5 +1,6 @@
 // Article
 // =======
+// Articles represent (often user-entered) pieces of content.
 
 .article {
   %title {
@@ -12,5 +13,10 @@
   }
 
   %label {
+  }
+
+  > p:first-of-type::first-letter,
+  > :first-child p:first-of-type::first-letter {
+    @extend %drop-cap;
   }
 }

@@ -1,0 +1,90 @@
+// Icon links
+// ==========
+
+%icon-link-bg-1 {
+  &::before { @include retina-background("../images/watercolors/1.png", contain, center center); }
+  &::after { @include retina-background("../images/watercolors/saturated/1.png", contain, center center); }
+}
+
+%icon-link-bg-2 {
+  &::before { @include retina-background("../images/watercolors/2.png", contain, center center); }
+  &::after { @include retina-background("../images/watercolors/saturated/2.png", contain, center center); }
+}
+
+@include b(icon-link) {
+  @extend %unstyled-link;
+
+  color: $light;
+  text-align: center;
+
+  &:hover {
+    color: $blue;
+
+    #{be(icon-link, icon)} {
+      &::before {
+        opacity: 0;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+
+      svg {
+        filter: drop-shadow(0 0 23px rgba($blue, 0.35));
+      }
+    }
+
+    #{be(icon-link, label)} {
+
+    }
+  }
+
+  @include e(icon) {
+    @extend %icon-link-bg-1;
+
+    height: 10rem;
+    position: relative;
+
+    @include trailing(small);
+    
+    svg {
+      filter: drop-shadow(0 0 23px rgba($light, 0.35));
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+
+      * {
+        stroke: #fff;
+        fill: #fff;
+      }
+    }
+
+    &::before, &::after {
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  @include e(label) {
+    padding-left: 0.95em;
+    padding-right: 0.95em;
+
+    strong {
+      color: $blue;
+      display: block;
+      line-height: strip-units(size(medium));
+
+      @include font($sans, $size: medium);
+    }
+  }
+}

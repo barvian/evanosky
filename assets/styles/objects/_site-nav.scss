@@ -2,15 +2,59 @@
 // ========
 
 @include b(site-nav) {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $wide;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  @include compact;
+
   @include e(menu) {
     @extend %unstyled-list;
 
+    align-items: baseline;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    padding-bottom: 65px;
+
+    @include compact;
+
     > li {
       > %link {
-        @extend %unstyled-link;
+        display: block;
 
         @include font($sans, $weight: semibold, $size: medium);
       }
+
+      &:not(#{be(site-nav, donate)}) {
+        > %link {
+          @extend %unstyled-link;
+
+          padding: 0.5em;
+        }
+      }
+
+      > #{b(dropdown)} {
+        display: none;
+      }
+    }
+  }
+
+  @include e(logo) {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  @include e(donate) {
+    > %link {
+      border-bottom-width: 2px;
+      color: $purple;
+      padding-bottom: 0.15em;
     }
   }
 }

@@ -3,4 +3,8 @@
 
 @include b(site-header) {
   padding-top: size(xxlarge);
+
+  #{bm(page, home)} & {
+    @include trailing(0);
+  }
 }

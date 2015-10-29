@@ -9,27 +9,33 @@
       )
     )) ?>
 
-    <div class="layout">
-      <div class="layout__unit"><?php echo $page->intro()->kirbytext() ?></div>
-    </div>
-    <div class="layout layout--wide">
-      <div class="layout__unit">
-        <div class="pack pack--border">
-          <?php foreach($page->links()->yaml() as $link): ?>
-          <?php snippet('icon-link', array(
-            'link' => array(
-              'page' => $link['page'],
-              'icon' => $page->file($link['icon']),
-              'label' => kirbytext($link['label'])
-            )
-          )) ?>
-          <?php endforeach ?>
+    <article class="article">
+    <?php if(!$page->intro()->empty()): ?>
+      <div class="layout">
+        <div class="layout__unit"><?php echo $page->intro()->kirbytext() ?></div>
+      </div>
+    <?php endif ?>
+      <div class="landmark layout layout--wide">
+        <div class="layout__unit">
+          <div class="pack pack--border">
+            <?php foreach($page->links()->yaml() as $link): ?>
+            <?php snippet('icon-link', array(
+              'link' => array(
+                'page' => $link['page'],
+                'icon' => $page->file($link['icon']),
+                'label' => kirbytext($link['label'])
+              )
+            )) ?>
+            <?php endforeach ?>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="layout">
-      <div class="layout__unit"><?php echo $page->text()->kirbytext() ?></div>
-    </div>
+    <?php if(!$page->text()->empty()): ?>
+      <div class="layout">
+        <div class="layout__unit article"><?php echo $page->text()->kirbytext() ?></div>
+      </div>
+    <?php endif ?>
+    </article>
 
   </main>
 

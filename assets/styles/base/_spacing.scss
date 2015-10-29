@@ -5,10 +5,14 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  @include trailing(size(spacing));
+  @include trailing;
 }
 
-%landmark {
-  @include leading(size(xlarge));
-  @include trailing(size(xlarge));
+body {
+  @include leading(0);
+}
+
+.landmark {
+  @include leading(xxlarge);
+  @include trailing(xxlarge);
 }

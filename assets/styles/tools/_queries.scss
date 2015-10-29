@@ -37,3 +37,13 @@ $queries: () !default;
     background-image: url($retina-url);
   }
 }
+
+// Feature queries
+// ---------------
+
+@mixin supports($feature) {
+  // Links to Modernizr for the time being
+  .supports-#{$feature} {
+    @content;
+  }
+}

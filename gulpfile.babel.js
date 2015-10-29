@@ -79,6 +79,11 @@ gulp.tasks = tasks({
     dest: `${dist}/images`,
   },
 
+  sprites: {
+    src: `${src}/sprites/**/*`,
+    dest: dist
+  },
+
   clean: {
     target: [
       '.sass-cache/',

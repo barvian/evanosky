@@ -4,15 +4,20 @@
 @mixin hidden {
   display: none !important;
 
-  @include leading(0);
-
-  &:first-child {
-    @include trailing(0);
-  }
+  @include removed;
 }
 
 .hidden {
   @include hidden;
+}
+
+.invisible {
+  height: 0 !important;
+  width: 0 !important;
+  position: absolute !important;
+  visibility: hidden !important;
+
+  @include removed;
 }
 
 // Queries

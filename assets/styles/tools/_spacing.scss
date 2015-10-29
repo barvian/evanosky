@@ -1,23 +1,38 @@
 // Spacing
 // =======
 
-// Specify the space before an element
+// Child-level
+// -----------
+
 @mixin leading($space: spacing, $horizontal: false) {
   @if type-of($space) == string { $space: size($space); }
-  * + & {
+  :not(:empty) + & {
     @if $horizontal { margin-left: $space; margin-top: 0; } @else { margin-top: $space; }
   }
 }
 
-// Specify the space after an element
 @mixin trailing($space: spacing, $horizontal: false) {
   @if type-of($space) == string { $space: size($space); }
-  & + * {
+  & + :not(:empty) {
     @if $horizontal { margin-left: $space; margin-top: 0; } @else { margin-top: $space; }
   }
 }
 
-// Specify the space between all children in an element
+@mixin removed {
+  @include leading(0);
+
+  &:first-child {
+    @include trailing(0);
+  }
+}
+
+@mixin flush {
+  @include leading(0);
+  @include trailing(0);
+}
+
+// Parent-level
+// ------------
 
 @mixin vertical($space: spacing) {
   > * {
@@ -31,6 +46,6 @@
   }
 }
 
-@mixin flush {
+@mixin compact {
   @include vertical(0);
 }

@@ -1,6 +1,8 @@
 // BEM
 // ===
 
+$breakpoints: () !default;
+
 $bem-element-separator: '__' !default;
 $bem-modifier-separator: '--' !default;
 $bem-condition-separator: '\\@' !default;
@@ -23,10 +25,19 @@ $_currentBlock: null; $_currentMod: null; $_currentCond: null;
   @return selector-nest(bm($block, $modifier), be($block, $element));
 }
 
-@mixin b($block) {
+@mixin b($block, $conditional: false) {
   $_currentBlock: $block !global;
-  #{b($block)} {
-    @content;
+  @if $conditional {
+    @if $conditional == true { $conditional: map-keys($breakpoints); }
+    @each $condition in $conditional {
+      @include c($condition) {
+        @content;
+      }
+    }
+  } @else {
+    #{b($block)} {
+      @content;
+    }
   }
   $_currentBlock: null !global;
 }
@@ -54,12 +65,12 @@ $_currentBlock: null; $_currentMod: null; $_currentCond: null;
 @mixin c($condition, $query: true) {
   $_currentCond: $condition !global;
   @if $query == true { $query: $condition; }
-  &#{$bem-condition-separator + $condition} {
+  @at-root { #{bc($_currentBlock, $condition)} {
     @if $query {
       @include query($query) { @content; }
     } @else {
       @content;
     }
-  }
+  } }
   $_currentCond: null !global;
 }
