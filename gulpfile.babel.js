@@ -21,24 +21,21 @@ gulp.tasks = tasks({
     dest: prod.root,
     excludeFirst: [
       '/site/accounts/*',
+      `/${dist}/avatars/*`,
+      `/${dist}/thumbs/*`,
       '.DS_Store'
     ],
     include: [
-      `${src}/`,
-      `${src}/avatars/`,
       '/content/***',
       '/kirby/***',
       '/panel/***',
       `/${dist}/***`,
       '/site/***',
-      '/thumbs/',
       '/.htaccess',
-      '/index.php',
-      '/secrets.yml'
+      '/index.php'
     ],
     exclude: [
-      '*', // everything not included
-      `${src}/*`
+      '*' // everything not included
     ],
     syncable: true
   },

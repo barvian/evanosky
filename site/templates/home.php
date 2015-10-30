@@ -32,7 +32,7 @@
       </div>
     <?php if(!$page->text()->empty()): ?>
       <div class="layout">
-        <div class="layout__unit article"><?php echo $page->text()->kirbytext() ?></div>
+        <div class="layout__unit"><?php echo $page->text()->kirbytext() ?></div>
       </div>
     <?php endif ?>
     </article>

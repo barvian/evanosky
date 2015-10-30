@@ -19,4 +19,14 @@
   > :first-child p:first-of-type::first-letter {
     @extend %drop-cap;
   }
+
+  figure {
+    &:nth-of-type(odd) {
+      float: right;
+    }
+
+    &:nth-of-type(even) {
+      float: left;
+    }
+  }
 }
