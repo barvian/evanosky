@@ -21,7 +21,7 @@
     margin-right: auto;
     max-width: $layout - $gutter*2;
     padding-top: 1.25rem;
-    transition: all 550ms ease-out;
+    transition: all 1.15s ease-out;
 
     @include compact;
 
@@ -34,18 +34,21 @@
         transform: translateY(-0.1rem);
       }
     }
+
+    #{be(hero, text)} {
+      margin-left: -($wide - $layout)/2;
+      margin-right: -($wide - $layout)/2;
+    }
   }
 
   @include e(text) {
     color: #fff;
     display: block;
-    margin-left: -($wide - $layout)/2;
-    margin-right: -($wide - $layout)/2;
     position: relative;
     z-index: 100;
     text-align: center;
     text-shadow: 0px 1.6rem 1.26rem rgba($shadow, 0.47), 0px 0.4rem 0.6rem rgba($shadow, 0.2);
-    transition: all 550ms ease-out;
+    transition: all 1.15s ease-out;
 
     @include font($script, $size: hero);
   }
@@ -118,5 +121,9 @@
     width: 2rem;
 
     @include trailing(0);
+  }
+
+  @include m(header) {
+    
   }
 }

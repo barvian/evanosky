@@ -1,6 +1,8 @@
-<div class="hero <?php echo isset($class) ? $class : '' ?>">
-  <div class="hero__box">
+<?php $tag = isset($mod) && $mod == 'header' ? 'header' : 'div' ?>
+<<?php echo $tag ?> class="hero <?php echo isset($class) ? $class : '' ?> <?php echo isset($mod) ? 'hero--'.$mod : '' ?>">
+  <?php if(array_key_exists('buttons', $hero)): ?><div class="hero__box"><?php endif ?>
     <h1 class="hero__text"><?php echo $hero['text'] ?></h1>
+    <?php if(array_key_exists('buttons', $hero)): ?>
     <div class="hero__buttons">
       <?php foreach($hero['buttons'] as $button): ?>
       <a href="<?php echo url($button['page']) ?>" class="hero__button">
@@ -13,5 +15,6 @@
       </a>
       <?php endforeach ?>
     </div>
+    <?php endif ?>
   </div>
-</div>
+</<?php echo $tag ?>>

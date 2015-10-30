@@ -1,7 +1,7 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Error
-pages: false
+title: Fundraisers
+pages: fundraiser
 deletable: false
 files: false
 fields:
@@ -11,4 +11,3 @@ fields:
   text:
     label: Text
     type:  textarea
-    size:  large
