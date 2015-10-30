@@ -4,14 +4,14 @@ import tasks from 'gulpfile';
 import fs from 'fs';
 import yaml from 'js-yaml';
 
-const secrets = yaml.safeLoad(fs.readFileSync('./secrets.yml', 'utf8'));
-const prod = secrets.servers.prod;
+const secrets = yaml.safeLoad(fs.readFileSync('./secrets.yml', 'utf8')),
+  prod = secrets.servers.prod;
 
 // Project paths
-const src     = './assets';
-const tmp     = './tmp';
+const src     = 'assets';
+const tmp     = 'tmp';
 const vendor  = `${src}/scripts/vendor`;
-const dist    = './public';
+const dist    = 'public';
 
 gulp.tasks = tasks({
   deploy: {
@@ -25,14 +25,16 @@ gulp.tasks = tasks({
       `/${dist}/thumbs/*`,
       '.DS_Store'
     ],
-    include: [
+    include: [ // everything not already excluded
       '/content/***',
       '/kirby/***',
       '/panel/***',
       `/${dist}/***`,
       '/site/***',
+      '/vendor/***',
       '/.htaccess',
-      '/index.php'
+      '/index.php',
+      '/site.php'
     ],
     exclude: [
       '*' // everything not included

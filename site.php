@@ -3,10 +3,9 @@
 $kirby = kirby();
 
 // Prevent panel breakage
-echo url::host();
 switch(url::host()) {
   case 'evanosky.dev': $kirby->urls->index = 'http://evanosky.dev';
-  case 'localhost': $kirby->urls->index = 'http://evanosky.dev';
+  default: $kirby->urls->index = 'http://'.url::host();
 }
 
 // avatars folder
