@@ -43,7 +43,7 @@ $queries: () !default;
 
 @mixin supports($feature) {
   // Links to Modernizr for the time being
-  .supports-#{$feature} {
+  .supports-#{$feature} & {
     @content;
   }
 }

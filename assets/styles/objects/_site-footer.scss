@@ -1,6 +1,19 @@
 // Site footer
 // ===========
 
+// Stick
+body {
+  @include supports(flexbox) {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    [role="main"] {
+      flex: 1;
+    }
+  }
+}
+
 @include b(site-footer) {
   color: desaturate(darken($gold, 30%), 25%);
 
