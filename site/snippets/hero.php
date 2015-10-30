@@ -9,7 +9,7 @@
           'sprite' => 'chevron-thin-right'
         )) ?>
         <span class="hero__question"><?php echo $button['callout'] ?></span>
-        <?php echo $button['action'] ?>.
+        <span class="hero__action"><?php echo $button['action'] ?></span>
       </a>
       <?php endforeach ?>
     </div>

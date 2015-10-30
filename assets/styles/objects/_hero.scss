@@ -16,13 +16,24 @@
 
   @include e(box) {
     border: 0.8rem solid $purple;
-    box-shadow: 0 19px 13px 0 rgba($shadow, 0.27);
+    box-shadow: 0 1.27rem 0.87rem 0 rgba($shadow, 0.27);
     margin-left: auto;
     margin-right: auto;
     max-width: $layout - $gutter*2;
     padding-top: 1.25rem;
+    transition: all 550ms ease-out;
 
     @include compact;
+
+    &:hover {
+      box-shadow: 0 1.4rem 0.93rem 0 rgba($shadow, 0.35);
+      transform: translateY(-0.2rem);
+
+      #{be(hero, text)} {
+        text-shadow: 0px 1.7rem 1.4rem rgba($shadow, 0.5), 0px 0.5rem 0.7rem rgba($shadow, 0.3);
+        transform: translateY(-0.1rem);
+      }
+    }
   }
 
   @include e(text) {
@@ -34,6 +45,7 @@
     z-index: 100;
     text-align: center;
     text-shadow: 0px 1.6rem 1.26rem rgba($shadow, 0.47), 0px 0.4rem 0.6rem rgba($shadow, 0.2);
+    transition: all 550ms ease-out;
 
     @include font($script, $size: hero);
   }
@@ -58,15 +70,13 @@
 
       content: '';
       background-image: linear-gradient(to bottom, rgba($bg, 0), rgba($bg, 0.65));
-      opacity: 1;
-      transition: all 150ms ease-in-out;
-      z-index: -1;
+      opacity: 0.15;
+      transition: all 225ms ease-in-out;
     }
 
-    @include font($serif, $size: big);
     @include attention {
       &::before {
-        opacity: 0.25;
+        opacity: 1;
         transition: none;
       }
     }
@@ -84,14 +94,25 @@
 
     color: $purple;
     display: block;
+    position: relative;
 
     @include font($sans, $size: base);
+  }
+
+  @include e(action) {
+    position: relative;
+
+    @include font($serif, $size: big);
+
+    &::after {
+      content: '.';
+    }
   }
 
   @include e(caret) {
     float: right;
     height: 2.5rem;
-    fill: $dark;
+    fill: currentColor;
     position: relative;
     top: 0.5rem;
     width: 2rem;
