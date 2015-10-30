@@ -22,7 +22,7 @@ fields:
     types:
         - image
   teaser:
-    label: Text
+    label: Teaser
     type:  textarea
   text:
     label: Text

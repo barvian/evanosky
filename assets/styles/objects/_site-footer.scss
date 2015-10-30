@@ -12,4 +12,12 @@
 
     text-align: right;
   }
+
+  @include e(image) {
+    > img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
