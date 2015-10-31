@@ -124,6 +124,14 @@
   }
 
   @include m(header) {
-    
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+
+    @include retina-background('../images/hero-header.png', 100% 100%);
+    @include trailing(huge);
+
+    @include e(text) {
+      font-size: size(massive);
+    }
   }
 }

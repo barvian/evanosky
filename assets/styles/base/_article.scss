@@ -18,7 +18,8 @@
   }
 
   > p:first-of-type::first-letter,
-  > :first-child p:first-of-type::first-letter {
+  > :first-child p:first-of-type::first-letter,
+  > header + * p:first-of-type::first-letter {
     @extend %drop-cap;
   }
 

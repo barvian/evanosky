@@ -16,14 +16,11 @@ fields:
     placeholder: 2015
     step: 1
   image:
-    label: Image
+    label: Featured image
     type: selector
     mode: single
     types:
         - image
-  teaser:
-    label: Teaser
-    type:  textarea
   text:
     label: Text
     type:  textarea

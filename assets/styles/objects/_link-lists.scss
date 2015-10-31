@@ -1,0 +1,64 @@
+// Link lists
+// ==========
+
+@include b(link-list) {
+  $caretHeight: 2.5rem;
+  $caretWidth: 2rem;
+
+  color: $blue;
+
+  @include compact;
+
+  > * {
+    display: block;
+
+    + * {
+      border-top: 1px dashed currentColor;
+    }
+  }
+
+  @include e(link) {
+    @extend %unstyled-link;
+
+    display: block;
+    padding: size(spacing) $caretWidth+size(spacing) size(spacing) size(spacing);
+    position: relative;
+    transition: all 175ms ease-in-out;
+
+    @include attention {
+      background-color: lighten($blue, 50%);
+      transition: none;
+
+      #{be(link-list, caret)} {
+        transform: translateX(0.5rem);
+      }
+    }
+  }
+
+  @include e(meta) {
+    @extend %label;
+
+    display: block;
+
+    @include trailing(0.35em);
+  }
+
+  @include e(title) {
+    @extend %sidekick;
+
+    display: block;
+
+    @include trailing(0.75em);
+  }
+
+  @include e(caret) {
+    fill: currentColor;
+    height: $caretHeight;
+    margin-top: -$caretHeight/2;
+    position: absolute;
+    right: size(spacing)-0.1rem;
+    top: 50%;
+    transition: transform 210ms ease-in-out;
+    width: $caretWidth;
+  }
+}
