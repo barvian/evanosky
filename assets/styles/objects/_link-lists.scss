@@ -54,7 +54,7 @@
   @include e(caret) {
     fill: currentColor;
     height: $caretHeight;
-    margin-top: -$caretHeight/2;
+    margin-top: -$caretHeight/2 !important;
     position: absolute;
     right: size(spacing)-0.1rem;
     top: 50%;

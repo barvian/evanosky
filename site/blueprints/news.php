@@ -1,6 +1,6 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Fundraiser
+title: News
 pages: false
 files:
   sortable: true
@@ -14,12 +14,18 @@ fields:
     type: date
     format: MM/DD/YYYY
     required: true
+  file:
+    label: Full article
+    type: selector
+    mode: single
+    types:
+      - document
   image:
     label: Featured image
     type: selector
     mode: single
     types:
       - image
-  text:
-    label: Text
+  teaser:
+    label: Teaser
     type:  textarea

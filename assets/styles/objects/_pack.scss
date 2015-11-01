@@ -3,12 +3,15 @@
 
 @include b(pack) {
   display: table;
-  table-layout: fixed;
   width: 100%;
 
   > * {
     display: table-cell;
     vertical-align: top;
+  }
+
+  @include m(equal) {
+    table-layout: fixed;
   }
 
   @include m(middle) {

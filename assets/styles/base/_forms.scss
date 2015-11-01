@@ -1,0 +1,99 @@
+// FORMS
+// =======
+
+$placeholder: lighten($base, 20%);
+
+*:focus {
+  outline: none;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  @extend %label;
+
+  display: block;
+  margin-bottom: 1em;
+}
+
+label[for], label > span {
+  @extend %label;
+
+  clear: both;
+  color: darken($light, 10%);
+  display: block;
+
+  @include trailing(0.35em);
+}
+
+input[type="hidden"] {
+  @include trailing(0);
+}
+
+%field {
+  appearance: none;
+  background: #fff;
+  border: none;
+  border: 1px solid lighten($light, 25%);
+  border-radius: 0;
+  color: $base;
+  display: block;
+  padding: 0.75em;
+  width: 100%;
+
+  @include font($sans, $size: medium);
+
+  &:focus {
+    border-color: $light;
+  }
+
+  &::input-placeholder {
+    color: $placeholder;
+  }
+}
+
+%tick {
+  margin-right: 0.45em;
+
+  & + label {
+    display: inline-block;
+    font-size: size(base);
+    vertical-align: baseline;
+  }
+}
+
+input:not([type]), input[type="text"],
+input[type="password"], input[type="date"],
+input[type="datetime"], input[type="datetime-local"],
+input[type="month"], input[type="week"],
+input[type="email"], input[type="number"],
+input[type="search"], input[type="tel"],
+input[type="time"], input[type="url"],
+input[type="color"], input[type="file"],
+textarea {
+  @extend %field;
+}
+
+textarea {
+  height: 6.5em;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  @extend %tick;
+}
+
+input[type="file"] {
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+select {
+  option[disabled]:first-child {
+    color: $placeholder;
+  }
+}

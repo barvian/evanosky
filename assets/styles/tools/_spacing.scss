@@ -6,14 +6,14 @@
 
 @mixin leading($space: spacing, $horizontal: false) {
   @if type-of($space) == string { $space: size($space); }
-  :not(:empty) + & {
+  * + & {
     @if $horizontal { margin-left: $space; margin-top: 0; } @else { margin-top: $space; }
   }
 }
 
 @mixin trailing($space: spacing, $horizontal: false) {
   @if type-of($space) == string { $space: size($space); }
-  & + :not(:empty) {
+  & + * {
     @if $horizontal { margin-left: $space; margin-top: 0; } @else { margin-top: $space; }
   }
 }

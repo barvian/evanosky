@@ -17,7 +17,7 @@
     <?php endif ?>
       <div class="landmark layout layout--wide">
         <div class="layout__unit">
-          <div class="pack pack--border">
+          <div class="pack pack--equal pack--border">
             <?php foreach($page->links()->yaml() as $link): ?>
             <?php snippet('icon-link', array(
               'link' => array(

@@ -1,7 +1,13 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: News & Events
-pages: news-event
+pages:
+  num: date
+  sort: flip
+  template:
+    - news
+    - event
+    - annual-report
 deletable: false
 files: false
 fields:

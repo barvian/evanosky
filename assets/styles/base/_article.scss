@@ -24,12 +24,20 @@
   }
 
   figure {
-    &:nth-of-type(odd) {
-      float: right;
+    @include query(alpha) {
+      margin-bottom: size(spacing);
+      max-width: 33.333%;
+
+      &:nth-of-type(odd) {
+        float: right;
+        margin-left: size(spacing);
+      }
+
+      &:nth-of-type(even) {
+        float: left;
+        margin-right: size(spacing);
+      }
     }
 
-    &:nth-of-type(even) {
-      float: left;
-    }
   }
 }

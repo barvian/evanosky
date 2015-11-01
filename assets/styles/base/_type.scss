@@ -52,14 +52,14 @@ code {
   letter-spacing: 0;
   text-transform: none;
 
-  @include font($serif, $size: large, $style: italic, $weight: bold);
+  @include font($serif, $size: large, $style: normal, $weight: bold);
 }
 
 %sidekick {
   @extend %heading;
   @extend %uppercase;
 
-  @include font($sans, $size: big, $style: normal, $weight: normal);
+  @include font($sans, $size: big, $style: normal, $weight: medium);
 }
 
 %shrimp {

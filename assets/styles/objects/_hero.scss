@@ -21,7 +21,7 @@
     margin-right: auto;
     max-width: $layout - $gutter*2;
     padding-top: 1.25rem;
-    transition: all 1.15s ease-out;
+    transition: box-shadow 1.15s ease-out, transform 1.15s ease-out;
 
     @include compact;
 
@@ -44,11 +44,12 @@
   @include e(text) {
     color: #fff;
     display: block;
+    pointer-events: none;
     position: relative;
     z-index: 100;
     text-align: center;
     text-shadow: 0px 1.6rem 1.26rem rgba($shadow, 0.47), 0px 0.4rem 0.6rem rgba($shadow, 0.2);
-    transition: all 1.15s ease-out;
+    transition: transform 1.15s ease-out, text-shadow 1.15s ease-out;
 
     @include font($script, $size: hero);
   }
@@ -74,7 +75,7 @@
       content: '';
       background-image: linear-gradient(to bottom, rgba($bg, 0), rgba($bg, 0.65));
       opacity: 0.15;
-      transition: all 225ms ease-in-out;
+      transition: opacity 225ms ease-in-out;
     }
 
     @include attention {
@@ -131,7 +132,33 @@
     @include trailing(huge);
 
     @include e(text) {
-      font-size: size(massive);
+      font-size: size(xxlarge);
+
+      @include query(alpha) {
+        font-size: size(huge);
+      }
+
+      @include query(bravo) {
+        font-size: size(massive);
+      }
+    }
+  }
+
+  @include m(form) {
+    background-position: center bottom;
+    background-size: 1235px 80%;
+    padding-top: 3rem;
+
+    @include e(box) {
+      background-color: lighten($light, 47%);
+      border: none;
+      box-shadow: 0 0 0 1px rgba($shadow, 0.1), 0 1.27rem 0.87rem 0 rgba($shadow, 0.27);
+      max-width: $layout/1.5;
+      padding: size(spacing)+0.25rem size(spacing);
+
+      &:hover {
+        box-shadow: 0 0 0 1px rgba($shadow, 0.1), 0 1.4rem 0.93rem 0 rgba($shadow, 0.35);
+      }
     }
   }
 }

@@ -16,7 +16,7 @@
           <?php foreach($page->children()->visible()->flip() as $campaign): ?>
           <article>
             <a class="link-list__link" href="<?php echo $campaign->url() ?>">
-              <time class="link-list__meta" datetime="<?php echo $campaign->year() ?>"><?php echo $campaign->year() ?></time>
+              <time class="link-list__meta" datetime="<?php echo date('Y-m-d', $campaign->date()) ?>"><?php echo date('F j, Y', $campaign->date()) ?></time>
               <h1 class="link-list__title"><?php echo $campaign->title()->html() ?></h1>
               <p class="link-list__teaser"><?php echo $campaign->text()->excerpt(300) ?></p>
               <?php snippet('sprite', array(
