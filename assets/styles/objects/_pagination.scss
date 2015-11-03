@@ -1,0 +1,111 @@
+// Pagination
+// ==========
+
+$pagination-border-width: 2px;
+$pagination-border-color: lighten($light, 35%);
+
+%pagination-bordered-item {
+  border-image: linear-gradient(to bottom, $pagination-border-color, rgba($pagination-border-color, 0));
+  border-image-slice: 1;
+  border-style: solid;
+  border-width: 0 0 0 $pagination-border-width;
+}
+
+@include b(pagination) {
+  @include leading(huge);
+
+  @include e(menu) {
+    @extend .clearfix;
+    @extend %unstyled-list;
+
+    border-top: $pagination-border-width solid $pagination-border-color;
+
+    > li {
+      float: left;
+      width: 50%;
+    }
+
+    @include compact;
+  }
+
+  @include e(link) {
+    @extend %unstyled-link;
+
+    display: block;
+    padding: 2.25rem;
+    position: relative;
+
+    &::before {
+      @extend %stretch;
+
+      background-image: linear-gradient(to bottom, rgba($pagination-border-color, 0.3), rgba($pagination-border-color, 0));
+      content: '';
+      opacity: 0;
+      transition: opacity 225ms ease-in-out;
+    }
+
+    @include attention {
+      &::before {
+        opacity: 1;
+        transition: none;
+      }
+    }
+  }
+
+  @include e(description) {
+    @extend %uppercase;
+
+    display: block;
+    position: relative;
+
+    @include font($sans, $size: base);
+  }
+
+  @include e(page) {
+    position: relative;
+
+    @include font($serif, $size: big);
+  }
+
+  @include e(prev) {
+    &:only-child {
+      @extend %pagination-bordered-item;
+
+      border-width: 0 $pagination-border-width 0 0;
+    }
+
+    #{be(pagination, caret)} {
+      float: left;
+      margin-left: 0;
+      margin-right: size(spacing);
+    }
+  }
+
+  @include e(next) {
+    @extend %pagination-bordered-item;
+
+    float: right !important;
+  }
+
+  @include e(caret) {
+    fill: currentColor;
+    float: right;
+    height: 2.5rem;
+    margin-left: size(spacing);
+    position: relative;
+    top: 0.5rem;
+    width: 2rem;
+
+    @include trailing(0);
+  }
+
+  @include m(landing) {
+    @include e(menu) {
+      > li {
+        @extend %pagination-bordered-item;
+
+        float: right;
+      }
+    }
+  }
+}

@@ -24,7 +24,17 @@
 
     @include compact;
 
+    #{bm(page, home)} & {
+      > li {
+        opacity: 1 !important;
+      }
+    }
+
     > li {
+      opacity: 0.35;
+      position: relative;
+      transition: opacity 175ms ease-in-out;
+
       > %link {
         display: block;
 
@@ -37,6 +47,19 @@
 
           padding: 0.5em;
         }
+
+        &.is-active {
+          opacity: 1 !important;
+
+          #{be(site-nav, caret)} {
+            display: block;
+          }
+        }
+
+        @include attention {
+          opacity: 1 !important;
+          transition: none;
+        }
       }
 
       > #{b(dropdown)} {
@@ -45,12 +68,26 @@
     }
   }
 
+  @include e(caret) {
+    display: none;
+    fill: desaturate(lighten($blue, 30%), 10%);
+    height: 1.75em;
+    left: 50%;
+    margin-left: -1.75em;
+    margin-top: -0.75em !important;
+    position: absolute;
+    top: 100%;
+    width: 3.5em;
+  }
+
   @include e(logo) {
     padding-left: $gutter;
     padding-right: $gutter;
   }
 
   @include e(donate) {
+    opacity: 1 !important;
+
     > %link {
       border-bottom-width: 2px;
       color: $purple;

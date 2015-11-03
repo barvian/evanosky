@@ -19,6 +19,10 @@
       </div>
 
     </article>
+
+    <?php snippet('pagination', array(
+      'currentPage' => $page
+    )) ?>
   </main>
 
 <?php snippet('footer') ?>

@@ -1,10 +1,10 @@
 // Hero
 // ====
 
-@include b(hero) {
-  $dark: darken($purple, 10%);
-  $shadow: $dark;
+$hero-dark-color: darken($purple, 10%);
+$hero-shadow-color: $hero-dark-color;
 
+@include b(hero) {
   padding-bottom: 6.5rem;
   padding-top: 5rem;
 
@@ -16,7 +16,7 @@
 
   @include e(box) {
     border: 0.8rem solid $purple;
-    box-shadow: 0 1.27rem 0.87rem 0 rgba($shadow, 0.27);
+    box-shadow: 0 1.27rem 0.87rem 0 rgba($hero-shadow-color, 0.27);
     margin-left: auto;
     margin-right: auto;
     max-width: $layout - $gutter*2;
@@ -26,11 +26,11 @@
     @include compact;
 
     &:hover {
-      box-shadow: 0 1.4rem 0.93rem 0 rgba($shadow, 0.35);
+      box-shadow: 0 1.4rem 0.93rem 0 rgba($hero-shadow-color, 0.35);
       transform: translateY(-0.2rem);
 
       #{be(hero, text)} {
-        text-shadow: 0px 1.7rem 1.4rem rgba($shadow, 0.5), 0px 0.5rem 0.7rem rgba($shadow, 0.3);
+        text-shadow: 0px 1.7rem 1.4rem rgba($hero-shadow-color, 0.5), 0px 0.5rem 0.7rem rgba($hero-shadow-color, 0.3);
         transform: translateY(-0.1rem);
       }
     }
@@ -48,7 +48,7 @@
     position: relative;
     z-index: 100;
     text-align: center;
-    text-shadow: 0px 1.6rem 1.26rem rgba($shadow, 0.47), 0px 0.4rem 0.6rem rgba($shadow, 0.2);
+    text-shadow: 0px 1.6rem 1.26rem rgba($hero-shadow-color, 0.47), 0px 0.4rem 0.6rem rgba($hero-shadow-color, 0.2);
     transition: transform 1.15s ease-out, text-shadow 1.15s ease-out;
 
     @include font($script, $size: hero);
@@ -64,7 +64,7 @@
     $bg: lighten($purple, 42.5%);
     @extend %unstyled-link;
 
-    color: $dark;
+    color: $hero-dark-color;
     display: table-cell;
     padding: 2.25rem;
     position: relative;
@@ -86,10 +86,10 @@
     }
 
     & + & {
-      border-width: 0 0 0 3px;
-      border-style: solid;
       border-image: linear-gradient(to top, $purple, rgba($purple, 0));
       border-image-slice: 1;
+      border-style: solid;
+      border-width: 0 0 0 3px;
     }
   }
 
@@ -129,7 +129,7 @@
     padding-top: 1rem;
 
     @include retina-background('../images/hero-header.png', 100% 100%);
-    @include trailing(huge);
+    @include trailing(xxlarge);
 
     @include e(text) {
       font-size: size(xxlarge);
@@ -152,12 +152,12 @@
     @include e(box) {
       background-color: lighten($light, 47%);
       border: none;
-      box-shadow: 0 0 0 1px rgba($shadow, 0.1), 0 1.27rem 0.87rem 0 rgba($shadow, 0.27);
+      box-shadow: 0 0 0 1px rgba($hero-shadow-color, 0.1), 0 1.27rem 0.87rem 0 rgba($hero-shadow-color, 0.27);
       max-width: $layout/1.5;
       padding: size(spacing)+0.25rem size(spacing);
 
       &:hover {
-        box-shadow: 0 0 0 1px rgba($shadow, 0.1), 0 1.4rem 0.93rem 0 rgba($shadow, 0.35);
+        box-shadow: 0 0 0 1px rgba($hero-shadow-color, 0.1), 0 1.4rem 0.93rem 0 rgba($hero-shadow-color, 0.35);
       }
     }
   }

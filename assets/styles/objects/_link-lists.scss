@@ -1,10 +1,10 @@
 // Link lists
 // ==========
 
-@include b(link-list) {
-  $caretHeight: 2.5rem;
-  $caretWidth: 2rem;
+$link-list-caret-height: 2.5rem;
+$link-list-caret-width: 2.5rem;
 
+@include b(link-list) {
   color: $blue;
 
   @include compact;
@@ -21,7 +21,7 @@
     @extend %unstyled-link;
 
     display: block;
-    padding: size(spacing) $caretWidth+size(spacing) size(spacing) size(spacing);
+    padding: size(spacing) $link-list-caret-width+size(spacing) size(spacing) size(spacing);
     position: relative;
     transition: all 175ms ease-in-out;
 
@@ -53,12 +53,12 @@
 
   @include e(caret) {
     fill: currentColor;
-    height: $caretHeight;
-    margin-top: -$caretHeight/2 !important;
+    height: $link-list-caret-height;
+    margin-top: -$link-list-caret-height/2 !important;
     position: absolute;
     right: size(spacing)-0.1rem;
     top: 50%;
     transition: transform 210ms ease-in-out;
-    width: $caretWidth;
+    width: $link-list-caret-width;
   }
 }
