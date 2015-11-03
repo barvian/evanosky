@@ -1,7 +1,7 @@
 // Site nav
 // ========
 
-@include b(site-nav) {
+.site-nav {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -13,7 +13,7 @@
 
   @include compact;
 
-  @include e(menu) {
+  &__menu {
     @extend %unstyled-list;
 
     align-items: baseline;
@@ -24,7 +24,7 @@
 
     @include compact;
 
-    #{bm(page, home)} & {
+    .page--home &, .page--error & {
       > li {
         opacity: 1 !important;
       }
@@ -41,7 +41,7 @@
         @include font($sans, $weight: semibold, $size: medium);
       }
 
-      &:not(#{be(site-nav, donate)}) {
+      &:not(.site-nav__donate) {
         > %link {
           @extend %unstyled-link;
 
@@ -51,7 +51,7 @@
         &.is-active {
           opacity: 1 !important;
 
-          #{be(site-nav, caret)} {
+          .site-nav__caret {
             display: block;
           }
         }
@@ -62,13 +62,13 @@
         }
       }
 
-      > #{b(dropdown)} {
+      > .dropdown {
         display: none;
       }
     }
   }
 
-  @include e(caret) {
+  &__caret {
     display: none;
     fill: desaturate(lighten($blue, 30%), 10%);
     height: 1.75em;
@@ -80,12 +80,12 @@
     width: 3.5em;
   }
 
-  @include e(logo) {
+  &__logo {
     padding-left: $gutter;
     padding-right: $gutter;
   }
 
-  @include e(donate) {
+  &__donate {
     opacity: 1 !important;
 
     > %link {

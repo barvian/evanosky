@@ -1,7 +1,7 @@
 // Pack
 // ====
 
-@include b(pack) {
+.pack {
   display: table;
   width: 100%;
 
@@ -10,23 +10,23 @@
     vertical-align: top;
   }
 
-  @include m(equal) {
+  &--equal {
     table-layout: fixed;
   }
 
-  @include m(middle) {
+  &--middle {
     > * {
       vertical-align: middle;
     }
   }
 
-  @include m(bottom) {
+  &--bottom {
     > * {
       vertical-align: bottom;
     }
   }
 
-  @include m(border) {
+  &--border {
     > * + * {
       border-style: solid;
       border-width: 0 0 0 2px;

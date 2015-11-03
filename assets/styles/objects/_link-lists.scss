@@ -4,7 +4,7 @@
 $link-list-caret-height: 2.5rem;
 $link-list-caret-width: 2.5rem;
 
-@include b(link-list) {
+.link-list {
   color: $blue;
 
   @include compact;
@@ -17,7 +17,7 @@ $link-list-caret-width: 2.5rem;
     }
   }
 
-  @include e(link) {
+  &__link {
     @extend %unstyled-link;
 
     display: block;
@@ -35,7 +35,7 @@ $link-list-caret-width: 2.5rem;
     }
   }
 
-  @include e(meta) {
+  &__meta {
     @extend %label;
 
     display: block;
@@ -43,15 +43,15 @@ $link-list-caret-width: 2.5rem;
     @include trailing(0.35em);
   }
 
-  @include e(title) {
+  &__title {
     @extend %sidekick;
 
     display: block;
 
-    @include trailing(0.75em);
+    @include trailing(0.55em);
   }
 
-  @include e(caret) {
+  &__caret {
     fill: currentColor;
     height: $link-list-caret-height;
     margin-top: -$link-list-caret-height/2 !important;

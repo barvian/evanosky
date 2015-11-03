@@ -3,10 +3,9 @@
 
 $columns: 6 !default;
 
-@for $num from 1 through $columns {
-  @include b("block-grid-#{$num}", true) {
+@mixin block-grids($max, $prefix: '', $postfix: '') {
+  %#{$prefix}block-grid#{$postfix} {
     @extend %unstyled-list;
-
     margin-left: -1*size(spacing);
 
     @include compact;
@@ -16,13 +15,30 @@ $columns: 6 !default;
       margin-top: size(spacing);
       padding-left: size(spacing);
       vertical-align: top;
-      width: percentage(1/$num);
+    }
+  }
 
-      @for $f from 1 through $num {
-        &:nth-child(#{$f}) {
-          margin-top: 0;
+  @for $num from 1 through $max {
+    .#{$prefix}block-grid-#{$num}#{$postfix} {
+      @extend %#{$prefix}block-grid#{$postfix};
+
+      > * {
+        width: percentage(1/$num);
+
+        @for $f from 1 through $num {
+          &:nth-child(#{$f}) {
+            margin-top: 0;
+          }
         }
       }
     }
+  }
+}
+
+@include block-grids($columns);
+
+@each $name, $query in $breakpoints {
+  @include query($name) {
+    @include block-grids($columns, $postfix: '\\@'+$name);
   }
 }

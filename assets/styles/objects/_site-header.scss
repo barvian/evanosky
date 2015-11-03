@@ -1,10 +1,10 @@
 // Site header
 // ===========
 
-@include b(site-header) {
+.site-header {
   padding-top: size(xxlarge);
 
-  #{bm(page, home)} & {
+  .page--home & {
     @include trailing(0);
   }
 }

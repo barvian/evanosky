@@ -24,26 +24,26 @@
 // -------
 
 @each $breakpoint, $query in $breakpoints {
-  #{bc(visible, $breakpoint)} {
+  .visible\@#{$breakpoint} {
     &, &-up { @extend .hidden; }
   }
 
   @include query($breakpoint) {
     @each $b, $query in $breakpoints {
       @if $b != $breakpoint {
-        #{bc(visible, $b)} {
+        .visible\@#{$b) {
           display: none !important;
         }
-        #{bc(hidden, $b)} {
+        .hidden\@#{$b} {
           display: block !important;
         }
       }
     }
 
-    #{bc(visible, $breakpoint)} {
+    .visible\@#{$breakpoint} {
       &, &-up { display: block !important; }
     }
-    #{bc(hidden, $breakpoint)} {
+    .hidden\@#{$breakpoint} {
       &, &-up { @include hidden; }
     }
   }

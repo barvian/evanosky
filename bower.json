@@ -9,6 +9,7 @@
   "devDependencies": {
     "modular-scale": "~2.1.1",
     "normalize-css": "normalize.css#~3.0.3",
-    "quantity-queries": "~0.4.0"
+    "quantity-queries": "~0.4.0",
+    "SassyLists": "~2.2.4"
   }
 }

@@ -5,22 +5,18 @@
 //
 
 .article {
-  %title {
-  }
-
-  %section-divider {
-  }
-
-  %sidekick {
-  }
-
-  %label {
-  }
-
-  > p:first-of-type::first-letter,
-  > :first-child p:first-of-type::first-letter,
-  > header + * p:first-of-type::first-letter {
+  > .layout:first-of-type > .layout__unit > p:first-of-type::first-letter {
     @extend %drop-cap;
+  }
+
+  > .layout > .layout__unit {
+    > h2 {
+      @include leading(xxlarge);
+    }
+  }
+
+  > ol {
+    @extend .numbered-list;
   }
 
   figure {

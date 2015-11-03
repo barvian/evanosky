@@ -14,19 +14,19 @@ body {
   }
 }
 
-@include b(site-footer) {
+.site-footer {
   color: desaturate(darken($gold, 30%), 25%);
 
   @include leading(massive);
   @include retina-background("../images/footer.png", 1349px 50px, bottom center);
 
-  @include e(tax) {
+  &__tax {
     @extend %small;
 
     text-align: right;
   }
 
-  @include e(image) {
+  &__image {
     > img {
       display: block;
       margin-left: auto;

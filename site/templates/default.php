@@ -2,12 +2,13 @@
 
   <main class="main" role="main">
     <article class="article">
-      <?php snippet('hero', array(
-        'mod' => 'header',
-        'hero' => array(
-          'text' => $page->title()->html()
-        )
-      )) ?>
+      <header class="hero hero--header layout layout--wide">
+        <?php snippet('breadcrumbs', array(
+          'currentPage' => $page,
+          'class' => 'layout__unit'
+        )) ?>
+        <h1 class="hero__text layout__unit"><?php echo $page->title()->html() ?></h1>
+      </header>
 
       <div class="layout">
         <div class="layout__unit">

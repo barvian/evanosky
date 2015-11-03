@@ -27,6 +27,6 @@
 
 @each $name, $query in $breakpoints {
   @include query($name) {
-    @include widths($columns, $postfix: $bem-condition-separator+$name);
+    @include widths($columns, $postfix: '\\@'+$name);
   }
 }

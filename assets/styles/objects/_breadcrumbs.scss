@@ -1,0 +1,28 @@
+// Breadcrumbs
+// ===========
+
+.breadcrumbs {
+  &__menu {
+    @extend .ilist;
+
+    white-space: nowrap;
+
+    @include horizontal(1rem);
+
+    > li {
+      &::after {
+        content: '/';
+        display: inline-block;
+        margin-left: 1rem;
+
+        @include font($sans, $weight: bold);
+      }
+
+      > %link {
+        display: inline-block;
+
+        @include font($sans, $weight: semibold, $size: base);
+      }
+    }
+  }
+}

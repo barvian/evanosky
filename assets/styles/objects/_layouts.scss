@@ -1,7 +1,7 @@
 // Layouts
 // =======
 
-@include b(layout) {
+.layout {
   list-style-type: none;
   margin-left: auto;
   margin-right: auto;
@@ -15,46 +15,46 @@
     margin-right: -$gutter;
   }
 
-  @include e(unit) {
+  &__unit {
     display: inline-block;
     padding-left: $gutter;
     vertical-align: top;
     width: 100%;
   }
 
-  @include m(wide) {
+  &--wide {
     max-width: $wide;
   }
 
-  @include e(span) {
+  &__span {
     margin-left: -($wide - $layout)/2;
     margin-right: -($wide - $layout)/2;
   }
 
-  @include m(flush) {
+  &--flush {
     margin-left: 0;
 
-    @include e(unit, true) {
+    > .layout__unit {
       padding-left: 0;
     }
   }
 
-  @include m(middle) {
-    @include e(unit, true) {
+  &--middle {
+    > .layout__unit {
       vertical-align: middle;
     }
   }
 
-  @include m(bottom) {
-    @include e(unit, true) {
+  &--bottom {
+    > .layout__unit {
       vertical-align: bottom;
     }
   }
 
-  @include m(center) {
+  &--center {
     text-align: center;
 
-    @include e(unit, true) {
+    > .layout__unit {
       text-align: left;
     }
   }

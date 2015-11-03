@@ -1,8 +1,8 @@
 // Forms
 // =====
 
-@include b(form) {
-  @include e(errors) {
+.form {
+  &__errors {
     background-color: lighten($red, 45%);
     border: 1px solid $red;
     color: darken($red, 20%);
@@ -18,7 +18,7 @@
     @include trailing;
   }
 
-  @include e(item) {
+  &__item {
     margin-bottom: size(spacing);
 
     %tick {
@@ -37,8 +37,8 @@
     }
   }
 
-  @include e(fields) {
-    @extend #{b(layout)};
+  &__fields {
+    @extend .layout;
     @extend %unstyled-list;
 
     margin-left: -$gutter;
@@ -46,12 +46,12 @@
 
     > li {
       @extend %clearfix;
-      @extend #{be(layout, unit)};
-      @extend #{be(form, item)};
+      @extend .layout__unit;
+      @extend .form__item;
     }
   }
 
-  @include e(submit) {
+  &__submit {
     @include leading(0.75rem);
   }
 }

@@ -5,9 +5,18 @@
 // -----------
 
 @mixin leading($space: spacing, $horizontal: false) {
+  $parent: selector-parse(&);
   @if type-of($space) == string { $space: size($space); }
-  * + & {
-    @if $horizontal { margin-left: $space; margin-top: 0; } @else { margin-top: $space; }
+  @if length($parent) > 1 or length(nth($parent, 1)) <= 1 {
+    * + & {
+      @if $horizontal { margin-left: $space; margin-top: 0; } @else { margin-top: $space; }
+    }
+  } @else {
+    $parent: nth($parent, 1);
+    $last: nth($parent, -1);
+    @at-root #{sl-replace-nth($parent, -1, unquote("* + #{$last}"))} {
+      @if $horizontal { margin-left: $space; margin-top: 0; } @else { margin-top: $space; }
+    };
   }
 }
 

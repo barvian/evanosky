@@ -1,6 +1,4 @@
-<?php $isHeader = isset($mod) && $mod == 'header' ?>
-<?php $tag = $isHeader ? 'header' : 'div' ?>
-<<?php echo $tag ?> class="hero <?php echo isset($class) ? $class : '' ?> <?php echo isset($mod) ? 'hero--'.$mod : '' ?> <?php echo $isHeader ? 'layout layout--wide' : '' ?>">
+<div class="hero <?php echo isset($class) ? $class : '' ?> <?php echo isset($mod) ? 'hero--'.$mod : '' ?>">
   <?php if(array_key_exists('buttons', $hero)): ?><div class="hero__box"><?php endif ?>
     <h1 class="hero__text <?php echo $isHeader ? 'layout__unit' : '' ?>"><?php echo $hero['text'] ?></h1>
     <?php if(array_key_exists('buttons', $hero)): ?>
@@ -18,4 +16,4 @@
     </div>
     <?php endif ?>
   </div>
-</<?php echo $tag ?>>
+</div>

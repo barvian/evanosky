@@ -4,17 +4,17 @@
 $hero-dark-color: darken($purple, 10%);
 $hero-shadow-color: $hero-dark-color;
 
-@include b(hero) {
+.hero {
   padding-bottom: 6.5rem;
   padding-top: 5rem;
 
   @include retina-background('../images/hero.png', 1235px 100%);
 
-  #{bm(page, home)} & {
+  .page--home & {
     margin-top: -1*size(spacing);
   }
 
-  @include e(box) {
+  &__box {
     border: 0.8rem solid $purple;
     box-shadow: 0 1.27rem 0.87rem 0 rgba($hero-shadow-color, 0.27);
     margin-left: auto;
@@ -29,19 +29,19 @@ $hero-shadow-color: $hero-dark-color;
       box-shadow: 0 1.4rem 0.93rem 0 rgba($hero-shadow-color, 0.35);
       transform: translateY(-0.2rem);
 
-      #{be(hero, text)} {
+      .hero__text {
         text-shadow: 0px 1.7rem 1.4rem rgba($hero-shadow-color, 0.5), 0px 0.5rem 0.7rem rgba($hero-shadow-color, 0.3);
         transform: translateY(-0.1rem);
       }
     }
 
-    #{be(hero, text)} {
+    .hero__text {
       margin-left: -($wide - $layout)/2;
       margin-right: -($wide - $layout)/2;
     }
   }
 
-  @include e(text) {
+  &__text {
     color: #fff;
     display: block;
     pointer-events: none;
@@ -54,13 +54,13 @@ $hero-shadow-color: $hero-dark-color;
     @include font($script, $size: hero);
   }
 
-  @include e(buttons) {
+  &__buttons {
     display: table;
     table-layout: fixed;
     width: 100%;
   }
 
-  @include e(button) {
+  &__button {
     $bg: lighten($purple, 42.5%);
     @extend %unstyled-link;
 
@@ -93,7 +93,7 @@ $hero-shadow-color: $hero-dark-color;
     }
   }
 
-  @include e(question) {
+  &__question {
     @extend %uppercase;
 
     color: $purple;
@@ -103,7 +103,7 @@ $hero-shadow-color: $hero-dark-color;
     @include font($sans, $size: base);
   }
 
-  @include e(action) {
+  &__action {
     position: relative;
 
     @include font($serif, $size: big);
@@ -113,7 +113,7 @@ $hero-shadow-color: $hero-dark-color;
     }
   }
 
-  @include e(caret) {
+  &__caret {
     float: right;
     height: 2.5rem;
     fill: currentColor;
@@ -124,14 +124,14 @@ $hero-shadow-color: $hero-dark-color;
     @include trailing(0);
   }
 
-  @include m(header) {
+  &--header {
     padding-bottom: 3rem;
     padding-top: 1rem;
 
     @include retina-background('../images/hero-header.png', 100% 100%);
     @include trailing(xxlarge);
 
-    @include e(text) {
+    .hero__text {
       font-size: size(xxlarge);
 
       @include query(alpha) {
@@ -142,14 +142,26 @@ $hero-shadow-color: $hero-dark-color;
         font-size: size(massive);
       }
     }
+
+    .breadcrumbs {
+      &, %link {
+        color: #fff;
+      }
+
+      padding-top: 0.25rem;
+      text-align: center;
+      text-shadow: 0 0.4rem 0.315rem rgba($hero-shadow-color, 0.37), 0px 0.1rem 0.15rem rgba($hero-shadow-color, 0.1), 0 0 1em rgba($hero-shadow-color, 0.8);
+
+      @include trailing(0.25rem);
+    }
   }
 
-  @include m(form) {
+  &--form {
     background-position: center bottom;
     background-size: 1235px 80%;
     padding-top: 3rem;
 
-    @include e(box) {
+    .hero__box {
       background-color: lighten($light, 47%);
       border: none;
       box-shadow: 0 0 0 1px rgba($hero-shadow-color, 0.1), 0 1.27rem 0.87rem 0 rgba($hero-shadow-color, 0.27);

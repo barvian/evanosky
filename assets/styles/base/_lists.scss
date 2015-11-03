@@ -42,3 +42,22 @@ ol, ul { @extend %list; }
     vertical-align: top;
   }
 }
+
+// Misc
+// ----
+
+/*ol*/.numbered-list {
+  @extend %unstyled-list;
+
+  counter-reset: numbered-list;
+
+  > li {
+    position: relative;
+
+    &::before {
+      content: counter(numbered-list);
+      counter-increment: numbered-list;
+      position: absolute;
+    }
+  }
+}

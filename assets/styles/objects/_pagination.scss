@@ -11,10 +11,10 @@ $pagination-border-color: lighten($light, 35%);
   border-width: 0 0 0 $pagination-border-width;
 }
 
-@include b(pagination) {
+.pagination {
   @include leading(huge);
 
-  @include e(menu) {
+  &__menu {
     @extend .clearfix;
     @extend %unstyled-list;
 
@@ -28,7 +28,7 @@ $pagination-border-color: lighten($light, 35%);
     @include compact;
   }
 
-  @include e(link) {
+  &__link {
     @extend %unstyled-link;
 
     display: block;
@@ -52,7 +52,7 @@ $pagination-border-color: lighten($light, 35%);
     }
   }
 
-  @include e(description) {
+  &__description {
     @extend %uppercase;
 
     display: block;
@@ -61,33 +61,33 @@ $pagination-border-color: lighten($light, 35%);
     @include font($sans, $size: base);
   }
 
-  @include e(page) {
+  &__page {
     position: relative;
 
     @include font($serif, $size: big);
   }
 
-  @include e(prev) {
+  &__prev {
     &:only-child {
       @extend %pagination-bordered-item;
 
       border-width: 0 $pagination-border-width 0 0;
     }
 
-    #{be(pagination, caret)} {
+    .pagination__caret {
       float: left;
       margin-left: 0;
       margin-right: size(spacing);
     }
   }
 
-  @include e(next) {
+  &__next {
     @extend %pagination-bordered-item;
 
     float: right !important;
   }
 
-  @include e(caret) {
+  &__caret {
     fill: currentColor;
     float: right;
     height: 2.5rem;
@@ -97,15 +97,5 @@ $pagination-border-color: lighten($light, 35%);
     width: 2rem;
 
     @include trailing(0);
-  }
-
-  @include m(landing) {
-    @include e(menu) {
-      > li {
-        @extend %pagination-bordered-item;
-
-        float: right;
-      }
-    }
   }
 }
