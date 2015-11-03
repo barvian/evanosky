@@ -108,8 +108,8 @@
   }
 
   @include e(label) {
-    padding-left: 0.95em;
-    padding-right: 0.95em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
 
     strong {
       color: $blue;
