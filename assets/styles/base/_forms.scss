@@ -159,13 +159,13 @@ select {
 
 .primary-field {
   &, & > %field {
-    border-color: lighten($blue, 25%) !important;
-    color: darken($blue, 5%) !important;
+    border-color: lighten(saturate($blue, 10%), 25%) !important;
+    color: saturate($blue, 15%) !important;
 
     @include font($sans, $weight: semibold);
 
     &:focus {
-      border-color: $blue !important;
+      border-color: saturate($blue, 10%) !important;
     }
   }
 }

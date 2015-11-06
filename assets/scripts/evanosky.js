@@ -47,13 +47,16 @@ $(function() {
         $(this).closest($form.find('> *')).addClass('has-focus').siblings().removeClass('has-focus');
       },
       input: function(event) {
-        $form.addClass('has-choice');
-        $customOption.prop('checked', true);
+        if ($(this).val().length > 0) {
+          $form.addClass('has-choice');
+          $customOption.prop('checked', true);  
+        }
       }
     });
 
     $amounts.on({
       change: function(event) {
+        $form.addClass('has-choice');
         $(this).closest($form.find('> *')).addClass('has-focus').siblings().removeClass('has-focus');
       }
     })
