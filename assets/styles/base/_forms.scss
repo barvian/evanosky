@@ -93,7 +93,7 @@ input[type="hidden"] {
   }
 
   &.btn {
-    display: none;
+    @extend .invisible;
 
     + label {
       background-color: rgba(#000, 0.05);

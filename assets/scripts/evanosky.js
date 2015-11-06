@@ -34,4 +34,26 @@ $(function() {
 
     Stripe.card.createToken($form, stripeResponseHandler.bind(this));
   });
+
+  $('.js-form-amount').each(function(index) {
+    const $form = $(this),
+      $customOption = $form.find('input[name="amount"][value="custom"]'),
+      $amounts = $form.find('input[name="amount"]').not($customOption),
+      $custom = $form.find('input[id="custom"]');
+
+    $custom.on({
+      focus: function(event) {
+        $(this).closest($form.find('> *')).addClass('has-focus').siblings().removeClass('has-focus');
+      },
+      input: function(event) {
+        $customOption.prop('checked', true);
+      }
+    });
+
+    $amounts.on({
+      change: function(event) {
+        $(this).closest($form.find('> *')).addClass('has-focus').siblings().removeClass('has-focus');
+      }
+    })
+  });
 });
