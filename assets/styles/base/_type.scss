@@ -78,11 +78,27 @@ code {
 }
 
 
-h1 { @extend %title; }
-h2 { @extend %section-divider; }
-h3 { @extend %sidekick; }
-h4 { @extend %shrimp; }
-h5 { @extend %label; }
+h1 {
+  @extend %title;
+}
+
+h2 {
+  @extend %section-divider;
+
+  @include leading(xxlarge);
+}
+
+h3 {
+  @extend %sidekick;
+}
+
+h4 {
+  @extend %shrimp;
+}
+
+h5 {
+  @extend %label;
+}
 
 // Misc
 // ----

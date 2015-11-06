@@ -1,7 +1,7 @@
 // FORMS
 // =======
 
-$placeholder: lighten($base, 20%);
+$field-placeholder-color: lighten($base, 20%) !default;
 
 *:focus {
   outline: none;
@@ -9,8 +9,13 @@ $placeholder: lighten($base, 20%);
 
 fieldset {
   border: none;
-  margin: 0;
   padding: 0;
+
+  + fieldset {
+    border-top: 1px solid lighten($light, 33.333%);
+    margin-top: size(spacing);
+    padding-top: size(spacing);
+  }
 }
 
 legend {
@@ -34,6 +39,28 @@ input[type="hidden"] {
   @include trailing(0);
 }
 
+.has-pre {
+  position: relative;
+
+  &::before {
+    align-items: center;
+    bottom: 0;
+    content: attr(data-pre);
+    font-size: 1.25em;
+    display: flex;
+    left: 0;
+    padding-left: 0.85em;
+    position: absolute;
+    top: 0;
+
+    @include font($sans, $weight: semibold);
+  }
+
+  > %field {
+    padding-left: 2em;
+  }
+}
+
 %field {
   appearance: none;
   background: #fff;
@@ -52,7 +79,7 @@ input[type="hidden"] {
   }
 
   &::input-placeholder {
-    color: $placeholder;
+    color: $field-placeholder-color;
   }
 }
 
@@ -63,6 +90,35 @@ input[type="hidden"] {
     display: inline-block;
     font-size: size(base);
     vertical-align: baseline;
+  }
+
+  &.btn {
+    display: none;
+
+    + label {
+      background-color: rgba(#000, 0.05);
+      border: 1px solid rgba(#000, 0.1);
+      cursor: pointer;
+      display: inline-block;
+      padding: 0.6em 0.7em;
+      margin-top: 0;
+
+      @include font($sans);
+    }
+
+    &:focus + label, + label:hover {
+      background-color: rgba(#000, 0.1);
+    }
+
+    &:checked + label {
+      background-color: lighten($blue, 10%);
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(#000, 0.25);
+    }
+
+    &--med + label {
+      @extend .btn--med;
+    }
   }
 }
 
@@ -94,6 +150,6 @@ input[type="file"] {
 
 select {
   option[disabled]:first-child {
-    color: $placeholder;
+    color: $field-placeholder-color;
   }
 }

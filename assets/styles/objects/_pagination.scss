@@ -1,8 +1,8 @@
 // Pagination
 // ==========
 
-$pagination-border-width: 2px;
-$pagination-border-color: lighten($light, 35%);
+$pagination-border-width: 2px !default;
+$pagination-border-color: lighten($light, 35%) !default;
 
 %pagination-bordered-item {
   border-image: linear-gradient(to bottom, $pagination-border-color, rgba($pagination-border-color, 0));

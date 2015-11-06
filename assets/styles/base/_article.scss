@@ -9,12 +9,6 @@
     @extend %drop-cap;
   }
 
-  > .layout > .layout__unit {
-    > h2 {
-      @include leading(xxlarge);
-    }
-  }
-
   > ol {
     @extend .numbered-list;
   }

@@ -34,4 +34,12 @@
       border-image-slice: 1;
     }
   }
+
+  &__grow {
+    width: 100%;
+  }
+
+  &__shrink {
+    width: 1px;
+  }
 }

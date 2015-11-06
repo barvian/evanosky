@@ -1,8 +1,8 @@
 // Link lists
 // ==========
 
-$link-list-caret-height: 2.5rem;
-$link-list-caret-width: 2.5rem;
+$link-list-caret-height: 2.5rem !default;
+$link-list-caret-width: 2.5rem !default;
 
 .link-list {
   color: $blue;

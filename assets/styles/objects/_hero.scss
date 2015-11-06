@@ -1,8 +1,8 @@
 // Hero
 // ====
 
-$hero-dark-color: darken($purple, 10%);
-$hero-shadow-color: $hero-dark-color;
+$hero-dark-color: darken($purple, 10%) !default;
+$hero-shadow-color: $hero-dark-color !default;
 
 .hero {
   padding-bottom: 6.5rem;
@@ -22,8 +22,6 @@ $hero-shadow-color: $hero-dark-color;
     max-width: $layout - $gutter*2;
     padding-top: 1.25rem;
     transition: box-shadow 1.15s ease-out, transform 1.15s ease-out;
-
-    @include compact;
 
     &:hover {
       box-shadow: 0 1.4rem 0.93rem 0 rgba($hero-shadow-color, 0.35);
@@ -58,6 +56,8 @@ $hero-shadow-color: $hero-dark-color;
     display: table;
     table-layout: fixed;
     width: 100%;
+
+    @include leading(0);
   }
 
   &__button {

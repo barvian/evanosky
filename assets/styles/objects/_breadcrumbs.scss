@@ -15,7 +15,7 @@
         display: inline-block;
         margin-left: 1rem;
 
-        @include font($sans, $weight: bold);
+        @include font($sans, $weight: semibold);
       }
 
       > %link {

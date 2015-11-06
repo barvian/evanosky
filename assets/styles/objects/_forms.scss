@@ -1,6 +1,8 @@
 // Forms
 // =====
 
+$form-or-color: lighten($light, 10%) !default;
+
 .form {
   &__errors {
     background-color: lighten($red, 45%);
@@ -48,6 +50,52 @@
       @extend %clearfix;
       @extend .layout__unit;
       @extend .form__item;
+    }
+  }
+
+  &__options {
+    @extend %unstyled-list;
+
+      margin-left: -1/2*size(spacing);
+      margin-top: -1/2*size(spacing);
+
+    @include compact;
+
+    > li {
+      display: inline-block;
+      margin-left: size(spacing) / 2;
+      margin-top: size(spacing) / 2;
+    }
+  }
+
+  &__or {
+    color: $form-or-color;
+    padding-left: size(spacing);
+    padding-right: size(spacing);
+    position: relative;
+
+    @include font($serif, $style: italic);
+
+    &::before, &::after {
+      content: '';
+      left: 50%;
+      margin-left: -1px;
+      position: absolute;
+      width: 1px;
+    }
+
+    &::before {
+      background-image: linear-gradient(to top, rgba($form-or-color, 0.5), rgba($form-or-color, 0));
+      bottom: 50%;
+      margin-bottom: 0.75em;
+      top: 0;
+    }
+
+    &::after {
+      background-image: linear-gradient(to bottom, rgba($form-or-color, 0.5), rgba($form-or-color, 0));
+      bottom: 0;
+      margin-top: 0.75em;
+      top: 50%;
     }
   }
 
