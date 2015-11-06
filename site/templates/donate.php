@@ -8,7 +8,7 @@
         <span class="form__errors"><?php e($error, $error) ?></span>
         <fieldset>
           <legend class="hidden">Amount</legend>
-          <div class="pack pack--middle js-form-amount">
+          <div class="pack pack--middle form__choices js-form-amount">
             <div>
               <ul class="form__options">
                 <li><input class="btn btn--med" type="radio" name="amount" value="5" id="5"><label for="5">$5</label></li>
@@ -22,7 +22,7 @@
             </div>
             <span class="pack__shrink form__or">or</span>
             <div>
-              <div class="has-pre" data-pre="$">
+              <div class="primary-field has-pre" data-pre="$">
                 <input type="text" pattern="[0-9]{1,6}" name="custom" id="custom" maxlength="6" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" />
               </div>
             </div>

@@ -32,7 +32,7 @@ label[for], label > span {
   color: darken($light, 10%);
   display: block;
 
-  @include trailing(0.35em);
+  @include trailing(0.35rem);
 }
 
 input[type="hidden"] {
@@ -151,5 +151,21 @@ input[type="file"] {
 select {
   option[disabled]:first-child {
     color: $field-placeholder-color;
+  }
+}
+
+// Misc
+// ----
+
+.primary-field {
+  &, & > %field {
+    border-color: lighten($blue, 25%) !important;
+    color: darken($blue, 5%) !important;
+
+    @include font($sans, $weight: semibold);
+
+    &:focus {
+      border-color: $blue !important;
+    }
   }
 }

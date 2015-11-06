@@ -43,9 +43,11 @@ $(function() {
 
     $custom.on({
       focus: function(event) {
+        $form.addClass('has-choice');
         $(this).closest($form.find('> *')).addClass('has-focus').siblings().removeClass('has-focus');
       },
       input: function(event) {
+        $form.addClass('has-choice');
         $customOption.prop('checked', true);
       }
     });

@@ -24,7 +24,7 @@
 
     @include compact;
 
-    .page--home &, .page--error & {
+    .page--home &, .page--error &, .page--donated & {
       > li {
         opacity: 1 !important;
       }

@@ -68,6 +68,19 @@ $form-or-color: lighten($light, 10%) !default;
     }
   }
 
+  &__choices {
+    > :not(.form__or) {
+      opacity: 1;
+      transition: opacity 225ms ease-in-out;
+    }
+
+    &.has-choice {
+      > :not(.form__or):not(.has-focus) {
+        opacity: 0.5;
+      }
+    }
+  }
+
   &__or {
     color: $form-or-color;
     padding-left: size(spacing);
