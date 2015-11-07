@@ -7,7 +7,7 @@ files:
 fields:
   title:
     label: Title
-    type:  text
+    type: text
     required: true
   date:
     label: Date
@@ -22,4 +22,4 @@ fields:
       - image
   text:
     label: Text
-    type:  textarea
+    type: textarea

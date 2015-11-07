@@ -7,8 +7,7 @@ files: false
 fields:
   title:
     label: Title
-    type:  text
+    type: text
   text:
     label: Text
-    type:  textarea
-    size:  large
+    type: textarea

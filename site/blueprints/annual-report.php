@@ -7,7 +7,7 @@ files:
 fields:
   title:
     label: Title
-    type:  text
+    type: text
     required: true
   file:
     label: Report

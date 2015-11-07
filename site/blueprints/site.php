@@ -5,22 +5,22 @@ pages: default
 fields:
   title:
     label: Title
-    type:  text
+    type: text
   address:
     label: Address
-    type:  textarea
+    type: textarea
   description:
     label: Description
-    type:  textarea
+    type: textarea
   keywords:
     label: Keywords
     type:  tags
   copyright:
     label: Copyright
-    type:  textarea
+    type: textarea
   tax:
     label: Tax information
-    type:  textarea
+    type: textarea
   footerImage:
     label: Footer image
     type: selector
