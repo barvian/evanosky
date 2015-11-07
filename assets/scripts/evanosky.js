@@ -48,8 +48,16 @@ $(function() {
       },
       input: function(event) {
         if ($(this).val().length > 0) {
-          $form.addClass('has-choice');
-          $customOption.prop('checked', true);  
+          $customOption.prop('checked', true);
+        }
+      },
+      blur: function(event) {
+        if ($(this).val().length <= 0) {
+          $form.removeClass('has-choice');
+          $(this).closest($form.find('> *')).removeClass('has-focus');
+          $amounts.filter(':checked').trigger('change');
+        } else {
+          $customOption.prop('checked', true);
         }
       }
     });
