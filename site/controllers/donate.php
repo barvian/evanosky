@@ -38,7 +38,7 @@ return function($site, $pages, $page) {
 
         go('donated');
       } catch(\Stripe\Error\Card $e) {
-        $error = $e;
+        $error = $e->getMessage();
       }
     }
 
