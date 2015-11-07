@@ -9,7 +9,7 @@
         <fieldset>
           <legend class="hidden">Amount</legend>
           <div class="pack pack--middle form__choices js-form-amount">
-            <div>
+            <div class="w2/3">
               <ul class="form__options">
                 <li><input class="btn btn--med" type="radio" name="amount" value="5" id="5"><label for="5">$5</label></li>
                 <li><input class="btn btn--med" type="radio" name="amount" value="10" id="10"><label for="10">$10</label></li>
@@ -20,8 +20,8 @@
                 <li class="hidden"><input type="radio" name="amount" value="custom" /></li>
               </ul>
             </div>
-            <span class="pack__shrink form__or">or</span>
-            <div>
+            <span class="form__or">or</span>
+            <div class="w1/3">
               <div class="primary-field has-pre" data-pre="$">
                 <input type="text" pattern="[0-9]{1,6}" name="custom" id="custom" maxlength="6" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" />
               </div>
@@ -37,19 +37,20 @@
                 <input type="text" pattern="[0-9]{13,16}" maxlength="16" data-stripe="number" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" />
               </label>
             </li>
-            <li class="w1/2">
-              <label>
-                <span>CVC</span>
-                <input type="text" pattern="[0-9]{3,4}" maxlength="4" data-stripe="cvc" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" />
-              </label>
-            </li><!--
-            --><li class="w1/2">
+            <li class="w2/3">
               <label for="exp-month">Expiration (MM/YY)</label>
               <div class="pack pack--middle">
                 <div><input type="text" pattern="[0-9]{1,2}" maxlength="2" id="exp-month" data-stripe="exp-month" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" /></div>
                 <span>&nbsp;/&nbsp;</span>
                 <div><input type="text" pattern="[0-9]{1,2}" maxlength="2" data-stripe="exp-year" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" /></div>
               </div>
+            </li><!--
+            --><li class="w1/3">
+              <label>
+                <span>CVC</span>
+                <input type="text" pattern="[0-9]{3,4}" maxlength="4" data-stripe="cvc" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" />
+              </label>
+            </li>
           </ol>
         </fieldset>
 

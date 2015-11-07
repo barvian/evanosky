@@ -29,6 +29,21 @@
   }
 }
 
+@mixin disabled($self: false) {
+  @if $self {
+    &,
+    &[disabled],
+    &.is-disabled {
+      @content;
+    }
+  } @else {
+    &[disabled],
+    &.is-disabled {
+      @content;
+    }
+  }
+}
+
 %link {
   color: scale-color($blue, $lightness: -15%, $saturation: 10%);
   border-bottom: 1px solid currentColor;
