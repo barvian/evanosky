@@ -1,0 +1,139 @@
+// Section navigation
+// ==================
+
+$section-nav-border-width: 2px !default;
+$section-nav-border-color: lighten($light, 35%) !default;
+
+.section-nav {
+  @extend .landmark;
+
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $layout;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  text-align: center;
+
+  .hero--header + & {
+    margin-top: 0;
+    position: relative;
+
+    .section-nav__menu {
+      &::before {
+        height: 5rem;
+      }
+
+      > li {
+        &:nth-child(1), &:nth-child(2) {
+          > %link::before {
+            top: -2rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__header {
+    @extend %uppercase;
+
+    border: $section-nav-border-width solid $section-nav-border-color;
+    color: darken($section-nav-border-color, 20%);
+    display: inline-block;
+    padding: 0.2em 0.75em 0.15em;
+
+    @include font($sans, $weight: semibold);
+  }
+
+  &__menu {
+    @extend %unstyled-list;
+
+    align-content: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+
+    @include compact;
+
+    .section-nav__header + & {
+      margin-top: 0;
+    }
+
+    &::before, &::after {
+      content: '';
+      left: 50%;
+      margin-left: -$section-nav-border-width / 2;
+      position: absolute;
+      width: $section-nav-border-width;
+    }
+
+    &::before {
+      background-image: linear-gradient(to top, rgba($section-nav-border-color, 1) 0%, rgba($section-nav-border-color, 1) 50%, rgba($section-nav-border-color, 0) 100%);
+      bottom: 100%;
+    }
+
+    &::after {
+      background-image: linear-gradient(to bottom, rgba($section-nav-border-color, 1) 0%, rgba($section-nav-border-color, 1) 50%, rgba($section-nav-border-color, 0) 100%);
+      bottom: 0;
+      top: 0;
+    }
+
+    > li {
+      display: flex;
+      position: relative;
+      width: 50%;
+
+      > %link {
+        @extend .block-link;
+
+        flex: 1;
+        font-size: size(medium);
+
+        &::before {
+          background: rgba($pagination-border-color, 0.3);
+          z-index: -1;
+        }
+      }
+
+      // First two
+      &:nth-child(1):not(:nth-last-child(2)):not(:nth-last-child(1)), &:nth-child(2):not(:nth-last-child(1)) {
+        > %link::before {
+          background: linear-gradient(to top, rgba($pagination-border-color, 0.3), rgba($pagination-border-color, 0));
+        }
+      }
+
+      // New rows
+      &:nth-child(2n+3) {
+        &::before {
+          border-top: $section-nav-border-width solid $section-nav-border-color;
+          content: '';
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 200%;
+        }
+      }
+
+      // Last two
+      &:nth-child(2n+3):nth-last-child(1), &:nth-child(2n+3):nth-last-child(2), // second to last
+      &:nth-child(2n+4):nth-last-child(1) { // last & second
+        > %link::before {
+          background: linear-gradient(to bottom, rgba($pagination-border-color, 0.3), rgba($pagination-border-color, 0));
+        }
+      }
+
+      // First & last
+      &:nth-child(1):nth-last-child(1), &:nth-child(1):nth-last-child(2), // second to last & first
+      &:nth-child(2):nth-last-child(1) { // last
+        > %link::before {
+          background: linear-gradient(to bottom, rgba($pagination-border-color, 0) 0%, rgba($pagination-border-color, 0.3) 25%, rgba($pagination-border-color, 0) 100%);
+        }
+      }
+    }
+  }
+
+  &__caret {
+    @extend .block-link__caret;
+
+    top: 0;
+  }
+}

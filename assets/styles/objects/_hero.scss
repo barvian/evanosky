@@ -42,12 +42,13 @@ $hero-shadow-color: $hero-dark-color !default;
   &__text {
     color: #fff;
     display: block;
+    line-height: 1.1;
     pointer-events: none;
     position: relative;
-    z-index: 100;
     text-align: center;
     text-shadow: 0px 1.6rem 1.26rem rgba($hero-shadow-color, 0.47), 0px 0.4rem 0.6rem rgba($hero-shadow-color, 0.2);
     transition: transform 1.15s ease-out, text-shadow 1.15s ease-out;
+    z-index: 100;
 
     @include font($script, $size: hero);
   }
@@ -62,27 +63,13 @@ $hero-shadow-color: $hero-dark-color !default;
 
   &__button {
     $bg: lighten($purple, 42.5%);
-    @extend %unstyled-link;
+    @extend .block-link;
 
     color: $hero-dark-color;
     display: table-cell;
-    padding: 2.25rem;
-    position: relative;
 
     &::before {
-      @extend %stretch;
-
-      content: '';
       background-image: linear-gradient(to bottom, rgba($bg, 0), rgba($bg, 0.65));
-      opacity: 0.15;
-      transition: opacity 225ms ease-in-out;
-    }
-
-    @include attention {
-      &::before {
-        opacity: 1;
-        transition: none;
-      }
     }
 
     & + & {
@@ -94,19 +81,13 @@ $hero-shadow-color: $hero-dark-color !default;
   }
 
   &__question {
-    @extend %uppercase;
+    @extend .block-link__description;
 
     color: $purple;
-    display: block;
-    position: relative;
-
-    @include font($sans, $size: base);
   }
 
   &__action {
-    position: relative;
-
-    @include font($serif, $size: big);
+    @extend .block-link__action;
 
     &::after {
       content: '.';
@@ -114,19 +95,14 @@ $hero-shadow-color: $hero-dark-color !default;
   }
 
   &__caret {
-    float: right;
-    height: 2.5rem;
-    fill: currentColor;
-    position: relative;
-    top: 0.5rem;
-    width: 2rem;
-
-    @include trailing(0);
+    @extend .block-link__caret;
   }
 
   &--header {
     padding-bottom: 3rem;
     padding-top: 1rem;
+    position: relative;
+    z-index: 50;
 
     @include retina-background('../images/hero-header.png', 100% 100%);
     @include trailing(xxlarge);
@@ -150,7 +126,7 @@ $hero-shadow-color: $hero-dark-color !default;
 
       padding-top: 0.25rem;
       text-align: center;
-      text-shadow: 0 0.4rem 0.315rem rgba($hero-shadow-color, 0.37), 0px 0.1rem 0.15rem rgba($hero-shadow-color, 0.1), 0 0 1em rgba($hero-shadow-color, 0.8);
+      text-shadow: 0 0.4em 0.315em rgba($hero-shadow-color, 0.37), 0px 0.1em 0.15em rgba($hero-shadow-color, 0.1), 0 0 1em rgba($hero-shadow-color, 0.8);
 
       @include trailing(0.25rem);
     }

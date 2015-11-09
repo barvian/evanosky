@@ -18,6 +18,8 @@
       margin-bottom: size(spacing);
       max-width: 33.333%;
 
+      @include trailing(0);
+
       &:nth-of-type(odd) {
         float: right;
         margin-left: size(spacing);

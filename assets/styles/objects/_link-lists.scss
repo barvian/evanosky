@@ -29,7 +29,7 @@ $link-list-caret-width: 2.5rem !default;
       background-color: lighten($blue, 50%);
       transition: none;
 
-      #{be(link-list, caret)} {
+      .link-list__caret {
         transform: translateX(0.5rem);
       }
     }

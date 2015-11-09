@@ -34,7 +34,7 @@ code {
 // This hidden class can be used to target all
 // headings in an element
 %heading {
-  line-height: 1.1;
+  line-height: strip-units(size(medium));
 }
 
 %title {

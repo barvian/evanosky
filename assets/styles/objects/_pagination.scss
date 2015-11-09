@@ -23,48 +23,27 @@ $pagination-border-color: lighten($light, 35%) !default;
     > li {
       float: left;
       width: 50%;
+
+      > %link {
+        @extend .block-link;
+
+        font-size: size(medium);
+
+        &::before {
+          background-image: linear-gradient(to bottom, rgba($pagination-border-color, 0.3), rgba($pagination-border-color, 0));
+        }
+      }
     }
 
     @include compact;
   }
 
-  &__link {
-    @extend %unstyled-link;
-
-    display: block;
-    padding: 2.25rem;
-    position: relative;
-
-    &::before {
-      @extend %stretch;
-
-      background-image: linear-gradient(to bottom, rgba($pagination-border-color, 0.3), rgba($pagination-border-color, 0));
-      content: '';
-      opacity: 0;
-      transition: opacity 225ms ease-in-out;
-    }
-
-    @include attention {
-      &::before {
-        opacity: 1;
-        transition: none;
-      }
-    }
-  }
-
   &__description {
-    @extend %uppercase;
-
-    display: block;
-    position: relative;
-
-    @include font($sans, $size: base);
+    @extend .block-link__description;
   }
 
   &__page {
-    position: relative;
-
-    @include font($serif, $size: big);
+    @extend .block-link__action;
   }
 
   &__prev {
@@ -88,14 +67,6 @@ $pagination-border-color: lighten($light, 35%) !default;
   }
 
   &__caret {
-    fill: currentColor;
-    float: right;
-    height: 2.5rem;
-    margin-left: size(spacing);
-    position: relative;
-    top: 0.5rem;
-    width: 2rem;
-
-    @include trailing(0);
+    @extend .block-link__caret;
   }
 }

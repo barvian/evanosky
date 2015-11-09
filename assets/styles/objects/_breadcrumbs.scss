@@ -11,17 +11,17 @@
 
     > li {
       &::after {
-        content: '/';
+        content: '>';
         display: inline-block;
         margin-left: 1rem;
 
-        @include font($sans, $weight: semibold);
+        @include font($sans, $size: medium, $weight: semibold);
       }
 
       > %link {
         display: inline-block;
 
-        @include font($sans, $weight: semibold, $size: base);
+        @include font($sans, $weight: semibold, $size: medium);
       }
     }
   }

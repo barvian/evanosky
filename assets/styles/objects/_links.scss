@@ -1,0 +1,53 @@
+// Links
+// =====
+
+.block-link {
+  @extend %unstyled-link;
+
+  display: block;
+  padding: 1.5em;
+  position: relative;
+  text-align: left;
+
+  @include font($serif, $size: big);
+
+  &::before {
+    @extend %stretch;
+
+    content: '';
+    opacity: 0;
+    transition: opacity 225ms ease-in-out;
+  }
+
+  @include attention {
+    &::before {
+      opacity: 1;
+      transition: none;
+    }
+  }
+
+  &__description, &__action {
+    display: block;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__description {
+    @extend %uppercase;
+
+    @include font($sans, $size: base);
+    @include trailing(0);
+  }
+
+  &__caret {
+    float: right;
+    height: 1.5em;
+    fill: currentColor;
+    margin-left: size(spacing);
+    position: relative;
+    top: 0.5em;
+    width: 1.5em;
+
+    @include trailing(0);
+  }
+}
