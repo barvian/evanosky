@@ -1,0 +1,47 @@
+Title: LSD Fact Sheet
+
+----
+
+Text: 
+
+The Evanosky Foundation has compiled a fact sheet below that explains the importance of screening for lysosomal storage disorders (LSDs) and discusses the status of the efforts in Illinois.
+
+## Background on newborn screening?
+
+(image: p1150009.jpg)
+
+* Newborn Screening is a mandated public health practice performed within the first 48 hours of an infant’s life for the early identification of certain genetic, metabolic, hormonal and/or functional conditions.
+
+  These conditions often have no immediate visible effects, but unless detected and treated early, can cause physical problems, mental retardation and even death. Early diagnosis and proper treatment can make the difference among death, lifelong disability or healthy development.
+  
+  The newborn screening test is performed within 2 days of birth. The baby’s heel is pricked to obtain a few drops of blood, which are then sent to a laboratory for analysis. Parents of babies who test positive are contacted by the state’s Department of Public Health. 
+* Each state can choose which tests it will administer in its newborn screening program. Because of this, significant disparities exist which can result in late diagnosis and inadequate treatment. Approximately four million infants are born annually in the United States, and of these, an estimated 150,000 are born with serious birth defects (3.75%).
+
+## About Lysosomal Storage Disorders (LSDs)
+
+(image: ill_cell_structure.gif)
+
+* Lysosomal storage disorders are inherited genetic diseases in which a person's lysosomes—the microscopic recycling bins in his or her cells—do not function properly, causing unrecycled material to build up inside the lysosomes. Lysosomes contain many different enzymes that help them break down and recycle complex materials that the body can no longer use, but a person with an LSD is missing one of those enzymes.
+* Lysosomal storage disorders have been recognized as one of the major groups of genetic disorders affecting children. With over 40 different disorders and a combined prevalence of up to one in 5,000 births, this group of disorders is a major public health problem and places an enormous burden on affected individuals and their families as well as the public and private health systems. Early identification and diagnosis is essential since the most serious and debilitating symptoms—particularly neurological and skeletal—often do not respond to therapy.
+
+## Testing for LSDs in Illinois
+
+* According to the Illinois Department of Public Health, in 2007, Illinois screened all newborns for the 29 disorders recommended by the March of Dimes and the American College of Medical Genetics (ACMG). Approximately 180,000 babies are born each year in Illinois.
+* Due to technological advances in chemistry and tandem mass spectrometry, one test can be used to detect a number of lysosomal storage disorders, thereby reducing cost and effort. In addition, a number of LSD newborn test reagents are available at no charge through the Centers of Disease Control (CDC).
+* It is estimated that implementing lysosomal storage disorder newborn screening in Illinois would allow the identification of approximately 37 affected babies per year.  This is the equivalent of nearly two kindergarten classes each year. Currently, 5 of the 43 lysosomal storage disorders disorders have validated newborn screening tests. Those disorders are (link: http://en.wikipedia.org/wiki/Gaucher's_disease text: Gaucher), (link: http://www.huntershope.org/ text: Krabbe), (link: http://www.pompe.com/ text: Pompe), (link: http://www.nnpdf.org/ text: Niemann-Pick) and (link: http://www.fabrycommunity.com/ text: Fabry).
+* It is anticipated that there would be a slight increase to the newborn screen fee to implement these five LSD disorders. There would be no impact to the general revenue fund and no additional cost to taxpayers.
+
+## Supporting agencies
+
+Other organizations that are supporting these efforts include:
+
+* (link: http://www.childrensmemorial.org/ text: Children's Memorial Hospital, Chicago)
+* (link: http://www.iafp.com/ text: Illinois Academy of Family Physicians (IAFP))
+* (link: http://www.jewishgeneticscenter.org/ text: Chicago Center for Jewish Genetic Disorders)
+* (link: http://www.pkuil.org/ text: PKU Organization of Illinois)
+* (link: http://www.savebabies.org/ text: Save Babies Through Screening Foundation)
+* (link: / text: The Evanosky Foundation)
+* (link: http://www.huntershope.org/ text: Hunter's Hope Foundation)
+* (link: http://www.amda-pompe.org/ text: Acid Maltase Deficiency Association (AMDA))
+* (link: http://www.unitedpompe.com/ text: United Pompe Foundation)
+* (link: http://www.pafoundation.com/ text: Propionic Acidemia Foundation)
