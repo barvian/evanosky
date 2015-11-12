@@ -19,7 +19,7 @@ The Evanosky Foundation has compiled a fact sheet below that explains the import
 
 ## About Lysosomal Storage Disorders (LSDs)
 
-(image: ill_cell_structure.gif)
+(image: illu_cell_structure.gif)
 
 * Lysosomal storage disorders are inherited genetic diseases in which a person's lysosomes—the microscopic recycling bins in his or her cells—do not function properly, causing unrecycled material to build up inside the lysosomes. Lysosomes contain many different enzymes that help them break down and recycle complex materials that the body can no longer use, but a person with an LSD is missing one of those enzymes.
 * Lysosomal storage disorders have been recognized as one of the major groups of genetic disorders affecting children. With over 40 different disorders and a combined prevalence of up to one in 5,000 births, this group of disorders is a major public health problem and places an enormous burden on affected individuals and their families as well as the public and private health systems. Early identification and diagnosis is essential since the most serious and debilitating symptoms—particularly neurological and skeletal—often do not respond to therapy.

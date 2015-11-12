@@ -17,17 +17,17 @@
     <?php endif ?>
       <div class="landmark layout layout--wide">
         <div class="layout__unit">
-          <div class="pack pack--equal pack--border">
+          <div class="block-grid-2 block-grid-4@bravo has-border"><!--
             <?php foreach($page->links()->yaml() as $link): ?>
-            <?php snippet('icon-link', array(
+            --><?php snippet('icon-link', array(
               'link' => array(
                 'page' => $link['page'],
                 'icon' => $page->file($link['icon']),
                 'label' => kirbytext($link['label'])
               )
-            )) ?>
+            )) ?><!--
             <?php endforeach ?>
-          </div>
+          --></div>
         </div>
       </div>
     <?php if(!$page->text()->empty()): ?>

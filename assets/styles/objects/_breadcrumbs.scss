@@ -5,23 +5,33 @@
   &__menu {
     @extend .ilist;
 
-    white-space: nowrap;
 
     @include horizontal(1rem);
+    @include query(bravo) {
+      white-space: nowrap;
+    }
 
     > li {
+      &::after, > %link {
+        font-size: size(base);
+
+        @include query(bravo) {
+          font-size: size(medium);
+        }
+      }
+
       &::after {
         content: '>';
         display: inline-block;
         margin-left: 1rem;
 
-        @include font($sans, $size: medium, $weight: semibold);
+        @include font($sans, $weight: semibold);
       }
 
       > %link {
         display: inline-block;
 
-        @include font($sans, $weight: semibold, $size: medium);
+        @include font($sans, $weight: semibold);
       }
     }
   }

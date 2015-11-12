@@ -5,8 +5,7 @@ $hero-dark-color: darken($purple, 10%) !default;
 $hero-shadow-color: $hero-dark-color !default;
 
 .hero {
-  padding-bottom: 6.5rem;
-  padding-top: 5rem;
+  padding: 5rem $gutter/2 6.5rem;
 
   @include retina-background('../images/hero.png', 1235px 100%);
 
@@ -15,13 +14,17 @@ $hero-shadow-color: $hero-dark-color !default;
   }
 
   &__box {
-    border: 0.8rem solid $purple;
+    border: 0.5rem solid $purple;
     box-shadow: 0 1.27rem 0.87rem 0 rgba($hero-shadow-color, 0.27);
     margin-left: auto;
     margin-right: auto;
     max-width: $layout - $gutter*2;
     padding-top: 1.25rem;
     transition: box-shadow 1.15s ease-out, transform 1.15s ease-out;
+
+    @include query(bravo) {
+      border-width: 0.8rem;
+    }
 
     &:hover {
       box-shadow: 0 1.4rem 0.93rem 0 rgba($hero-shadow-color, 0.35);
@@ -34,8 +37,14 @@ $hero-shadow-color: $hero-dark-color !default;
     }
 
     .hero__text {
-      margin-left: -($wide - $layout)/2;
-      margin-right: -($wide - $layout)/2;
+      @include query(alpha) {
+        font-size: size(giant);
+      }
+      @include query(bravo) {
+        font-size: size(hero);
+        margin-left: -($wide - $layout)/2;
+        margin-right: -($wide - $layout)/2;
+      }
     }
   }
 
@@ -50,7 +59,7 @@ $hero-shadow-color: $hero-dark-color !default;
     transition: transform 1.15s ease-out, text-shadow 1.15s ease-out;
     z-index: 100;
 
-    @include font($script, $size: hero);
+    @include font($script, $size: huge);
   }
 
   &__buttons {
@@ -110,10 +119,12 @@ $hero-shadow-color: $hero-dark-color !default;
     .hero__text {
       font-size: size(xxlarge);
 
+      @include query(bravo, true) {
+        padding: 0;
+      }
       @include query(alpha) {
         font-size: size(huge);
       }
-
       @include query(bravo) {
         font-size: size(massive);
       }

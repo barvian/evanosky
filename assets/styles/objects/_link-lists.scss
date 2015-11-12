@@ -33,6 +33,9 @@ $link-list-caret-width: 2.5rem !default;
         transform: translateX(0.5rem);
       }
     }
+    @include query(bravo, true) {
+      padding-right: $link-list-caret-width/2 + size(spacing);
+    }
   }
 
   &__meta {
@@ -49,6 +52,15 @@ $link-list-caret-width: 2.5rem !default;
     display: block;
 
     @include trailing(0.55em);
+    @include query(alpha, true) {
+      font-size: size(medium);
+    }
+  }
+
+  &__teaser {
+    @include query(bravo, true) {
+      font-size: size(small);
+    }
   }
 
   &__caret {
@@ -60,5 +72,10 @@ $link-list-caret-width: 2.5rem !default;
     top: 50%;
     transition: transform 210ms ease-in-out;
     width: $link-list-caret-width;
+
+    @include query(bravo, true) {
+      height: $link-list-caret-height/2;
+      width: $link-list-caret-width/2;
+    }
   }
 }

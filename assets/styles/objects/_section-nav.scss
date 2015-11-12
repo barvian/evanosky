@@ -23,11 +23,9 @@ $section-nav-border-color: lighten($light, 35%) !default;
         height: 5rem;
       }
 
-      > li {
-        &:nth-child(1), &:nth-child(2) {
-          > %link::before {
-            top: -2rem;
-          }
+      @include first-row(2) {
+        > %link::before {
+          top: -2rem;
         }
       }
     }
@@ -86,47 +84,53 @@ $section-nav-border-color: lighten($light, 35%) !default;
         @extend .block-link;
 
         flex: 1;
-        font-size: size(medium);
+        @include query(alpha, true) {
+          font-size: size(base);
+        }
+        @include query(alpha) {
+          font-size: size(medium);
+        }
+        @include query(bravo, true) {
+          padding: 1em 0.75em;
+        }
 
         &::before {
           background: rgba($pagination-border-color, 0.3);
           z-index: -1;
         }
       }
+    }
 
-      // First two
-      &:nth-child(1):not(:nth-last-child(2)):not(:nth-last-child(1)), &:nth-child(2):not(:nth-last-child(1)) {
-        > %link::before {
-          background: linear-gradient(to top, rgba($pagination-border-color, 0.3), rgba($pagination-border-color, 0));
-        }
+    // First row
+    @include first-row(2) {
+      > %link::before {
+        background: linear-gradient(to top, rgba($pagination-border-color, 0.3), rgba($pagination-border-color, 0));
       }
+    }
 
-      // New rows
-      &:nth-child(2n+3) {
-        &::before {
-          border-top: $section-nav-border-width solid $section-nav-border-color;
-          content: '';
-          left: 0;
-          position: absolute;
-          top: 0;
-          width: 200%;
-        }
+    // New rows
+    @include new-row(2) {
+      &::before {
+        border-top: $section-nav-border-width solid $section-nav-border-color;
+        content: '';
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 200%;
       }
+    }
 
-      // Last two
-      &:nth-child(2n+3):nth-last-child(1), &:nth-child(2n+3):nth-last-child(2), // second to last
-      &:nth-child(2n+4):nth-last-child(1) { // last & second
-        > %link::before {
-          background: linear-gradient(to bottom, rgba($pagination-border-color, 0.3), rgba($pagination-border-color, 0));
-        }
+    // Last row
+    @include last-row(2) { // last & second
+      > %link::before {
+        background: linear-gradient(to bottom, rgba($pagination-border-color, 0.3), rgba($pagination-border-color, 0));
       }
+    }
 
-      // First & last
-      &:nth-child(1):nth-last-child(1), &:nth-child(1):nth-last-child(2), // second to last & first
-      &:nth-child(2):nth-last-child(1) { // last
-        > %link::before {
-          background: linear-gradient(to bottom, rgba($pagination-border-color, 0) 0%, rgba($pagination-border-color, 0.3) 25%, rgba($pagination-border-color, 0) 100%);
-        }
+    // Only row
+    @include only-row(2) {
+      > %link::before {
+        background: linear-gradient(to bottom, rgba($pagination-border-color, 0) 0%, rgba($pagination-border-color, 0.3) 25%, rgba($pagination-border-color, 0) 100%);
       }
     }
   }

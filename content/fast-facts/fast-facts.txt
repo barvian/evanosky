@@ -1,0 +1,19 @@
+Title: Fast facts
+
+----
+
+Facts: 
+
+- 
+  text: 'Lysosomal storage disorders affect 1 of every 5,000 babies, and over 4.1 million babies are born in the US each year.  This means that over 800 children will be born with these fatal diseases in 2011 alone!'
+- 
+  text: 'Metachromatic leukodystrophy, Pompe disease, Krabbe disease, and MPS I and II are all lysosomal storage disorders which will lead to premature death if left untreated.  Unfortunately, most children today are not diagnosed until it is too late.'
+- 
+  text: 'The Evanosky Foundation has helped to draft laws in Illinois, Missouri and New Mexico that requires these states to screen all babies at birth for 5 lysosomal storage disorders.  Besides New York, no other state in the country screens for these diseases!'
+- 
+  text: |
+    The Evanosky Foundation needs your support to help children impacted by lysosomal storage disorders.  We fund:
+    
+    1. Medical Research at Duke University for treatment
+    2. Family Support for families whose children are receiving treatment
+    3. Newborn Screening for lysosomal storage disorders for all babies

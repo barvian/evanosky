@@ -16,6 +16,7 @@ body {
 
 .site-footer {
   color: desaturate(darken($gold, 30%), 25%);
+  display: flex;
 
   @include leading(massive);
   @include retina-background("../images/footer.png", 1349px 50px, bottom center);
@@ -23,7 +24,9 @@ body {
   &__tax {
     @extend %small;
 
-    text-align: right;
+    @include query(bravo) {
+      text-align: right;
+    }
   }
 
   &__image {

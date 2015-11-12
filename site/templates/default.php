@@ -17,6 +17,8 @@
       <div class="layout">
         <div class="layout__unit">
           <?php echo $page->text()->kirbytext() ?>
+
+          <?php // snippet('fast-fact') ?>
         </div>
       </div>
     </article>

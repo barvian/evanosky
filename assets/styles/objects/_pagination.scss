@@ -28,6 +28,9 @@ $pagination-border-color: lighten($light, 35%) !default;
         @extend .block-link;
 
         font-size: size(medium);
+        @include query(bravo, true) {
+          padding: 1em 0.75em;
+        }
 
         &::before {
           background-image: linear-gradient(to bottom, rgba($pagination-border-color, 0.3), rgba($pagination-border-color, 0));
@@ -54,9 +57,7 @@ $pagination-border-color: lighten($light, 35%) !default;
     }
 
     .pagination__caret {
-      float: left;
-      margin-left: 0;
-      margin-right: size(spacing);
+      @extend .block-link__caret-left;
     }
   }
 

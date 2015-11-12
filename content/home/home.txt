@@ -2,17 +2,17 @@ Title: Home
 
 ----
 
-Text:
+Text: 
 
 ----
 
-Ctas:
+Ctas: 
 
--
+- 
   callout: What is MLD?
   action: Learn more
   page: mld
--
+- 
   callout: Ready to help?
   action: Donate today
   page: donate
@@ -27,21 +27,21 @@ Intro: The Evanosky Foundation supports pediatric leukodystrophy research, unive
 
 ----
 
-Links:
+Links: 
 
--
-  page: newborn
+- 
+  page: projects/newborn-screening
   icon: baby.svg
   label: 'focusing on early detection through **newborn screening**'
--
-  page: medical
+- 
+  page: projects/medical-research
   icon: pills.svg
   label: 'finding a cure through **medical research**'
--
-  page: donations
+- 
+  page: projects/family-support/jack-s-library
   icon: home.svg
   label: "donations to children's hospitals through **Jack's library**"
--
-  page: families
+- 
+  page: projects/family-support
   icon: family.svg
   label: 'providing support, equipment, and housing to **affected families**'

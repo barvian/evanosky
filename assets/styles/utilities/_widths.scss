@@ -3,7 +3,7 @@
 
 @mixin widths($max, $prefix: '', $postfix: '') {
   %#{$prefix}width#{$postfix} {
-    &.unit {
+    &.layout__unit {
       @include leading(0);
     }
   }

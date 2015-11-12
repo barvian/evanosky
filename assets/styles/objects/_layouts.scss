@@ -8,8 +8,6 @@
   max-width: $layout;
   padding-right: $gutter;
 
-  @include compact;
-
   & & {
     margin-left: -$gutter;
     margin-right: -$gutter;

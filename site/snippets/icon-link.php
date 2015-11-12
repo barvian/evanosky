@@ -1,4 +1,4 @@
-<a class="icon-link<?php echo isset($class) ? " $class" : '' ?>"<?php echo isset($link['page']) ? ' href="'.url($link['page']).'"' : '' ?>>
+<a class="icon-link<?php echo isset($class) ? " $class" : '' ?><?php echo isset($mod) ? ' icon-link--'.$mod : '' ?>"<?php echo isset($link['page']) ? ' href="'.url($link['page']).'"' : '' ?>>
   <div class="icon-link__icon">
   <?php if($link['icon']->extension() == 'svg'): ?>
     <?php echo $link['icon']->read() ?>

@@ -1,5 +1,5 @@
 <?php if($currentPage->hasVisibleChildren()): ?>
-<nav class="section-nav <?php echo isset($class) ? $class : '' ?> <?php echo isset($mod) ? 'section-nav--'.$mod : '' ?>">
+<nav class="section-nav <?php echo isset($class) ? $class : '' ?><?php echo isset($mod) ? ' section-nav--'.$mod : '' ?>">
   <?php if(isset($sectionNav) && $sectionNav['header']): ?>
   <header class="section-nav__header">
     <?php e($sectionNav['header'] == true, 'In this section', $sectionNav['header']) ?>

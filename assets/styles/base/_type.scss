@@ -121,5 +121,12 @@ h5 {
 }
 
 blockquote {
+  color: $light;
+  margin-left: 0;
+  margin-right: 0;
   @include font($serif, $style: italic);
+  @include query(bravo) {
+    margin-left: size(spacing);
+    margin-right: size(spacing);
+  }
 }
