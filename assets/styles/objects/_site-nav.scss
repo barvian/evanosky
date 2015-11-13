@@ -1,67 +1,75 @@
 // Site nav
 // ========
 
-.site-nav {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $wide;
-  padding-left: $gutter;
-  padding-right: $gutter;
+.has-open-nav {
+  overflow: hidden;
+}
 
+.site-nav {
   @include compact;
+  @include query(site-nav-spread) {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $wide;
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
 
   &__menu {
     @extend %unstyled-list;
 
-    align-items: baseline;
-    display: flex;
-    flex: 1;
-    justify-content: space-around;
-    padding-bottom: 65px;
-
     @include compact;
+    @include query(site-nav-spread) {
+      align-items: baseline;
+      display: flex;
+      flex: 1;
+      justify-content: space-around;
+      padding-bottom: 65px;
 
-    .page--hidden & {
       > li {
-        opacity: 1 !important;
+        opacity: 0.35;
+        position: relative;
+        transition: opacity 175ms ease-in-out;
+
+        > %link {
+          display: block;
+
+          @include font($sans, $weight: semibold, $size: medium);
+        }
+
+        &:not(.site-nav__donate) {
+          > %link {
+            @extend %unstyled-link;
+
+            padding: 0.5em;
+          }
+
+          &.is-active {
+            opacity: 1 !important;
+
+            .site-nav__caret {
+              display: block;
+            }
+          }
+
+          @include attention {
+            opacity: 1 !important;
+            transition: none;
+          }
+        }
+      }
+
+      .page--hidden & {
+        > li {
+          opacity: 1 !important;
+        }
       }
     }
 
     > li {
-      opacity: 0.35;
-      position: relative;
-      transition: opacity 175ms ease-in-out;
-
-      > %link {
-        display: block;
-
-        @include font($sans, $weight: semibold, $size: medium);
-      }
-
-      &:not(.site-nav__donate) {
-        > %link {
-          @extend %unstyled-link;
-
-          padding: 0.5em;
-        }
-
-        &.is-active {
-          opacity: 1 !important;
-
-          .site-nav__caret {
-            display: block;
-          }
-        }
-
-        @include attention {
-          opacity: 1 !important;
-          transition: none;
-        }
-      }
-
       > .dropdown {
         display: none;
       }

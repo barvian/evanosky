@@ -8,6 +8,11 @@
   @include trailing;
 }
 
+// Normalize overrides
+button, input, optgroup, select, textarea {
+  @include leading;
+}
+
 body {
   @include leading(0);
 }

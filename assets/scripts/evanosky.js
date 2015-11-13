@@ -1,3 +1,4 @@
+import {breakpoints} from '../variables';
 import pictureFill from 'picturefill';
 import $ from 'jquery';
 import appendAround from 'wsol-append-around';
@@ -5,6 +6,19 @@ import enquire from 'enquire';
 
 $(function() {
   $('.js-aa').wsol_appendAround();
+  $('.js-site-nav').on('click', function(event) {
+    $('body').toggleClass('has-open-nav');
+  });
+
+  // Queries
+  enquire.register(breakpoints['site-nav-spread'], {
+    match: () => {
+      $('body').removeClass('has-open-nav');
+    },
+    unmatch: () => {
+
+    }
+  });
 
   // Donations
   const stripeResponseHandler = function(status, response) {
@@ -67,6 +81,6 @@ $(function() {
         $form.addClass('has-choice');
         $(this).closest($form.find('> *')).addClass('has-focus').siblings().removeClass('has-focus');
       }
-    })
+    });
   });
 });

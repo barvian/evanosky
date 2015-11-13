@@ -7,6 +7,14 @@ $field-placeholder-color: lighten($base, 20%) !default;
   outline: none;
 }
 
+%unstyled-button {
+  appearance: none;
+  background: none;
+  border: none;
+  display: inline-block;
+  padding: 0;
+}
+
 fieldset {
   border: none;
   padding: 0;

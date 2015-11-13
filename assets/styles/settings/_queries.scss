@@ -4,11 +4,7 @@
 // Helper map containing all queries.
 //
 
-$breakpoints: (
-  alpha: "screen and (min-width: 560px)",
-  bravo: "screen and (min-width: 780px)",
-  charlie: "screen and (min-width: 1240px)"
-);
+$breakpoints: () !default;
 
 $queries: map-merge((
   retina: "only screen and (-webkit-min-device-pixel-ratio: 1.3),	only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi)",

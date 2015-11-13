@@ -2,9 +2,43 @@
 // ===========
 
 .site-header {
-  padding-top: size(xxlarge);
+  @extend .clearfix;
+
+  @include query(site-nav-spread, true) {
+    padding: size(spacing) size(spacing) 0;
+  }
+
+  &__logo {
+    float: left;
+    max-height: 15vh;
+    max-width: 50%;
+
+    > .site-logo {
+      &, > img {
+        max-height: 100%;
+      }
+    }
+  }
+
+  @include query(site-nav-spread) {
+    padding-top: size(xxlarge);
+  }
 
   .page--home & {
     @include trailing(0);
+  }
+
+  &__nav {
+    @extend %unstyled-button;
+
+    height: 2rem;
+    float: right;
+    width: 2rem;
+
+    > svg {
+      fill: $blue;
+      height: 100%;
+      width: 100%;
+    }
   }
 }

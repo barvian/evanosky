@@ -44,7 +44,7 @@ gulp.tasks = tasks({
 
   styles: {
     src: `${src}/styles/evanosky.scss`,
-    all: `${src}/styles/**/*.scss`,
+    all: [`${src}/styles/**/*.scss`, `${src}/variables.json`],
     includePaths: [bower.config.directory],
     dest:`${dist}/styles`,
     autoprefixer: {

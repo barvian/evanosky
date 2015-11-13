@@ -16,11 +16,4 @@
   <?php echo js('public/scripts/vendor/modernizr-custom.min.js') ?>
 
   <div class="invisible"><?php echo file_get_contents(url('public/sprites.svg')) ?></div>
-  <header class="site-header" role="banner">
-    <div class="hidden@alpha-up" data-set="site-logo">
-      <a class="site-logo js-aa" href="<?php echo url() ?>">
-        <img srcset="<?php echo url('public/images/logo.png') ?> 1x, <?php echo url('public/images/logo@2x.png') ?> 2x" alt="<?php echo $site->title()->html() ?>" />
-      </a>
-    </div>
-    <?php snippet('site-nav') ?>
-  </header>
+  <?php snippet('site-header') ?>
