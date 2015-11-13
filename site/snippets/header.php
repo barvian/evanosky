@@ -16,4 +16,5 @@
   <?php echo js('public/scripts/vendor/modernizr-custom.min.js') ?>
 
   <div class="invisible"><?php echo file_get_contents(url('public/sprites.svg')) ?></div>
-  <?php snippet('site-header') ?>
+  <div class="wrapper">
+    <?php snippet('site-header') ?>

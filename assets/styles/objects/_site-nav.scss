@@ -1,12 +1,48 @@
 // Site nav
 // ========
 
-.has-open-nav {
-  overflow: hidden;
+body {
+  &::before {
+    background-color: $bg;
+    content: '';
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    width: 100%;
+    right: 100%;
+    top: 9px;
+    transition: opacity 175ms ease-in-out;
+    z-index: 799;
+  }
+
+  &.has-open-nav {
+    overflow: hidden;
+
+    &::before {
+      left: 0;
+      opacity: 0.9;
+    }
+  }
 }
 
 .site-nav {
   @include compact;
+  @include query(site-nav-spread, true) {
+    bottom: 0;
+    overflow-y: auto;
+    margin-top: size(spacing) !important;
+    position: fixed;
+    right: 100%;
+    width: 100%;
+    z-index: 800;
+
+    @include leading(0);
+
+    .has-open-nav & {
+      right: 0;
+    }
+  }
   @include query(site-nav-spread) {
     align-items: center;
     display: flex;

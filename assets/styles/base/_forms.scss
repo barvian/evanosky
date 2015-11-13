@@ -1,7 +1,7 @@
 // FORMS
 // =======
 
-$field-placeholder-color: lighten($base, 20%) !default;
+$field-placeholder-color: lighten($light, 10%) !default;
 
 *:focus {
   outline: none;
@@ -86,7 +86,7 @@ input[type="hidden"] {
     border-color: $light;
   }
 
-  &::input-placeholder {
+  &::placeholder {
     color: $field-placeholder-color;
   }
 }

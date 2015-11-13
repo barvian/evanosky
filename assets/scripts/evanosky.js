@@ -8,6 +8,7 @@ $(function() {
   $('.js-aa').wsol_appendAround();
   $('.js-site-nav').on('click', function(event) {
     $('body').toggleClass('has-open-nav');
+    $('.site-nav').css('top', $('.site-header').height());
   });
 
   // Queries

@@ -9,7 +9,7 @@
         <fieldset>
           <legend class="hidden">Amount</legend>
           <div class="pack pack--middle form__choices js-form-amount">
-            <div class="pack__grow visible@bravo-up">
+            <div class="pack__grow visible@bravo">
               <ul class="form__options">
                 <li><input class="btn btn--med" type="radio" name="amount" value="5" id="5"><label for="5">$5</label></li>
                 <li><input class="btn btn--med" type="radio" name="amount" value="10" id="10"><label for="10">$10</label></li>
@@ -20,7 +20,7 @@
                 <li class="hidden"><input type="radio" name="amount" value="custom" /></li>
               </ul>
             </div>
-            <span class="form__or pack__shrink pack__stretch visible@bravo-up">or</span>
+            <span class="form__or pack__shrink pack__stretch visible@bravo">or</span>
             <div>
               <div class="primary-field has-pre" data-pre="$">
                 <input type="text" pattern="[0-9]{1,6}" name="custom" id="custom" maxlength="6" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" />
@@ -38,11 +38,11 @@
               </label>
             </li>
             <li class="w2/3">
-              <label for="exp-month">Expiration<span class="visible@bravo-up"> (MM/YY)</span></label>
+              <label for="exp-month">Expiration</label>
               <div class="pack pack--middle">
-                <div class="pack__grow"><input type="text" pattern="[0-9]{1,2}" maxlength="2" id="exp-month" data-stripe="exp-month" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" /></div>
+                <div class="pack__grow"><input type="text" pattern="[0-9]{1,2}" placeholder="MM" maxlength="2" id="exp-month" data-stripe="exp-month" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" /></div>
                 <span class="pack__shrink">&nbsp;/&nbsp;</span>
-                <div class="pack__grow"><input type="text" pattern="[0-9]{1,2}" maxlength="2" data-stripe="exp-year" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" /></div>
+                <div class="pack__grow"><input type="text" pattern="[0-9]{1,2}" placeholder="YY" maxlength="2" data-stripe="exp-year" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" /></div>
               </div>
             </li><!--
             --><li class="w1/3">

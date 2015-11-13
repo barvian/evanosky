@@ -18,6 +18,12 @@
       margin-bottom: size(spacing);
       max-width: 33.333%;
 
+      > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       &:first-child {
         @include trailing(0);
       }

@@ -4,7 +4,7 @@ $kirby = kirby();
 
 // Prevent panel breakage
 switch(url::host()) {
-  case 'evanosky.dev': $kirby->urls->index = 'http://evanosky.dev';
+  case 'evanosky.local': $kirby->urls->index = 'http://evanosky.local';
   default: $kirby->urls->index = 'http://'.url::host();
 }
 
