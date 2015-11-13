@@ -1,12 +1,6 @@
 // Visibility
 // ==========
 
-@mixin hidden {
-  display: none !important;
-
-  @include removed;
-}
-
 .hidden {
   @include hidden;
 }

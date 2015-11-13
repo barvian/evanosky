@@ -1,6 +1,14 @@
 // Page
 // ====
 
+%root {
+  /* placeholder */
+}
+
+html, body, .wrapper {
+  @extend %root;
+}
+
 .page {
   @include retina-background("../images/header.jpg", 1346px 9px, top center);
 }

@@ -21,7 +21,7 @@ body {
 
     &::before {
       left: 0;
-      opacity: 0.9;
+      opacity: 0.95;
     }
   }
 }
@@ -31,7 +31,7 @@ body {
   @include query(site-nav-spread, true) {
     bottom: 0;
     overflow-y: auto;
-    margin-top: size(spacing) !important;
+    margin-top: size(large) !important;
     position: fixed;
     right: 100%;
     width: 100%;
@@ -58,6 +58,19 @@ body {
     @extend %unstyled-list;
 
     @include compact;
+    @include query(site-nav-spread, true) {
+      > li {
+        display: block;
+        padding: size(base);
+        text-align: center;
+
+        > %link {
+          display: inline-block;
+
+          @include font($sans, $size: big, $weight: bold);
+        }
+      }
+    }
     @include query(site-nav-spread) {
       align-items: baseline;
       display: flex;

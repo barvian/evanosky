@@ -17,8 +17,8 @@ $script: pacifico;
 $fonts: (
   raleway: (
     stack: ("Raleway", helvetica, serif),
-    weights: (medium: 500, semibold: 600),
-    styles: (medium: normal, semibold: normal)
+    weights: (medium: 500, semibold: 600, bold: 700),
+    styles: (medium: normal, semibold: normal, bold: normal)
   ),
   libre-baskerville: (
     stack: ("Libre Baskerville", serif),
