@@ -23,6 +23,7 @@ $(function() {
   });
 
   // Donations
+  $('input.cc-numeric').payment('restrictNumeric');
   $('input.cc-number').payment('formatCardNumber');
   $('input.cc-exp').payment('formatCardExpiry');
   $('input.cc-cvc').payment('formatCardCVC');

@@ -23,7 +23,7 @@
             <span class="form__or pack__shrink pack__stretch visible@bravo">or</span>
             <div>
               <div class="primary-field has-pre" data-pre="$">
-                <input type="number" min="1" max="100000" name="custom" id="custom" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" />
+                <input type="tel" class="cc-numeric" maxlength="6" name="custom" id="custom" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" />
               </div>
             </div>
           </div>
