@@ -27,9 +27,7 @@
               </div>
             </div>
           </div>
-        </fieldset>
-        <fieldset>
-          <legend class="hidden">Payment details</legend>
+          <hr />
           <ol class="form__fields">
             <li>
               <label>

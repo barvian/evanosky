@@ -1,6 +1,10 @@
 // Type
 // ====
 
+$hr-color: lighten($light, 33.333%) !default;
+$hr-style: solid !default;
+$hr-size: 1px !default;
+
 // Base
 // ----
 
@@ -102,6 +106,11 @@ h5 {
 
 // Misc
 // ----
+
+hr {
+  border: none;
+  border-top: $hr-size $hr-style $hr-color;
+}
 
 %uppercase {
   letter-spacing: 0.07em;

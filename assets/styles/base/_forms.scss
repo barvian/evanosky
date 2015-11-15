@@ -20,7 +20,7 @@ fieldset {
   padding: 0;
 
   + fieldset {
-    border-top: 1px solid lighten($light, 33.333%);
+    border-top: $hr-size $hr-style $hr-color;
     margin-top: size(spacing);
     padding-top: size(spacing);
   }
