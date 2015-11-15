@@ -2,10 +2,10 @@
   <?php foreach($pages as $page): ?>
   <li class="site-nav__<?php echo $page->slug() ?> <?php e($page->hasVisibleChildren(), 'has-sub') ?><?php e($page->isOpen(), ' is-active') ?>">
     <a href="<?php echo $page->url() ?>"><?php echo $page->title()->html() ?></a>
-    <?php snippet('sprite', array(
+    <?php snippet('sprite', [
       'class' => 'site-nav__caret',
       'sprite' => 'chevron-small-down'
-    )) ?>
+    ]) ?>
     <?php if($page->hasVisibleChildren()): ?>
     <div class="dropdown">
       <ul class="dropdown__menu">

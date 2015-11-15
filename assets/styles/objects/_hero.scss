@@ -5,9 +5,12 @@ $hero-dark-color: darken($purple, 10%) !default;
 $hero-shadow-color: $hero-dark-color !default;
 
 .hero {
-  padding: 5rem $gutter/2 6.5rem;
+  padding: 4rem $gutter/2 3rem;
 
   @include retina-background('../images/hero.png', 1235px 100%);
+  @include query(alpha) {
+    padding-bottom: 6.5rem;
+  }
 
   .page--home & {
     margin-top: -1*size(spacing);

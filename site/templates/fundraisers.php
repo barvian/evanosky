@@ -16,10 +16,10 @@
               <time class="link-list__meta" datetime="<?php echo date('Y-m-d', $campaign->date()) ?>"><?php echo date('F j, Y', $campaign->date()) ?></time>
               <h1 class="link-list__title"><?php echo $campaign->title()->html() ?></h1>
               <p class="link-list__teaser"><?php echo $campaign->text()->excerpt(300) ?></p>
-              <?php snippet('sprite', array(
+              <?php snippet('sprite', [
                 'class' => 'link-list__caret',
                 'sprite' => 'chevron-thin-right'
-              )) ?>
+              ]) ?>
             </a>
           </article>
           <?php endforeach ?>

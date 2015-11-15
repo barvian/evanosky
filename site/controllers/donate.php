@@ -29,12 +29,12 @@ return function($site, $pages, $page) {
 
       // Create the charge on Stripe's servers - this will charge the user's card
       try {
-        $charge = \Stripe\Charge::create(array(
+        $charge = \Stripe\Charge::create([
           "amount" => $amount * 100, // amount in cents, again
           "currency" => "usd",
           "source" => $token,
           "description" => "Example charge"
-        ));
+        ]);
 
         go('donated');
       } catch(\Stripe\Error\Card $e) {
@@ -44,6 +44,6 @@ return function($site, $pages, $page) {
 
   }
 
-  return array('error' => $error);
+  return ['error' => $error];
 
 };

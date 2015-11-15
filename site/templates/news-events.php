@@ -9,7 +9,7 @@
       <div class="layout__unit">
         <?php echo $page->text()->kirbytext() ?>
 
-        <section>
+        <section id="news">
           <h2>News</h2>
           <nav class="link-list">
             <?php foreach($page->children()->visible()->filter(function($child) {
@@ -30,7 +30,7 @@
           </nav>
         </section>
 
-        <section>
+        <section id="annual-reports">
           <h2>Annual Reports</h2>
           <nav class="link-list">
             <?php foreach($page->children()->visible()->filter(function($child) {
@@ -49,7 +49,7 @@
           </nav>
         </section>
 
-        <section>
+        <section id="events">
           <h2>Events</h2>
           <nav class="link-list">
             <?php foreach($page->children()->visible()->filter(function($child) {

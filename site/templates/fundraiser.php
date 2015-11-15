@@ -3,10 +3,10 @@
   <main class="main" role="main">
     <article class="article fundraiser">
       <header class="hero hero--header layout layout--wide">
-        <?php snippet('breadcrumbs', array(
+        <?php snippet('breadcrumbs', [
           'currentPage' => $page,
           'class' => 'layout__unit'
-        )) ?>
+        ]) ?>
         <h1 class="hero__text layout__unit"><?php echo $page->title()->html() ?></h1>
       </header>
 
@@ -21,9 +21,9 @@
 
     </article>
 
-    <?php snippet('pagination', array(
+    <?php snippet('pagination', [
       'currentPage' => $page
-    )) ?>
+    ]) ?>
   </main>
 
 <?php snippet('footer') ?>

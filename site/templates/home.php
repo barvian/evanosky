@@ -2,12 +2,12 @@
 
   <main role="main">
 
-    <?php snippet('hero', array(
-      'hero' => array(
+    <?php snippet('hero', [
+      'hero' => [
         'text' => $page->heading(),
         'buttons' => $page->ctas()->yaml()
-      )
-    )) ?>
+      ]
+    ]) ?>
 
     <article class="article">
     <?php if(!$page->intro()->empty()): ?>
@@ -19,13 +19,13 @@
         <div class="layout__unit">
           <div class="block-grid-2 block-grid-4@bravo has-border"><!--
             <?php foreach($page->links()->yaml() as $link): ?>
-            --><?php snippet('icon-link', array(
-              'link' => array(
+            --><?php snippet('icon-link', [
+              'link' => [
                 'page' => $link['page'],
                 'icon' => $page->file($link['icon']),
                 'label' => kirbytext($link['label'])
-              )
-            )) ?><!--
+              ]
+            ]) ?><!--
             <?php endforeach ?>
           --></div>
         </div>

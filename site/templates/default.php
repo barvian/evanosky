@@ -2,16 +2,16 @@
 
   <main class="main" role="main">
     <header class="hero hero--header layout layout--wide">
-      <?php snippet('breadcrumbs', array(
+      <?php snippet('breadcrumbs', [
         'currentPage' => $page,
         'class' => 'layout__unit'
-      )) ?>
+      ]) ?>
       <h1 class="hero__text layout__unit"><?php echo $page->title()->html() ?></h1>
     </header>
 
-    <?php snippet('section-nav', array(
+    <?php snippet('section-nav', [
       'currentPage' => $page
-    )) ?>
+    ]) ?>
 
     <article class="article">
       <div class="layout">
@@ -23,9 +23,9 @@
       </div>
     </article>
 
-    <?php snippet('pagination', array(
+    <?php snippet('pagination', [
       'currentPage' => $page
-    )) ?>
+    ]) ?>
   </main>
 
 <?php snippet('footer') ?>

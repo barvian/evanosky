@@ -4,7 +4,7 @@ Title: Newborn screening
 
 Text: 
 
-The Evanosky Foundation firmly believes that early detection is critical for MLD and other lysosomal storage disorders, and has been active in the passage of laws in Illinois (2007), Missouri (2009), and New Mexico (2010) that advocate newborn screening.
+The Evanosky Foundation firmly believes that early detection is critical for MLD and other (link: projects/newborn-screening/lsd-fact-sheet text: lysosomal storage disorders), and has been active in the passage of (link: projects/newborn-screening/il-sb1761 text: laws in Illinois) (2007), (link: projects/newborn-screening/mo-hb716 text: Missouri) (2009), and (link: projects/newborn-screening/nm-hb201 text: New Mexico) (2010) that advocate newborn screening.
 
 ## How does newborn screening work?
 

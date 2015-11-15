@@ -1,13 +1,14 @@
 import {breakpoints} from '../variables';
 import pictureFill from 'picturefill';
 import $ from 'jquery';
+import payment from 'jquery.payment';
 import appendAround from 'wsol-append-around';
 import enquire from 'enquire';
 
 $(function() {
   $('.js-aa').wsol_appendAround();
   $('.js-site-nav').on('click', function(event) {
-    $('body').toggleClass('has-open-nav');
+    $('html, body').toggleClass('has-open-nav').animate({ scrollTop: 0 }, 150);
     $('.site-nav').css('top', $('.site-header').height());
   });
 
@@ -22,6 +23,10 @@ $(function() {
   });
 
   // Donations
+  $('input.cc-number').payment('formatCardNumber');
+  $('input.cc-exp').payment('formatCardExpiry');
+  $('input.cc-cvc').payment('formatCardCVC');
+
   const stripeResponseHandler = function(status, response) {
     const $form = $(this);
 

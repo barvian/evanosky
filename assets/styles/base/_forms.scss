@@ -50,10 +50,9 @@ input[type="hidden"] {
 .has-pre {
   position: relative;
 
-  &::before {
+  &::before, > .pre {
     align-items: center;
     bottom: 0;
-    content: attr(data-pre);
     font-size: 1.25em;
     display: flex;
     left: 0;
@@ -64,8 +63,52 @@ input[type="hidden"] {
     @include font($sans, $weight: semibold);
   }
 
+  &::before {
+    content: attr(data-pre);
+  }
+
+  > .pre {
+    @include removed;
+  }
+
   > %field {
     padding-left: 2em;
+  }
+}
+
+.has-post {
+  position: relative;
+
+  &::before, > .post {
+    align-items: center;
+    bottom: 0;
+    font-size: 1.25em;
+    display: flex;
+    padding-right: 0.85em;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @include font($sans, $weight: semibold);
+
+    > .sprite {
+      height: 1.75em;
+      width: 1.75em;
+
+      @include trailing(0);
+    }
+  }
+
+  &::before {
+    content: attr(data-pre);
+  }
+
+  > .post {
+    @include removed;
+  }
+
+  > %field {
+    padding-right: 2em;
   }
 }
 
@@ -174,6 +217,22 @@ select {
 
     &:focus {
       border-color: saturate($blue, 10%) !important;
+    }
+  }
+}
+
+.cc-number {
+  padding-right: 3.35em !important;
+
+  + .post > .sprite {
+    display: none;
+  }
+
+  &.identified {
+    @each $card in amex dinersclub discover jcb mastercard visa {
+      &.#{$card} + .post > .sprite--#{$card} {
+        display: block;
+      }
     }
   }
 }

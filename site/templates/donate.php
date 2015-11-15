@@ -2,7 +2,7 @@
 
   <main class="main" role="main">
     <div class="hero hero--form">
-      <form class="hero__box js-stripe" action="" method="POST">
+      <form class="hero__box js-stripe" action="" method="POST" autocomplete="on">
         <input type="hidden" name="donation" value="donation" />
 
         <span class="form__errors"><?php e($error, $error) ?></span>
@@ -23,7 +23,7 @@
             <span class="form__or pack__shrink pack__stretch visible@bravo">or</span>
             <div>
               <div class="primary-field has-pre" data-pre="$">
-                <input type="text" pattern="[0-9]{1,6}" name="custom" id="custom" maxlength="6" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" />
+                <input type="number" min="1" max="100000" name="custom" id="custom" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" />
               </div>
             </div>
           </div>
@@ -34,21 +34,28 @@
             <li>
               <label>
                 <span>Card Number</span>
-                <input type="text" pattern="[0-9]{13,16}" maxlength="16" data-stripe="number" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" />
+                <div class="has-post">
+                  <input type="tel" class="cc-number" autocomplete="cc-number" data-stripe="number" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" />
+                  <div class="post">
+                    <?php foreach(['amex', 'dinersclub', 'discover', 'jcb', 'mastercard', 'visa'] as $card): ?>
+                    <?php snippet('sprite', [
+                      'sprite' => $card
+                    ]) ?>
+                    <?php endforeach ?>
+                  </div>
+                </div>
               </label>
             </li>
-            <li class="w2/3">
-              <label for="exp-month">Expiration</label>
-              <div class="pack pack--middle">
-                <div class="pack__grow"><input type="text" pattern="[0-9]{1,2}" placeholder="MM" maxlength="2" id="exp-month" data-stripe="exp-month" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" /></div>
-                <span class="pack__shrink">&nbsp;/&nbsp;</span>
-                <div class="pack__grow"><input type="text" pattern="[0-9]{1,2}" placeholder="YY" maxlength="2" data-stripe="exp-year" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" /></div>
-              </div>
+            <li class="w3/5">
+              <label>
+                <span>Expiration</span>
+                <input type="tel" class="cc-exp" placeholder="MM / YY" autocomplete="cc-exp" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" />
+              </label>
             </li><!--
-            --><li class="w1/3">
+            --><li class="w2/5">
               <label>
                 <span>CVC</span>
-                <input type="text" pattern="[0-9]{3,4}" maxlength="4" data-stripe="cvc" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" />
+                <input type="tel" class="cc-cvc" data-stripe="cvc" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" />
               </label>
             </li>
           </ol>

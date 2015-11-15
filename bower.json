@@ -4,7 +4,8 @@
   "dependencies": {
     "picturefill": "~2.3.1",
     "enquire": "~2.1.2",
-    "wsol-append-around": "websolutions/append-around#~2.0.1"
+    "wsol-append-around": "websolutions/append-around#~2.0.1",
+    "jquery.payment": "mbarvian/jquery.payment#umd"
   },
   "devDependencies": {
     "modular-scale": "~2.1.1",

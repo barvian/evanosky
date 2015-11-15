@@ -1,6 +1,10 @@
 // Site nav
 // ========
 
+.has-open-nav {
+  overflow: hidden;
+}
+
 body {
   &::before {
     background-color: $bg;
@@ -16,13 +20,9 @@ body {
     z-index: 799;
   }
 
-  &.has-open-nav {
-    overflow: hidden;
-
-    &::before {
-      left: 0;
-      opacity: 0.95;
-    }
+  &.has-open-nav::before {
+    left: 0;
+    opacity: 0.95;
   }
 }
 
@@ -68,6 +68,9 @@ body {
           display: inline-block;
 
           @include font($sans, $size: big, $weight: bold);
+          @include query(bravo) {
+            font-size: size(huge);
+          }
         }
       }
     }
