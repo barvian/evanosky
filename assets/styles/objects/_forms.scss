@@ -46,10 +46,16 @@ $form-or-color: lighten($light, 10%) !default;
     margin-left: -$gutter;
     margin-right: -$gutter;
 
+    @include compact;
+
     > li {
       @extend %clearfix;
       @extend .layout__unit;
       @extend .form__item;
+    }
+
+    + button, + input[type="submit"] {
+      margin-top: 0.75rem;
     }
   }
 
@@ -110,9 +116,5 @@ $form-or-color: lighten($light, 10%) !default;
       margin-top: 0.75em;
       top: 50%;
     }
-  }
-
-  &__submit {
-    @include leading(0.75rem);
   }
 }

@@ -45,11 +45,60 @@
     }
   }
 
+  &--secondary {
+    background-color: lighten($purple, 6.25%);
+    background-image: linear-gradient(to bottom, lighten($light, 48.5%), lighten($light, 40%));
+    border-image: linear-gradient(to bottom, lighten($light, 27.5%), lighten($light, 20%));
+    border-image-slice: 1;
+    border-width: 1px;
+    box-shadow: inset 0 1px 1px #fff;
+    color: $blue;
+    transition: all 225ms ease-in-out;
+
+    @include font($sans, $size: medium, $weight: semibold);
+
+    @include attention {
+      background-color: lighten($purple, 6.25%);
+      background-image: linear-gradient(to bottom, lighten($light, 48.5%), lighten($light, 45%));
+
+      &:not([disabled]) { transition: none; }
+    }
+    @include pressed {
+      background-color: lighten($light, 40%);
+      background-image: none;
+      box-shadow: inset 0 1px 3px lighten($light, 30%);
+      color: rgba($blue, 0.7);
+
+      &:not([disabled]) { transition: none; }
+    }
+    @include disabled {
+      background-color: lighten(desaturate($light, 10%), 40%);
+      background-image: none;
+      color: rgba($blue, 0.7);
+      opacity: 0.5;
+    }
+  }
+
   &--full {
     display: block;
     padding-bottom: 0.5em;
     padding-top: 0.5em;
     width: 100%;
+  }
+
+  &--next {
+    position: relative;
+
+    &::after {
+      background: url('../images/chevron-right-filled.svg') no-repeat center center;
+      background-size: 1.13rem 1.13rem;
+      content: '';
+      position: absolute;
+      height: 100%;
+      right: 1em;
+      top: 0;
+      width: 1.13rem;
+    }
   }
 
   // Sizes

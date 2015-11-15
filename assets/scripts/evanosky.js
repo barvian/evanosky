@@ -95,5 +95,17 @@ $(function() {
         $(this).closest($form.find('> *')).addClass('has-focus').siblings().removeClass('has-focus');
       }
     });
+
+    $('.js-multistep').each(function(index) {
+      const $form = $(this);
+
+      $form.find('fieldset:not(:last-of-type)').each(function(index) {
+        const $fieldset = $(this),
+          $next = $fieldset.next().filter('fieldset'),
+          $nextLegend = $next.find('> legend').text();
+
+        $fieldset.append(`<button class="btn btn--full btn--secondary btn--next">${$nextLegend}</button>`);
+      })
+    });
   });
 });

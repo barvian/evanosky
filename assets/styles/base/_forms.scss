@@ -17,11 +17,13 @@ $field-placeholder-color: lighten($light, 10%) !default;
 
 fieldset {
   border: none;
+  margin: 0;
   padding: 0;
 
-  + fieldset {
+  @include leading;
+
+  form:not(.js-multistep) & + fieldset {
     border-top: $hr-size $hr-style $hr-color;
-    margin-top: size(spacing);
     padding-top: size(spacing);
   }
 }
@@ -116,7 +118,7 @@ input[type="hidden"] {
   appearance: none;
   background: #fff;
   border: none;
-  border: 1px solid lighten($light, 25%);
+  border: 1px solid lighten($light, 33.333%);
   border-radius: 0;
   color: $base;
   display: block;
@@ -131,6 +133,10 @@ input[type="hidden"] {
 
   &::placeholder {
     color: $field-placeholder-color;
+  }
+
+  &.abbr {
+    text-transform: uppercase;
   }
 }
 
