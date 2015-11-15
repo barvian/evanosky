@@ -52,7 +52,13 @@ $(function() {
     // Disable the submit button to prevent repeated clicks
     $form.find('[type="submit"]').prop('disabled', true);
 
-    Stripe.card.createToken($form, stripeResponseHandler.bind(this));
+    const expiration = $form.find('.cc-exp').payment('cardExpiryVal');
+    Stripe.card.createToken({
+      number: $form.find('.cc-number').val(),
+      cvc: $form.find('.cc-cvc').val(),
+      exp_month: (expiration.month || 0),
+      exp_year: (expiration.year || 0)
+    }, stripeResponseHandler.bind(this));
   });
 
   $('.js-form-amount').each(function(index) {
