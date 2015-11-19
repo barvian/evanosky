@@ -38,6 +38,14 @@ $form-multistep-transition-duration: 250ms !default;
         text-transform: none;
       }
     }
+
+    &.is-required {
+      > label[for], > label > span {
+        &::after {
+          content: '*';
+        }
+      }
+    }
   }
 
   &__fields {
@@ -143,6 +151,11 @@ $form-multistep-transition-duration: 250ms !default;
         vertical-align: top;
         white-space: normal;
 
+        + fieldset {
+          border-top: none;
+          padding-top: 0;
+        }
+
         &.is-inactive:not([class^="is-animating"]):not([class*=" is-animating"]) {
           @include hidden;
         }
@@ -182,11 +195,14 @@ $form-multistep-transition-duration: 250ms !default;
       color: darken($hr-color, 30%);
       overflow: hidden;
       max-height: 2em;
-      max-width: 50%;
+      max-width: 100%;
       transition: all $form-multistep-transition-duration linear;
       white-space: nowrap;
 
       @include font($sans, $size: base, $weight: semibold);
+      @include query(alpha) {
+        max-width: 50%;
+      }
 
       &:empty, &.is-inactive {
         margin-right: 0;

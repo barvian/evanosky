@@ -150,12 +150,15 @@ $hero-shadow-color: $hero-dark-color !default;
   }
 
   &--form {
-    background-position: center 100px;
+    background-position: center 20px;
     background-size: 1235px 500px;
     padding-bottom: 3rem;
     padding-top: 2rem;
+    min-height: 500px + 20px;
 
     @include query(alpha) {
+      background-position: center 100px;
+      min-height: 500px + 100px;
       padding-bottom: 6rem;
       padding-top: 3rem;
     }

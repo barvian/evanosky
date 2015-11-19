@@ -46,10 +46,6 @@
         filter: drop-shadow(0 0 23px rgba($blue, 0.75));
       }
     }
-
-    .icon-link__label {
-
-    }
   }
 
   &:nth-of-type(odd) .icon-link__icon {
@@ -119,7 +115,7 @@
       display: block;
       line-height: strip-units(size(medium));
 
-      @include font($sans, $size: base);
+      @include font($sans, $size: base, $weight: semibold);
     }
 
     @include query(bravo) {

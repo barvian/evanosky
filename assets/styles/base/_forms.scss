@@ -1,5 +1,5 @@
-// FORMS
-// =======
+// Forms`
+// =====
 
 $field-placeholder-color: lighten($light, 10%) !default;
 
@@ -22,7 +22,7 @@ fieldset {
 
   @include leading;
 
-  form:not(.js-multistep) & + fieldset {
+  & + & {
     border-top: $hr-size $hr-style $hr-color;
     padding-top: size(spacing);
   }
@@ -49,7 +49,7 @@ input[type="hidden"] {
   @include trailing(0);
 }
 
-.has-pre {
+[class^="has-pre"], [class*=" has-pre"] {
   position: relative;
 
   &::before, > .pre {
@@ -78,7 +78,7 @@ input[type="hidden"] {
   }
 }
 
-.has-post {
+[class^="has-post"], [class*=" has-post"] {
   position: relative;
 
   &::before, > .post {
@@ -227,18 +227,20 @@ select {
   }
 }
 
-.cc-number {
-  padding-right: 3.35em !important;
+.has-post-cc {
+  > %field {
+    padding-right: 3.35em !important;
 
-  + .post > .sprite {
-    display: none;
-  }
-
-  &.identified {
-    @each $card in amex dinersclub discover jcb mastercard visa {
-      &.#{$card} + .post > .sprite--#{$card} {
-        display: block;
+    &.identified {
+      @each $card in amex dinersclub discover jcb mastercard visa {
+        &.#{$card} + .post > .sprite--#{$card} {
+          display: block;
+        }
       }
     }
+  }
+
+  > .post > .sprite {
+    display: none;
   }
 }

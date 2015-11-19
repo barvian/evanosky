@@ -99,6 +99,10 @@
       top: 0;
       width: 1.13rem;
     }
+
+    @include query(alpha, true) {
+      text-align: left;
+    }
   }
 
   // Sizes

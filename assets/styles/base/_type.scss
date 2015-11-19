@@ -18,8 +18,8 @@ html {
   text-size-adjust: none;
 
   @include font($serif, $size: percentage(15/16), $weight: normal);
-  @include query(charlie) {
-    font-size: percentage(16/16);
+  @include query(short) {
+    font-size: percentage(13/16);
   }
 }
 

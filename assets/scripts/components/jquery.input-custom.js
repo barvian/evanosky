@@ -1,8 +1,8 @@
 import $ from 'jquery';
 
-/**
- * Amount input
- */
+// Custom Input
+// ============
+
 class InputCustom {
   constructor(el, options) {
     this.$el = $(el);
@@ -16,7 +16,21 @@ class InputCustom {
     this.$options = this.$el.find(`input[name="${this.options.optionsGroup}"]`).not(this.$customOption);
     this.$custom = this.$el.find(this.options.customSelector);
 
+    if (this.$options.filter(':checked').length > 0) {
+      this.$el.addClass('has-choice');
+      this.$options.closest(this.$choices).addClass(this.options.focusClass);
+      this._value = this.$options.filter(':checked').val();
+    } else if (this.$customOption.is(':checked')) {
+      this.$el.addClass('has-choice');
+      this.$custom.closest(this.$choices).addClass(this.options.focusClass);
+      this._value = this.$custom.val();
+    }
+
     this.listen();
+  }
+
+  get value() {
+    return this._value;
   }
 
   listen() {
@@ -31,6 +45,8 @@ class InputCustom {
       input: (event) => {
         const $target = $(event.currentTarget);
 
+        this._value = $target.val();
+        this.$el.trigger('change.inputCustom');
         if ($target.val().length > 0) {
           this.$customOption.prop('checked', true);
         }
@@ -44,6 +60,8 @@ class InputCustom {
           this.$options.filter(':checked').trigger('change');
         } else {
           this.$customOption.prop('checked', true);
+          this._value = $target.val();
+          this.$el.trigger('change.inputCustom');
         }
       }
     });
@@ -52,7 +70,8 @@ class InputCustom {
       change: (event) => {
         const $target = $(event.currentTarget);
 
-        this.$el.addClass('has-choice');
+        this._value = $target.val();
+        this.$el.trigger('change.inputCustom', [$target.val()]).addClass('has-choice');
         this.$choices.removeClass(this.options.focusClass);
         $target.closest(this.$choices).addClass(this.options.focusClass);
       }
@@ -70,8 +89,21 @@ class InputCustom {
   };
 };
 
+// jQuery plugin
+// -------------
+
 $.fn.inputCustom = function(options) {
-  return this.each(function() {
-    new InputCustom(this, options);
+  return this.each((index, input) => {
+    new InputCustom(input, options);
   });
 };
+
+
+// Attribute bootstrap
+// -------------------
+
+$(() => {
+  $('[data-input-custom]').each((index, input) => {
+    new InputCustom(input, $(input).data('inputCustom'));
+  });
+});
