@@ -5,7 +5,8 @@
     "picturefill": "~2.3.1",
     "enquire": "~2.1.2",
     "wsol-append-around": "websolutions/append-around#~2.0.1",
-    "jquery.payment": "mbarvian/jquery.payment#umd"
+    "jquery.payment": "mbarvian/jquery.payment#umd",
+    "animate.css": "~3.4.0"
   },
   "devDependencies": {
     "modular-scale": "~2.1.1",

@@ -24,7 +24,9 @@
             </div>
           </div>
         </div>
-        <hr />
+        <nav class="form__nav">
+          <button class="form__prev"></button>
+        </nav>
         <fieldset>
           <legend class="hidden">Personal information</legend>
           <ol class="form__fields">

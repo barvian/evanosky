@@ -117,4 +117,56 @@ $form-or-color: lighten($light, 10%) !default;
       top: 50%;
     }
   }
+
+  &__nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    transition: all 500ms ease-in-out;
+
+    @include compact;
+
+    &::before {
+      background-color: $hr-color;
+      height: $hr-size;
+      content: '';
+      flex: 1;
+      order: 2;
+    }
+  }
+
+  &__prev, &__next {
+    @extend %unstyled-button;
+
+    color: darken($hr-color, 30%);
+
+    @include font($sans, $size: base, $weight: semibold);
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__prev {
+    order: 1;
+    margin-right: 1em;
+
+    &::before {
+      content: '<';
+      display: inline-block;
+      margin-right: 0.25em;
+      vertical-align: top;
+    }
+  }
+
+  &__next {
+    order: 3;
+    margin-left: 1em;
+
+    &::after {
+      content: '>';
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
 }

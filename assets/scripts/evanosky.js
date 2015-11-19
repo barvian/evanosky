@@ -1,6 +1,7 @@
 import {breakpoints} from '../variables';
 import pictureFill from 'picturefill';
 import $ from 'jquery';
+import multistep from './jquery.multistep';
 import payment from 'jquery.payment';
 import appendAround from 'wsol-append-around';
 import enquire from 'enquire';
@@ -96,16 +97,6 @@ $(function() {
       }
     });
 
-    $('.js-multistep').each(function(index) {
-      const $form = $(this);
-
-      $form.find('fieldset:not(:last-of-type)').each(function(index) {
-        const $fieldset = $(this),
-          $next = $fieldset.next().filter('fieldset'),
-          $nextLegend = $next.find('> legend').text();
-
-        $fieldset.append(`<button class="btn btn--full btn--secondary btn--next">${$nextLegend}</button>`);
-      })
-    });
+    $('.js-multistep').multistep();
   });
 });
