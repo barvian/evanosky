@@ -2,6 +2,7 @@
 // =====
 
 $form-or-color: lighten($light, 10%) !default;
+$form-multistep-transition-duration: 250ms !default;
 
 .form {
   &__errors {
@@ -118,55 +119,111 @@ $form-or-color: lighten($light, 10%) !default;
     }
   }
 
-  &__nav {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    transition: all 500ms ease-in-out;
+  &--multistep {
+    .form__steps {
+      [class^="is-animating"], &[class*=" is-animating"] {
+        transition: height $form-multistep-transition-duration linear;
+      }
 
-    @include compact;
+      overflow: hidden;
+      margin-left: size(spacing) * -1;
+      margin-right: size(spacing) * -1;
+      padding-left: size(spacing);
+      padding-right: size(spacing);
+      white-space: nowrap;
 
-    &::before {
-      background-color: $hr-color;
-      height: $hr-size;
-      content: '';
-      flex: 1;
-      order: 2;
+      @include compact;
+
+      > fieldset {
+        animation-duration: $form-multistep-transition-duration;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        white-space: normal;
+
+        &.is-inactive:not([class^="is-animating"]):not([class*=" is-animating"]) {
+          @include hidden;
+        }
+
+        &.is-animating-forward {
+          &:not(.is-inactive) { animation-name: fadeInRightSmall; left: -100%; }
+          &.is-inactive { animation-name: fadeOutLeftSmall; }
+        }
+
+        &.is-animating-backward {
+          &:not(.is-inactive) { animation-name: fadeInLeftSmall; }
+          &.is-inactive { animation-name: fadeOutRightSmall; left: -100%; }
+        }
+      }
     }
-  }
 
-  &__prev, &__next {
-    @extend %unstyled-button;
+    .form__nav {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
 
-    color: darken($hr-color, 30%);
+      @include compact;
 
-    @include font($sans, $size: base, $weight: semibold);
-
-    &:empty {
-      display: none;
+      &::before {
+        background-color: $hr-color;
+        height: $hr-size;
+        content: '';
+        flex: 1;
+        order: 2;
+      }
     }
-  }
 
-  &__prev {
-    order: 1;
-    margin-right: 1em;
+    .form__prev, .form__next {
+      @extend %unstyled-button;
 
-    &::before {
-      content: '<';
-      display: inline-block;
-      margin-right: 0.25em;
-      vertical-align: top;
+      animation: fadeInRightSmall $form-multistep-transition-duration linear 1 normal both;
+      color: darken($hr-color, 30%);
+      overflow: hidden;
+      max-height: 2em;
+      max-width: 50%;
+      transition: all $form-multistep-transition-duration linear;
+      white-space: nowrap;
+
+      @include font($sans, $size: base, $weight: semibold);
+
+      &:empty, &.is-inactive {
+        margin-right: 0;
+        max-width: 0;
+        max-height: 0;
+      }
+
+      &:empty {
+        animation: none;
+      }
+
+      &.is-inactive {
+        animation: fadeOutRightSmall $form-multistep-transition-duration linear 1 normal both;
+      }
     }
-  }
 
-  &__next {
-    order: 3;
-    margin-left: 1em;
+    .form__prev {
+      order: 1;
+      margin-right: 1em;
 
-    &::after {
-      content: '>';
-      display: inline-block;
-      vertical-align: top;
+      &::before {
+        content: '<';
+        display: inline-block;
+        margin-right: 0.25em;
+        vertical-align: top;
+      }
+    }
+
+    .form__next {
+      order: 3;
+      margin-left: 1em;
+
+      &::after {
+        content: '>';
+        display: inline-block;
+        vertical-align: top;
+      }
     }
   }
 }

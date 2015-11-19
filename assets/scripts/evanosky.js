@@ -1,6 +1,7 @@
 import {breakpoints} from '../variables';
 import pictureFill from 'picturefill';
 import $ from 'jquery';
+import inputCustom from './jquery.input-custom';
 import multistep from './jquery.multistep';
 import payment from 'jquery.payment';
 import appendAround from 'wsol-append-around';
@@ -23,11 +24,15 @@ $(function() {
     }
   });
 
-  // Donations
+  // Forms
   $('input.cc-numeric').payment('restrictNumeric');
   $('input.cc-number').payment('formatCardNumber');
   $('input.cc-exp').payment('formatCardExpiry');
   $('input.cc-cvc').payment('formatCardCVC');
+
+  $('.js-form-amount').inputCustom();
+  $('.js-multistep').multistep();
+
 
   const stripeResponseHandler = function(status, response) {
     const $form = $(this);
@@ -61,42 +66,5 @@ $(function() {
       exp_month: (expiration.month || 0),
       exp_year: (expiration.year || 0)
     }, stripeResponseHandler.bind(this));
-  });
-
-  $('.js-form-amount').each(function(index) {
-    const $form = $(this),
-      $customOption = $form.find('input[name="amount"][value="custom"]'),
-      $amounts = $form.find('input[name="amount"]').not($customOption),
-      $custom = $form.find('input[id="custom"]');
-
-    $custom.on({
-      focus: function(event) {
-        $form.addClass('has-choice');
-        $(this).closest($form.find('> *')).addClass('has-focus').siblings().removeClass('has-focus');
-      },
-      input: function(event) {
-        if ($(this).val().length > 0) {
-          $customOption.prop('checked', true);
-        }
-      },
-      blur: function(event) {
-        if ($(this).val().length <= 0) {
-          $form.removeClass('has-choice');
-          $(this).closest($form.find('> *')).removeClass('has-focus');
-          $amounts.filter(':checked').trigger('change');
-        } else {
-          $customOption.prop('checked', true);
-        }
-      }
-    });
-
-    $amounts.on({
-      change: function(event) {
-        $form.addClass('has-choice');
-        $(this).closest($form.find('> *')).addClass('has-focus').siblings().removeClass('has-focus');
-      }
-    });
-
-    $('.js-multistep').multistep();
   });
 });

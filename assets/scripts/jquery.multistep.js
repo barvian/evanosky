@@ -69,10 +69,8 @@ class MultiStep {
       options);
     this.$el.data("multistep", this);
 
-    this.$nav = this.$el.find(this.options.navSelector);
-    this.$navPrev = this.$el.find(this.options.navPrevSelector);
-
-    this.$items = this.$el.find(this.options.itemSelector)
+    this.$steps = this.$el.find(this.options.stepsSelector);
+    this.$items = this.$steps.find(this.options.itemSelector)
       .multistepItem($.extend({}, this.options, {
         progressButton: (item) => {
           return `<button class="btn btn--full btn--secondary btn--next">
@@ -83,17 +81,26 @@ class MultiStep {
     this.items = this.$items
       .map(function() { return $(this).data('multistepItem') });
 
-    const length = this.items.length;
-    this.items.each(function(index) { this.needsProgressButton = index != length-1; });
+    this.items.each((index, item) => {
+      item.needsProgressButton = index != this.length-1;
+      item.$el.toggleClass(this.options.inactiveClass, index != 0);
+    });
+    this.$steps.height(this.$steps.height() + 2);
     this.active = this.items.get(0);
 
+    this._initNav();
+
     this.listen();
+  }
+
+  get length() {
+    return this.items.length;
   }
 
   listen() {
     this.$navPrev.on('click', (event) => {
       event.preventDefault();
-      
+
       this.goTo(this.prev());
     });
     this.$items.on('progress.multistep', (event, item) => {
@@ -101,20 +108,43 @@ class MultiStep {
     });
   }
 
+  _initNav() {
+    this.$nav = $(`<nav class="${this.options.navClass}" />`);
+    this.$navPrev = $(`<button class="${this.options.navPrevClass}"></button>`);
+
+    this.$nav.append(this.$navPrev);
+    this.$steps.before(this.$nav);
+
+    this._refreshNav();
+  }
+
   _refreshNav() {
-    if (this.hasPrev(this.active)) {
-      this.$navPrev.text(this.prev().$legend.text());
+    if (this.hasPrev()) {
+      this.$navPrev.removeClass(this.options.inactiveClass).text(this.prev().$legend.text());
     } else {
-      this.$navPrev.html('');
+      this.$navPrev.addClass(this.options.inactiveClass);
     }
   }
 
   goTo(index) {
     if (index == null) return;
     const next = typeof index == 'object' ? index : this.items.get(index);
+    const animatingClass = this.items.index(this.active) < this.items.index(next)
+      ? this.options.animatingForwardClass
+      : this.options.animatingBackwardClass;
 
-    this.active.$el.addClass('hidden');
-    next.$el.removeClass('hidden');
+    this.active.$el.addClass(this.options.inactiveClass);
+    next.$el.removeClass(this.options.inactiveClass);
+    this.active.$el.add(next.$el).add(this.$steps)
+      .removeClass(this.options.animatingForwardClass)
+      .removeClass(this.options.animatingBackwardClass)
+      .addClass(animatingClass)
+      .one('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', (event) => {
+        $(event.currentTarget).removeClass(animatingClass);
+      });
+
+    const heightDiff = next.$el.height() - this.active.$el.height();
+    this.$steps.height(this.$steps.height() + heightDiff);
 
     this.active = next;
     this._refreshNav();
@@ -144,9 +174,13 @@ class MultiStep {
 
   static get defaultOptions() {
     return {
+      animatingForwardClass: 'is-animating-forward',
+      animatingBackwardClass: 'is-animating-backward',
+      inactiveClass: 'is-inactive',
+      stepsSelector: '.form__steps',
       itemSelector: '> fieldset',
-      navSelector: '.form__nav',
-      navPrevSelector: '.form__prev'
+      navClass: 'form__nav',
+      navPrevClass: 'form__prev'
     };
   };
 };
