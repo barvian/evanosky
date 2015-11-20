@@ -2,7 +2,7 @@
 <nav class="section-nav <?php echo isset($class) ? $class : '' ?><?php echo isset($mod) ? ' section-nav--'.$mod : '' ?>">
   <?php if(isset($sectionNav) && $sectionNav['header']): ?>
   <header class="section-nav__header">
-    <?php e($sectionNav['header'] == true, 'In this section', $sectionNav['header']) ?>
+    <?php e($sectionNav['header'] === true, 'In this section', $sectionNav['header']) ?>
   </header>
   <?php endif ?>
   <ul class="section-nav__menu">

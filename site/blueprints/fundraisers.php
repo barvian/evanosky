@@ -1,7 +1,11 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Fundraisers
-pages: fundraiser
+pages:
+  num: date
+  sort: flip
+  template:
+    - fundraiser
 deletable: false
 files: false
 fields:

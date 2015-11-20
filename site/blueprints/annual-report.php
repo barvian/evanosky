@@ -9,7 +9,7 @@ fields:
     label: Title
     type: text
     required: true
-  file:
+  report:
     label: Report
     type: selector
     mode: single

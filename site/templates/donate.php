@@ -122,6 +122,13 @@
         <?php echo $page->text()->kirbytext() ?>
       </article>
     </div>
+
+    <?php snippet('section-nav', [
+      'currentPage' => $page,
+      'sectionNav' => [
+        'header' => 'How you can help'
+      ]
+    ]) ?>
   </main>
 
 <?php snippet('footer') ?>

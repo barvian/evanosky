@@ -20,6 +20,15 @@ fields:
     mode: single
     types:
       - image
+  article:
+    label: Full article
+    type: selector
+    mode: single
+    types:
+      - document
+  teaser:
+    label: Teaser
+    type: textarea
   text:
     label: Text
     type: textarea

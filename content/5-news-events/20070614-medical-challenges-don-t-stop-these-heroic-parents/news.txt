@@ -6,11 +6,7 @@ Date: 2007-06-14
 
 ----
 
-File: 
-
-----
-
-Image: 
+Image: p6300302.gif
 
 ----
 
@@ -18,3 +14,7 @@ Teaser:
 
 One of the perks of writing this column is meeting heroic people. Two of those people are Bob and Sonya Evanosky. About a year ago, I wrote about their struggles with their three children who all have a rare genetic disease. Their two oldest sons, identical twins who are five years old, were diagnosed with metachromatic leukodystrophy at age three. The 
 disease was too advanced to treat so the parents have had to watch the boys slowly lose control of their bodies.
+
+----
+
+Article: fox-valley-villages-061407.pdf

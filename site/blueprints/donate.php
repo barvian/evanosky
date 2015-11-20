@@ -1,7 +1,7 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Donate
-pages: false
+pages: default
 deletable: false
 files: true
 fields:

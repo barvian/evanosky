@@ -14,7 +14,7 @@ fields:
     type: date
     format: MM/DD/YYYY
     required: true
-  file:
+  article:
     label: Full article
     type: selector
     mode: single

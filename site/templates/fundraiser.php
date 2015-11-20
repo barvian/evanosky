@@ -22,7 +22,13 @@
     </article>
 
     <?php snippet('pagination', [
-      'currentPage' => $page
+      'currentPage' => $page,
+      'url' => function($page) {
+        return $page->article()->empty() ? $page->url() : $page->article()->toFile()->url();
+      },
+      'target' => function($page) {
+        return $page->article()->empty() ? '_self' : '_blank';
+      }
     ]) ?>
   </main>
 
