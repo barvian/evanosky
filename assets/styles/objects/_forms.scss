@@ -21,6 +21,35 @@ $form-multistep-transition-duration: 250ms !default;
     @include trailing;
   }
 
+  &__completed, &__fatal {
+    padding: size(big);
+    text-align: center;
+
+    > .sprite {
+      animation: bounceIn 1s linear 1 normal both;
+      border: 3px solid currentColor;
+      border-radius: 100%;
+      display: inline-block;
+      fill: currentColor;
+      height: 5rem;
+      padding: 1rem;
+      width: 5rem;
+
+      @include query(alpha) {
+        border-width: 5px;
+        height: 10rem;
+        padding: size(spacing);
+        width: 10rem;
+      }
+    }
+  }
+
+  &__completed {
+    > %heading, > .sprite {
+      color: lighten(saturate($purple, 10%), 10%);
+    }
+  }
+
   &__item {
     margin-bottom: size(spacing);
 
@@ -179,21 +208,21 @@ $form-multistep-transition-duration: 250ms !default;
 
       @include compact;
 
-      &::before {
+      &::after {
         background-color: $hr-color;
         height: $hr-size;
         content: '';
         flex: 1;
-        order: 2;
       }
     }
 
-    .form__prev, .form__next {
+    .form__prev {
       @extend %unstyled-button;
 
       animation: fadeInRightSmall $form-multistep-transition-duration linear 1 normal both;
       color: darken($hr-color, 30%);
       overflow: hidden;
+      margin-right: 1em;
       max-height: 2em;
       max-width: 100%;
       transition: all $form-multistep-transition-duration linear;
@@ -202,6 +231,13 @@ $form-multistep-transition-duration: 250ms !default;
       @include font($sans, $size: base, $weight: semibold);
       @include query(alpha) {
         max-width: 50%;
+      }
+
+      &::before {
+        content: '<';
+        display: inline-block;
+        margin-right: 0.25em;
+        vertical-align: top;
       }
 
       &:empty, &.is-inactive {
@@ -216,29 +252,6 @@ $form-multistep-transition-duration: 250ms !default;
 
       &.is-inactive {
         animation: fadeOutRightSmall $form-multistep-transition-duration linear 1 normal both;
-      }
-    }
-
-    .form__prev {
-      order: 1;
-      margin-right: 1em;
-
-      &::before {
-        content: '<';
-        display: inline-block;
-        margin-right: 0.25em;
-        vertical-align: top;
-      }
-    }
-
-    .form__next {
-      order: 3;
-      margin-left: 1em;
-
-      &::after {
-        content: '>';
-        display: inline-block;
-        vertical-align: top;
       }
     }
   }

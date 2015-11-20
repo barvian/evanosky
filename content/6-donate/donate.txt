@@ -34,3 +34,11 @@ Your donation may be eligible for matching by your employer!  The Foundation has
 * . . . let's add your company to the list!
 
 Please go to your HR department or website to identify your company's matching gift criteria.  The Foundation is a 501(c)(3) nonprofit organization, and we can help you fill out any necessary paperwork!
+
+----
+
+Thanks: Thank you very much for your donation.  You will be e-mailed a receipt once your payment has been processed.
+
+----
+
+Javascript: For security purposes, JavaScript is required to donate through the foundation.  Please enable JavaScript in your web browser and refresh this page to continue.

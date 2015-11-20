@@ -11,3 +11,9 @@ fields:
   text:
     label: Text
     type: textarea
+  thanks:
+    label: Thank you
+    type: textarea
+  javascript:
+    label: Javascript Error
+    type: textarea

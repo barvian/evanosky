@@ -2,6 +2,7 @@
 
 return function($site, $pages, $page) {
 
+  $completed = false;
   $error = false;
 
   // handle the form submission
@@ -71,7 +72,7 @@ return function($site, $pages, $page) {
         "receipt_email" => $email
       ]);
 
-      go('donated');
+      $completed = true;
     } catch(\Stripe\Error\Card $e) {
       $error = $e->getMessage(); goto errored;
     } catch(\Stripe\Error\InvalidRequest $e) {
@@ -80,6 +81,9 @@ return function($site, $pages, $page) {
   }
 
   errored:
-  return ['error' => $error];
+  return [
+    'error' => $error,
+    'completed' => $completed
+  ];
 
 };

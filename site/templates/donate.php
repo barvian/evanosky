@@ -3,7 +3,23 @@
   <main class="main" role="main">
     <div class="hero hero--form">
       <div class="hero__box">
-        <form class="form form--multistep" data-donate action="" method="POST" autocomplete="on">
+        <?php if($completed): ?>
+        <div class="form__completed">
+          <?php snippet('sprite', [
+            'sprite' => 'check'
+          ]) ?>
+          <h3>Thank you</h3>
+          <?php echo $page->thanks()->kirbytext() ?>
+        </div>
+        <?php else: ?>
+        <div class="form__fatal no-js">
+          <?php snippet('sprite', [
+            'sprite' => 'cross'
+          ]) ?>
+          <h3>Javascript Required</h3>
+          <?php echo $page->javascript()->kirbytext() ?>
+        </div>
+        <form class="form form--multistep js" data-donate action="" method="POST" autocomplete="on">
           <input type="hidden" name="donation" value="donation" />
 
           <span class="form__errors"><?php e($error, $error) ?></span>
@@ -97,6 +113,7 @@
             </ol>
           </fieldset>
         </form>
+        <?php endif ?>
       </div>
     </div>
 
