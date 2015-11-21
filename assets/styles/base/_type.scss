@@ -59,13 +59,13 @@ code {
   letter-spacing: 0;
   text-transform: none;
 
-  @include font($serif, $size: large, $style: normal, $weight: bold);
+  @include font($serif, $size: big, $style: normal, $weight: bold);
 }
 
 %sidekick {
   @extend %heading;
 
-  @include font($sans, $size: big, $style: normal, $weight: medium);
+  @include font($sans, $size: ms(2), $style: normal, $weight: medium);
 }
 
 %shrimp {
@@ -92,7 +92,7 @@ h1 {
 h2 {
   @extend %section-divider;
 
-  @include leading(xxlarge);
+  @include leading(large);
 }
 
 h3 {

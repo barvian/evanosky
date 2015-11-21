@@ -84,14 +84,11 @@ $section-nav-border-color: lighten($light, 35%) !default;
         @extend .block-link;
 
         flex: 1;
-        @include query(alpha, true) {
-          font-size: size(base);
-        }
-        @include query(alpha) {
+        padding: 1.1em 0.75em 0.9em;
+
+        @include query(bravo) {
           font-size: size(medium);
-        }
-        @include query(bravo, true) {
-          padding: 1em 0.75em;
+          padding: 1.25em 1.25em 1em;
         }
 
         &::before {

@@ -83,6 +83,13 @@ $hero-shadow-color: $hero-dark-color !default;
     color: $hero-dark-color;
     display: table-cell;
 
+    @include query(alpha) {
+      padding-bottom: 1.65em;
+    }
+    @include query(bravo) {
+      font-size: size(big);
+    }
+
     &::before {
       background-image: linear-gradient(to bottom, rgba($bg, 0), rgba($bg, 0.65));
     }

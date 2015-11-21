@@ -27,7 +27,6 @@ $pagination-border-color: lighten($light, 35%) !default;
       > %link {
         @extend .block-link;
 
-        font-size: size(medium);
         @include query(bravo, true) {
           padding: 1em 0.75em;
         }

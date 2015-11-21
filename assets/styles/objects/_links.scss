@@ -106,7 +106,6 @@
   }
 
   &__label {
-    font-size: size(small);
     padding-left: 0.75em;
     padding-right: 0.75em;
 
@@ -115,15 +114,7 @@
       display: block;
       line-height: strip-units(size(medium));
 
-      @include font($sans, $size: base, $weight: semibold);
-    }
-
-    @include query(bravo) {
-      font-size: size(base);
-
-      strong {
-        font-size: size(medium);
-      }
+      @include font($sans, $size: medium, $weight: semibold);
     }
   }
 }
@@ -135,16 +126,15 @@
   @extend %unstyled-link;
 
   display: block;
-  padding: 1.5em;
+  line-height: strip-units(ms(1));
+  padding: 1.15em;
   position: relative;
   text-align: left;
 
   @include font($serif);
   @include query(alpha) {
     font-size: size(medium);
-  }
-  @include query(bravo) {
-    font-size: size(big);
+    padding: 1.5em;
   }
 
   &::before {
@@ -172,7 +162,7 @@
     @extend %uppercase;
 
     @include font($sans, $size: small);
-    @include trailing(0);
+    @include trailing(0.25em);
     @include query(alpha) {
       font-size: size(base);
     }

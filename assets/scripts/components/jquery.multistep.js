@@ -121,8 +121,8 @@ class MultiStep {
     this.$items.on('progress.multistep', (event, item) => {
       this.goTo(this.next(item));
     });
-    $(window).on('resize', (event) => {
-      this.$steps.height('auto').height(this.$steps.height() + 2);
+    $(window).on('resize.multistep', (event) => {
+      this.$steps.height('auto').height(this.$steps.height() + 2); // + 2 for borders
     }).trigger('resize');
   }
 
