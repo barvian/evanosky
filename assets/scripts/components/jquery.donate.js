@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import maskMoney from 'autoNumeric';
+import inputCustom from './jquery.input-custom';
 import multistep from './jquery.multistep';
 import payment from 'jquery.payment';
 
@@ -16,7 +18,7 @@ class DonationForm {
     this.$errors = this.$el.find(this.options.errorsSelector);
     this.$amount = this.$el.find(this.options.amountSelector).inputCustom();
     this.amount = this.$amount.data('inputCustom');
-    this.amount.$custom.payment('restrictNumeric');
+    this.amount.$custom.autoNumeric('init', { vMin: '0', vMax: '100000' });
     this.$zip = this.$el.find(this.options.zipSelector);
     this.$ccNumber = this.$el.find(this.options.ccNumberSelector).payment('formatCardNumber');
     this.$ccExpiry = this.$el.find(this.options.ccExpirySelector).payment('formatCardExpiry');
@@ -58,6 +60,8 @@ class DonationForm {
       var token = response.id;
       // Insert the token into the form so it gets submitted to the server
       this.$el.append($('<input type="hidden" name="stripeToken" />').val(token));
+      this.$el.append($('<input type="hidden" name="customInt" />')
+        .val(this.amount.$custom.autoNumeric('get')));
       // and submit
       this.$el.get(0).submit();
     }

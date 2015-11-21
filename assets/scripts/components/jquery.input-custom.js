@@ -54,7 +54,7 @@ class InputCustom {
       blur: (event) => {
         const $target = $(event.currentTarget);
 
-        if ($target.val().length <= 0) {
+        if ($target.val().length <= 0 || $target.val() == 0) {
           this.$el.removeClass('has-choice');
           $target.closest(this.$choices).removeClass(this.options.focusClass);
           this.$options.filter(':checked').trigger('change');

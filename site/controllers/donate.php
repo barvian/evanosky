@@ -9,7 +9,7 @@ return function($site, $pages, $page) {
   if(r::is('post') and get('donation')) {
     $amount = get('amount');
     if($amount) {
-      if($amount == 'custom') $amount = get('custom');
+      if($amount == 'custom') $amount = get('customInt');
       if(is_numeric($amount)) {
         $amount = (float) $amount;
       } else {

@@ -35,7 +35,7 @@
             <span class="form__or pack__shrink pack__stretch visible@bravo">or</span>
             <div>
               <div class="primary-field has-pre" data-pre="$">
-                <input type="tel" maxlength="6" name="custom" id="custom" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" value="<?php echo get('custom') ?>" />
+                <input type="tel" name="custom" id="custom" autocomplete="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off" autocompletetype="off" value="<?php echo get('custom') ?>" />
               </div>
             </div>
           </div>

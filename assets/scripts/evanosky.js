@@ -1,6 +1,7 @@
 import {breakpoints} from '../variables';
 import pictureFill from 'picturefill';
 import $ from 'jquery';
+import payment from 'jquery.payment';
 import inputCustom from './components/jquery.input-custom';
 import multistep from './components/jquery.multistep';
 import donate from './components/jquery.donate';
