@@ -88,7 +88,7 @@ $section-nav-border-color: lighten($light, 35%) !default;
 
         @include query(bravo) {
           font-size: size(medium);
-          padding: 1.25em 1.25em 1em;
+          padding: 1.35em 1.25em 1.25em;
         }
 
         &::before {
