@@ -1,9 +1,12 @@
 // Media
 // =====
 
+img {
+  max-width: 100%;
+}
+
 figure {
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
 
   > img {
     display: block;

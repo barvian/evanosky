@@ -1,7 +1,10 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Page
-pages: default
+pages:
+  template:
+    - default
+    - external
 files: true
 fields:
   title:

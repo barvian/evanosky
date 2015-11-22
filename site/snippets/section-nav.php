@@ -7,8 +7,8 @@
   <?php endif ?>
   <ul class="section-nav__menu">
     <?php foreach($currentPage->children()->visible() as $page): ?>
-    <li>
-      <a href="<?php echo $page->url() ?>">
+    <li<?php e($page->template() == 'external', ' class="external"') ?>>
+      <a href="<?php e($page->template() == 'external', $page->external(), $page->url()) ?>">
         <?php snippet('sprite', [
           'class' => 'section-nav__caret',
           'sprite' => 'chevron-thin-right'

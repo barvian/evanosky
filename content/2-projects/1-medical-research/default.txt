@@ -4,6 +4,8 @@ Title: Medical research
 
 Text: 
 
+(image: research-201.gif)
+
 We at The Evanosky Foundation believe that two issues need to be resolved to appropriately treat a child with MLD:
 
 1. Provide a child with the arylsulfatase-A (ARSA) enzyme, since the deficiency of this enzyme causes MLD. 
