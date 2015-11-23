@@ -16,7 +16,7 @@
             'class' => 'pagination__caret',
             'sprite' => 'chevron-thin-left'
           ]) ?>
-          <span class="pagination__description">Previous <?php// e($category, $category) ?></span>
+          <span class="pagination__description"><!--Previous--><?php echo $parent ?><?php// e($category, ' '.$category) ?></span>
           <span class="pagination__page"><?php echo $prev->title()->html() ?></span>
         </a>
       </li>
@@ -29,7 +29,7 @@
             'class' => 'pagination__caret',
             'sprite' => 'chevron-thin-right'
           ]) ?>
-          <span class="pagination__description">Next <?php// e($category, $category) ?></span>
+          <span class="pagination__description"><!--Next--><?php echo $parent ?><?php// e($category, ' '.$category) ?></span>
           <span class="pagination__page"><?php echo $next->title()->html() ?></span>
         </a>
       </li>

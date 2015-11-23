@@ -17,8 +17,7 @@ Metabolic disorders - also known as lysosomal storage disorders - include severa
 For the past decade or so, physicians have experimented with cord blood transplants after birth as a way of treating these diseases, and in many cases, treatments have been successful. Kurtzberg says the timing of the transplant is critical.
  
 > The idea is to give the baby cord blood stem cells from a healthy donor that have the potential to provide healthy genes that can replace the ones that aren't working properly in the baby's own cells.
-
-- Kurtzberg
+> <footer>Kurtzberg</footer>
 
 Generally, she says that the earlier the treatment, the greater the chance the donor cells will work, so transplants before the baby is born are ideal. 
 
@@ -28,4 +27,4 @@ Kurtzberg says the trial is open to pregnant women who are at risk of having aba
  
 Donor cells will be manufactured by Aldagen, Inc., a biopharmaceutical company in Durham and a partner in the study. Kurtzberg has no interest in the company."
 
-If you have any questions about the study or know a family expecting a child that may be affected by a metabolic disorder, please contact Michelle Gailiun at (919) 660-1306 or michelle.gailiun@duke.edu.
+If you have any questions about the study or know a family expecting a child that may be affected by a metabolic disorder, please contact Michelle Gailiun at (919) 660-1306 or (email: michelle.gailiun@duke.edu text: michelle.gailiun@duke.edu).

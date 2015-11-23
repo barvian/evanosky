@@ -27,9 +27,8 @@
 }
 
 @mixin only-row($columns) {
-  @for $column from 1 through $columns {
-    > :nth-child(#{$column}):nth-last-child(#{$columns - ($column - 1)}) {
-      @content;
-    }
+  > :nth-child(-n+#{$columns}):nth-child(#{$columns}n+1):nth-last-child(-n+#{$columns}),
+  > :nth-child(-n+#{$columns}):nth-child(#{$columns}n+1):nth-last-child(-n+#{$columns}) ~ * {
+    @content;
   }
 }

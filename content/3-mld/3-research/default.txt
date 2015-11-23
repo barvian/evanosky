@@ -4,18 +4,18 @@ Title: Research
 
 Text: 
 
-An article from e-Medicine that describes MLD in detail (may require you to log in, but it's free).
+An article from (link: http://www.emedicine.com/ped/topic2893.htm text: e-Medicine) that describes MLD in detail (may require you to log in, but it's free).
 
 ## Enzyme replacement therapy
 
-In 2008, Shire HGT purchased the rights to Metazym, an enzyme replacement therapy (ERT) that was initially developed by Zymenex.   In February 2009, Shire announced the results of its one-year Metazym trial with 13 late infantile MLD children and noted that no motor or cognitive function effects were observed.  Shire had planned to initiate a Phase 2/3 study with intravenous (IV) enzyme replacement therapy but later canceled this after concluding that the IV route of administration was not succeeding. As a result, Shire decided to suspend further development of an IV formulation of arylsulfatase A (ASA) derived from CHO cells, also known as HGT-1111.   
+In 2008, Shire HGT purchased the rights to Metazym, an enzyme replacement therapy (ERT) that was initially developed by Zymenex.   In February 2009, Shire announced the results of its one-year Metazym trial with 13 late infantile MLD children and noted that no motor or cognitive function effects were observed.  Shire had planned to initiate a Phase 2/3 study with intravenous (IV) enzyme replacement therapy but later canceled this after concluding that the IV route of administration was not succeeding. **As a result, Shire decided to suspend further development of an IV formulation of arylsulfatase A (ASA) derived from CHO cells, also known as HGT-1111**.   
 
 Going forward Shire believes that direct delivery to the central nervous system (CNS) offers the best chance for development of a successful treatment for MLD. Shire plans to develop HGT-1110, a formulation of ASA derived from human cells and compatible with direct CNS delivery for MLD patients. This human cell line has been used successfully by Shire for the development of other ERTs for Hunter syndrome, Fabry disease, and type 1 Gaucher disease. Development of the HGT-1110 formulation suitable for direct delivery to the CNS is ongoing, and according to Shire's website, it is expected to be launched in in the 2013-2016 timeframe.  
 
-Volkmar Gieselmann discusses the genetics and new forms of treatment (gene therapy and enzyme replacement therapy) being studied for metachromatic leukodystrophy in the 2008 issue of Aecta Paediatrica.  Click here to read the article.  Gieselmann is not an advocate of transplant for the late-infantile form of MLD based on a paper published in Bone Marrow Transplant in 2007.  This paper describes a case study with only one child who was pre-symptomatic yet MLD degradation continued despite transplant.  While The Evanosky Foundation disagrees with this position based on personal experience, the discussion of other treatment studies is interesting.  Please note that Dr. Gieselmann held a limited number of stock options in Zymenex,  which produced ASA (the enzyme required by MLD 
+Volkmar Gieselmann discusses the genetics and new forms of treatment (gene therapy and enzyme replacement therapy) being studied for metachromatic leukodystrophy in the 2008 issue of Aecta Paediatrica.  (file: metachromatic-leukodystrophy-gieselmann-highlighted.pdf popup: true text: Click here to read the article).  Gieselmann is not an advocate of transplant for the late-infantile form of MLD based on a paper published in Bone Marrow Transplant in 2007.  This paper describes a case study with only one child who was pre-symptomatic yet MLD degradation continued despite transplant.  While The Evanosky Foundation disagrees with this position based on personal experience, the discussion of other treatment studies is interesting.  Please note that Dr. Gieselmann held a limited number of stock options in Zymenex,  which produced ASA (the enzyme required by MLD 
 patients) for clinical  application.  In 2008, Zymenex's ASA technology was purchased by Shire, LLC.  Dr. Gieselmann stated in an e-mail to The Evanosky Foundation in late 2010 that he did not exercise any of the stock options.
 
-## Duke studies
+## Duke studies new approach in fetal transplants for metabolic disorders
 
 Duke University Medical Center is conducting a study of transplants in unborn babies that have metabolic disorders (October 2009).
 
@@ -37,26 +37,28 @@ Kurtzberg says the trial is open to pregnant women who are at risk of having aba
  
 Donor cells will be manufactured by Aldagen, Inc., a biopharmaceutical companyin Durham and a partner in the study. Kurtzberg has no interest in the company."
 
-If you have any questions about the study or know a familyexpecting a child that may be affected by a metabolic disorder, please contact Michelle Gailiun at (919) 660-1306 or michelle.gailiun@duke.edu.
+If you have any questions about the study or know a familyexpecting a child that may be affected by a metabolic disorder, please contact Michelle Gailiun at (919) 660-1306 or (email: michelle.gailiun@duke.edu).
 
 ## Stem cell therapy
 
-Aldagen is conducting Phase III clinical trials at Duke University on its supplemental stem cell known as ALD-101.  The study will determine if this supplemental stem cell accelerates cell engraftment in children who have received umbilical cord blood transplants for inherited metabolic diseases, such as MLD.  Rapid engraftment would shorten the period of time a patient would be at risk for infection and bleeding after a transplant, so it would therefore increase transplant survival rates.  For more information on this clinical trial, click here. 
+(image: 78502-561im.jpg)
 
-The Evanosky Foundation is continuing to sponsor pre-clinical work at Duke University which is targeted at developing cellular therapies for treatment of children with leukodystrophies.  In the coming year we expect to see initiation of a Phase I clinical trial that will administer cells intrathecally (in the spinal fluid) for children with advanced leukodystrophies.  Individuals or organizations who are interested in funding this or other research should contact Bob Evanosky at The Evanosky Foundation (evanoskyfoundation@evanoskyfoundation.org).  
+Aldagen is conducting Phase III clinical trials at Duke University on its supplemental stem cell known as ALD-101.  The study will determine if this supplemental stem cell accelerates cell engraftment in children who have received umbilical cord blood transplants for inherited metabolic diseases, such as MLD.  Rapid engraftment would shorten the period of time a patient would be at risk for infection and bleeding after a transplant, so it would therefore increase transplant survival rates.  For more information on this (link: http://clinicaltrials.gov/ct2/show/NCT00654433?cond=%22Leukodystrophy%2C+Metachromatic%22&rank=8 text: clinical trial, click here). 
+
+The Evanosky Foundation is continuing to sponsor pre-clinical work at Duke University which is targeted at developing cellular therapies for treatment of children with leukodystrophies.  In the coming year we expect to see initiation of a Phase I clinical trial that will administer cells intrathecally (in the spinal fluid) for children with advanced leukodystrophies.  Individuals or organizations who are interested in funding this or other research should contact Bob Evanosky at The Evanosky Foundation ((email: evanoskyfoundation@evanoskyfoundation.org)).  
 
 We at The Evanosky Foundation understand that many families are desperate for a cure for MLD.  We have one son who has been treated via stem cell transplant but we also have two other sons who have not been able to be treated.  We are aware that stem cell studies are taking place around the world, but we strongly encourage you to closely investigate any potential treatment prior to considering it for your child or situation.  To resolve MLD, two items must be addressed:
 
 1.  Provide the affected individual with the arylsulfatase-A (ARSA) enzyme, since the deficiency of this enzyme causes MLD.
 2.  Repair the damage that has already occurred to the brain and overall nervous system as a result of the degenerative process of MLD.
 
-Please remember that many treatments may promise to repair the brain (issue #2), but unless the enzyme can be produced (issue #1), brain repair will have to be done continuously.  For a good article on this subject, please read Stem-cell tourism troubles experts.  The article Injections of Hope, published in the Washington Post in September 2008, also discusses offshore stem cell injections.
+Please remember that many treatments may promise to repair the brain (issue #2), but unless the enzyme can be produced (issue #1), brain repair will have to be done continuously.  For a good article on this subject, please read (file: stem-cell-tourism-troubles-experts.pdf popup: true text: Stem-cell tourism troubles experts).  The article (file: injections-of-hope.pdf popup: true text: Injections of Hope), published in the Washington Post in September 2008, also discusses offshore stem cell injections.
 
 ## Gene therapy
 
 For several years, the San Raffaele Telethon Institute for Gene Therapy in Milan, Italy, has been researching gene therapy as an effective treatment for MLD.  The team demonstrated in previous research that they were able to use a virus to transport stem cells and ARSA (the enzyme that MLD patients are missing) to the central and peripheral nervous system.  This was effective in the central and peripheral nervous system for pre-symptomatic mice as well as symptomatic animals.  
 
-As of July 2010, the team has begun recruiting for a gene therapy clinical trial in Italy for the treatment of MLD.  Note that they are only accepting patients who are pre-symptomatic (meaning they have no symptoms) with late infantile MLD, so typically the child would have to be a brother or sister of an affect MLD child.  They are also accepting children with early juvenile MLD within the first six months of displaying symptoms.  Note that bisulfan, a chemotherapy drug, is required as part of the conditioning regimen.  Please click here for the full description of the trial.
+**As of July 2010, the team has begun recruiting for a gene therapy clinical trial in Italy for the treatment of MLD**.  Note that they are only accepting patients who are **pre-symptomatic** (meaning they have no symptoms) with late infantile MLD, so typically the child would have to be a brother or sister of an affect MLD child.  They are also accepting children with early juvenile MLD within the first six months of displaying symptoms.  Note that bisulfan, a chemotherapy drug, is required as part of the conditioning regimen.  Please click here for the full description of the trial.
 
 ## Other research
 

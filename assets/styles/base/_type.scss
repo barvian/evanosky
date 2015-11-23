@@ -141,4 +141,14 @@ blockquote {
     margin-left: size(spacing);
     margin-right: size(spacing);
   }
+
+  > footer {
+    @include leading(0.75em);
+
+    &::before {
+      content: '–';
+      display: inline-block;
+      margin-right: 0.15em;
+    }
+  }
 }

@@ -29,11 +29,13 @@
       }
 
       &:nth-of-type(odd) {
+        clear: right;
         float: right;
         margin-left: size(spacing);
       }
 
       &:nth-of-type(even) {
+        clear: left;
         float: left;
         margin-right: size(spacing);
       }

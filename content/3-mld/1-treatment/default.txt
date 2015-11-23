@@ -4,42 +4,42 @@ Title: Treatment
 
 Text: 
 
-**Currently, the only form of treatment for a person diagnosed with MLD is a bone marrow or stem cell transplant, and these are typically only performed on people who do not display any significant symptoms of MLD**. Gene therapy research is ongoing, but less-toxic transplants are currently showing the most promise. For more information on MLD research efforts, please click here.
+**Currently, the only form of treatment for a person diagnosed with MLD is a bone marrow or stem cell transplant, and these are typically only performed on people who do not display any significant symptoms of MLD**. Gene therapy research is ongoing, but less-toxic transplants are currently showing the most promise. (link: mld/research text: For more information on MLD research efforts, please click here).
 
-**For information on treating unborn babies who may be affected by MLD, please click here.**
+**(link: mld/treatment/in-utero-treatment text: For information on treating unborn babies who may be affected by MLD, please click here).**
 
 Various hospitals in the country currently perform bone marrow and stem cell transplants.  Duke University is a leader in performing stem cell transplants in children with MLD, while University of Minnesota has performed many bone marrow transplants for MLD patients. Click here for a slide show of Jack Evanosky's stem cell transplant journey.
 
-The advantage that stem cell transplants have over bone marrow transplants is that stem cells do not have to match as closely as bone marrow, and therefore are much easier to obtain.  In addition, doctors have found that patients who receive stem cell transplants seem to show more improvement than patients who receive bone marrow transplants.  Click here to read a paper on the effectiveness of umbilical cord stem cell transplants for children with inherited metabolic disorders such as MLD.
+The advantage that stem cell transplants have over bone marrow transplants is that stem cells do not have to match as closely as bone marrow, and therefore are much easier to obtain.  In addition, doctors have found that patients who receive stem cell transplants seem to show more improvement than patients who receive bone marrow transplants.  (file: 205.pdf popup: true text: Click here to read a paper on the effectiveness of umbilical cord stem cell transplants) for children with inherited metabolic disorders such as MLD.
 
-Click here to view a video of Dr. Joanne Kurtzberg discussing stem cell transplants (click on "Dr. Joanne Kurtzberg" in the lower right-hand corner of the page that appears).  Click on "Cord Blood Transplants" to hear MLD mother Jane Trimper discuss the benefits of using cord blood for stem cell transplant.
+(link: http://www.corduse.com/ text: Click here to view a video of Dr. Joanne Kurtzberg) discussing stem cell transplants (click on "Dr. Joanne Kurtzberg" in the lower right-hand corner of the page that appears).  Click on "Cord Blood Transplants" to hear MLD mother Jane Trimper discuss the benefits of using cord blood for stem cell transplant.
 
 Click here to read about the latest efforts in MLD research.
 
 ## What is cord blood?
 
-* Article describing Dr. Joanne Kurtzberg's cord blood transplant program at Duke.
-* What is cord blood?
-* This article on umbilical cord blood discusses the benefits of cord blood donation, the donation process, and reviews private versus public donation
-* An article that appeared in the Summer 2008 issue of Cancer Center Notes tells the story of the longest surviving cord blood transplant recipient.
+* (link: http://www.worldmag.com/articles/10284 text: Article) describing Dr. Joanne Kurtzberg's cord blood transplant program at Duke.
+* (link: http://www.babyzone.com/pregnancy/labor_birth/cordblood/article/cord-blood-donation text: What is cord blood?)
+* This (link: http://www.mysanantonio.com/news/MYSA090306_01A_cordblood_30ed2f8_html1369.html text: article on umbilical cord blood) discusses the benefits of cord blood donation, the donation process, and reviews private versus public donation
+* An article that appeared in the (link: http://http//www.evanoskyfoundation.org/PDF%20Articles/Unlikely%20Transplant%20Gives%20New%20Life.pdf text: Summer 2008 issue of Cancer Center Notes) tells the story of the longest surviving cord blood transplant recipient.
 
 ## Who should I contact for more information?
 
-If you know of a child or loved one who was recently diagnosed with MLD and are looking for information regarding umbilical cord stem cell transplants, please contact Dr. Joanne Kurtzberg at Duke University by e-mail at kurtz001@mc.duke.edu.  You may also view the Pediatric Blood and Marrow Transplantation site. 
+If you know of a child or loved one who was recently diagnosed with MLD and are looking for information regarding umbilical cord stem cell transplants, please contact (link: http://www.dukehealth.org/physicians/joanne_kurtzberg text: Dr. Joanne Kurtzberg) at Duke University by e-mail at kurtz001@mc.duke.edu.  You may also view the (link: http://cancer.duke.edu/pbmt/ text: Pediatric Blood and Marrow Transplantation) site. 
 
-If you know an expectant mother with a family history of MLD or another metabolic disorder, please click here to find out more about a Duke study involving fetal transplants for metabolic disorders.
+If you know an expectant mother with a family history of MLD or another metabolic disorder, (link: mld/research text: please click here to find out more about a Duke study involving fetal transplants for metabolic disorders).
 
-For developmental evaluations and questions regarding the progression of MLD symptoms, Dr. Maria Escolar at Children's Hospital of Pittsburgh of UPMC  and the University of Pittsburgh is a recognized expert in this field.  Please click here to find out more information about Dr. Escolar and the Program for the Study of Neurodevelopment in Rare Disorders (NDRD) at Children's Hospital of Pittsburgh of UPMC.
+For developmental evaluations and questions regarding the progression of MLD symptoms, Dr. Maria Escolar at (link: http://chp.edu/CHP/neurodevelopment+in+rare+disorders text: Children's Hospital of Pittsburgh of UPMC)  and the University of Pittsburgh is a recognized expert in this field.  (link: http://chp.edu/CHP/neurodevelopment+in+rare+disorders text: Please click here to find out more information about Dr. Escolar and the Program for the Study of Neurodevelopment in Rare Disorders (NDRD) at Children's Hospital of Pittsburgh of UPMC).
 
-For information on how to care for a person or child with MLD, click here.
+(link: mld/care text: For information on how to care for a person or child with MLD, click here).
 
 ## Published research on transplant effectiveness for leukodystrophies 
 
-* Click here to read a paper on the effectiveness of umbilical cord stem cell transplants for children with inherited metabolic disorders such as MLD.
-* Transplant Outcomes in Leukodystophies was published in January 2010 and authored by Paul Orchard and Jakub Tolar.  It discusses the effectiveness of stem cell transplants for Krabbe disease, ALD, and MLD at various points of disease progression.
+* (file: 205.pdf popup: true text: Click here to read a paper on the effectiveness of umbilical cord stem cell transplants) for children with inherited metabolic disorders such as MLD.
+* (file: transplant-outcomes-in-leukodystrophies-jan2010.pdf popup: true text: Transplant Outcomes in Leukodystophies) was published in January 2010 and authored by Paul Orchard and Jakub Tolar.  It discusses the effectiveness of stem cell transplants for Krabbe disease, ALD, and MLD at various points of disease progression.
 
 ## Other organizations and resources
 
-* Click here for additional resources that may be helpful for families care with a child or person affected by MLD.
-* Hunter's Hope was founded by Hall of Fame quarterback Jim Kelly after his son, Hunter, was diagnosed with Krabbe's Disease, which is another leukodystrophy.  Click here to read an article on Hunter and their organization's efforts.
-* The MLD Foundation offers an e-mail support group for families affected by MLD.
+* (link: mld/care/other-resources text: Click here for additional resources) that may be helpful for families care with a child or person affected by MLD.
+* (link: http://www.huntershope.org/site/PageServer text: Hunter's Hope) was founded by Hall of Fame quarterback Jim Kelly after his son, Hunter, was diagnosed with Krabbe's Disease, which is another leukodystrophy.  (link: http://www.niagarafallsreporter.com/hanchette169.html text: Click here to read an article on Hunter) and their organization's efforts.
+* The (link: http://www.mldfoundation.org/ text: MLD Foundation) offers an e-mail support group for families affected by MLD.

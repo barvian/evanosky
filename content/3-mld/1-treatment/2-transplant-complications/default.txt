@@ -6,13 +6,13 @@ Text:
 
 Graft vs. host disease (GVHD) can occur after a stem cell transplant and is a result of the "new" or graft cells attacking the body's existing cells.  Symptoms of GVHD include itching, rash, vomiting and diarrhea.  If left untreated, GVHD will eventually attack the body's organs and can cause death.
 
-Dr. David A. Jacobsohn at Children's National Medical Center in Washington, DC is the Chief of the Division of Blood and Marrow Transplantation. His specialties include transplantation - stem cell and cancer (oncology), with special interests in stem cell transplantation as well as acute and chronic graft vs. host disease.
+(link: http://www.childrensnational.org/FindADoctor/Profiles/David-Jacobsohn-4346.aspx text: Dr. David A. Jacobsohn) at Children's National Medical Center in Washington, DC is the Chief of the Division of Blood and Marrow Transplantation. His specialties include transplantation - stem cell and cancer (oncology), with special interests in stem cell transplantation as well as acute and chronic graft vs. host disease.
 
 Dr. Jacobsohn has been the author of several studies on GVHD and is considered a leading expert.  Here are abstracts of several of the studies he has authored:
 
-* Phase II study of pentostatin in patients with corticosteroid-refractory chronic graft-versus-host disease, published in Journal of Clinical Oncology in September 2007.
-* Full article that appeared in Blood, 12 November 2009 - Evaluation of pentostatin in corticosteroid-refractory chronic graft versus-host disease in children
-* Acute graft-versus-host-disease in children article, published in Bone Marrow Transplantation in January 2008.
+* (file: phase-ii-pentostatin-study.pdf popup: true text: Phase II study of pentostatin in patients with corticosteroid-refractory chronic graft-versus-host disease), published in Journal of Clinical Oncology in September 2007.
+* Full article that appeared in Blood, 12 November 2009 - (file: blood-nov-2009.pdf popup: true text: Evaluation of pentostatin in corticosteroid-refractory chronic graft versus-host disease in children)
+* (file: bmt-jan-2008.pdf popup: true text: Acute graft-versus-host-disease in children) article, published in Bone Marrow Transplantation in January 2008.
 * Abstract of Pentostatin in Steroid Refractory Chronic Graft vs. Host Disease, published in Blood, 16 November 2005.  Jack was a participant in a similar Pentostatin study.
 * Full article that appeared in Journal of Clinical Oncology in April 2005 that discusses Pentostatin in Steroid Refactory Acute Graft vs. Host Disease.
 * Chronic Graft vs. Host Disease, British Journal of Haematology, 2004.
