@@ -1,6 +1,8 @@
 // Lists
 // =====
 
+$list-marker-color: lighten($light, 15%);
+
 %list {
   margin-left: 0;
   padding-left: 2.5em;
@@ -46,18 +48,64 @@ ol, ul { @extend %list; }
 // Misc
 // ----
 
+/*ul*/.unordered-list,
 /*ol*/.numbered-list {
   @extend %unstyled-list;
 
+  > li {
+    padding-left: size(spacing);
+    position: relative;
+
+    @include query(alpha) {
+      padding-left: size(spacing)*2;
+    }
+
+    &::before {
+      position: absolute;
+    }
+  }
+}
+
+/*ul*/.unordered-list {
+  > li {
+    &::before {
+      background-color: $list-marker-color;
+      border-radius: 100%;
+      content: '';
+      height: 0.5rem;
+      left: (size(spacing) - 0.5rem) / 4;
+      top: 0.5rem;
+      width: 0.5rem;;
+
+      @include query(alpha) {
+        left: size(spacing);
+      }
+    }
+  }
+}
+
+/*ol*/.numbered-list {
   counter-reset: numbered-list;
 
   > li {
-    position: relative;
+    counter-increment: numbered-list;
 
     &::before {
+      border: 1.5px solid $list-marker-color;
+      border-radius: 100%;
+      color: $list-marker-color;
       content: counter(numbered-list);
-      counter-increment: numbered-list;
-      position: absolute;
+      height: size(medium);
+      left: (size(spacing) - size(medium)) / -2;
+      line-height: strip-units(size(medium)-0.1rem);
+      text-align: center;
+      top: 0.125rem;
+      width: size(medium);
+
+      @include font($sans, $weight: bold, $size: small);
+      @include query(alpha) {
+        left: size(spacing) - size(medium)/2;
+      }
     }
   }
 }

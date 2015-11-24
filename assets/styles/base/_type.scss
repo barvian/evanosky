@@ -132,14 +132,22 @@ hr {
   margin-top: 0.05em;
 }
 
+%caption {
+  @extend %small;
+
+  @include font($serif, $style: italic);
+}
+
 blockquote {
+  @extend .landmark;
+
   color: $light;
   margin-left: 0;
   margin-right: 0;
   @include font($serif, $style: italic);
   @include query(bravo) {
-    margin-left: size(spacing);
-    margin-right: size(spacing);
+    margin-left: size(spacing)*2;
+    margin-right: size(spacing)*2;
   }
 
   > footer {
@@ -151,4 +159,10 @@ blockquote {
       margin-right: 0.15em;
     }
   }
+}
+
+figcaption {
+  @extend %caption;
+
+  @include leading(small);
 }

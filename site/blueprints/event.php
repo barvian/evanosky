@@ -20,3 +20,7 @@ fields:
     mode: single
     types:
       - document
+  text:
+    label: Text
+    type: textarea
+

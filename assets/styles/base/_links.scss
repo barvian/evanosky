@@ -53,14 +53,58 @@
     border-bottom-style: dashed;
   }
 
+  &[href$=".pdf"] {
+    @extend %external-link;
+
+    // &::before {
+    //   background-image: url('../images/pdf.png');
+    // }
+
+    &::after {
+      content: '[PDF]';
+    }
+  }
+
   img {
     border-bottom: none;
   }
 }
 
+%external-link {
+  border-bottom-style: dotted;
+  // color: darken(desaturate(#D62306, 10%), 2%);
+
+  // &::before {
+  //   background-position: left center;
+  //   background-repeat: no-repeat;
+  //   background-size: 100%;
+  //   border-bottom: none;
+  //   content: '';
+  //   display: inline-block;
+  //   height: size(base);
+  //   margin-right: 0.25em;
+  //   max-height: 24px;
+  //   max-width: 24px;
+  //   vertical-align: top;
+  //   width: size(base);
+  // }
+
+  &::after {
+    display: inline-block;
+    margin-left: 0.25em;
+    vertical-align: baseline;
+
+    @include font($sans, $size: small, $weight: semibold);
+  }
+}
+
 %unstyled-link {
-  &, &[href^="#"] {
+  &, &[href^="#"], &[href$=".pdf"] {
     border-bottom: none;
+  }
+
+  &[href$=".pdf"]::after {
+    content: none;
   }
 }
 

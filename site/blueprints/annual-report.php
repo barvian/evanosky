@@ -9,6 +9,11 @@ fields:
     label: Title
     type: text
     required: true
+  date:
+    label: Date
+    type: date
+    format: MM/DD/YYYY
+    required: true
   report:
     label: Report
     type: selector

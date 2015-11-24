@@ -156,6 +156,10 @@ $hero-shadow-color: $hero-dark-color !default;
     }
   }
 
+  &--tabs {
+    @include retina-background('../images/hero-header.png', 100% 100%);
+  }
+
   &--form {
     background-position: center 20px;
     background-size: 1235px 500px;
