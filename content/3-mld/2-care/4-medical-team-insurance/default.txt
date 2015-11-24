@@ -4,16 +4,6 @@ Title: Medical team & insurance
 
 Text: 
 
-## Insurance
-
-In addition to private insurance, some other insurance options may be available:
-
-* A **pediatric hospice** service can provide medication, tube feeding formula, or other services.  Depending on your state or insurance company, the insurance company may pay the hospice a flat amount per month for these services.  To qualify for hospice, generally the insurance company requires that a doctor write a letter stating that the child may not have a life expectancy of more than six months.  While that may sound pessimistic, children with MLD are often hospitalized and have many medical issues so it can be reasonable to assume that their life expectancy may be short.  Most insurance companies do not penalize you or cancel the services if the child uses hospice services for more than six months.
-* Within the United States, most hospitals have **pediatric social workers**.  These social workers are trained in knowing what programs are offered by the state, federal government, or local programs.  Social workers can help to identify programs that your child or family may be qualified for.
-* **United Cerebral Palsy** provides information on how parents can confront medical insurance companies as well as helps families of special needs children get the most from their benefits.  You can read more about them by clicking (link: http://ucp.org/ucp_generalsub.cfm/1/8/11592 text: here).
-
-## Medical Team
-
 (image: doctor-202.gif)
 
 Managing your child’s medical care can easily become a full-time job, but it can be easier if you choose a primary care physician who has the ability to be the “leader” of your child’s medical team.  The coordination effort helps to make sure that everyone is informed and that the doctor advocates for the proper care both with other doctors and the insurance companies.  Members of your team may include:
@@ -26,3 +16,11 @@ Managing your child’s medical care can easily become a full-time job, but it c
 * An **ophthalmologist** (eye doctor) or **neuro-ophthalmologist** (an eye doctor who is also familiar with how the nervous system works) can help to determine your child’s visual capabilities.  Because eyes often degrade with MLD children, these doctors can help with glasses or other treatment as needed.
 * A **pulmonologist** is a doctor of the lungs and respiratory system.  Because children with MLD are immobile and cannot run around and expand their lungs like other children, they are often susceptible to pneumonia and lung problems.  A pulmonologist can assess your child’s lung health and make recommendations for maintaining or improving lung function.
 * A **gastroenterologist** specializes in stomach and digestive issues.  This doctor may be involved in placing a G-tube or other type of feeding tube and can be consulted for vomiting or reflux concerns.
+
+## Insurance
+
+In addition to private insurance, some other insurance options may be available:
+
+* A **pediatric hospice** service can provide medication, tube feeding formula, or other services.  Depending on your state or insurance company, the insurance company may pay the hospice a flat amount per month for these services.  To qualify for hospice, generally the insurance company requires that a doctor write a letter stating that the child may not have a life expectancy of more than six months.  While that may sound pessimistic, children with MLD are often hospitalized and have many medical issues so it can be reasonable to assume that their life expectancy may be short.  Most insurance companies do not penalize you or cancel the services if the child uses hospice services for more than six months.
+* Within the United States, most hospitals have **pediatric social workers**.  These social workers are trained in knowing what programs are offered by the state, federal government, or local programs.  Social workers can help to identify programs that your child or family may be qualified for.
+* **United Cerebral Palsy** provides information on how parents can confront medical insurance companies as well as helps families of special needs children get the most from their benefits.  You can read more about them by clicking (link: http://ucp.org/ucp_generalsub.cfm/1/8/11592 text: here).
