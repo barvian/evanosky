@@ -5,7 +5,7 @@
 <?php if($currentPage->depth() > 1 && ($hasPrevVisible || $hasNextVisible)): ?>
 <?php $inflector = \ICanBoogie\Inflector::get(\ICanBoogie\Inflector::DEFAULT_LOCALE) ?>
 <?php $parentTerm = $currentPage->parent()->title() ?>
-<?php if (!isset($term)) $term = str_word_count($parentTerm) == 1 ? $inflector->singularize(str_word_count($parentTerm, 1)[0]) : null ?>
+<?php if (!isset($term)) $term = str_word_count($parentTerm) == 1 && substr(str_word_count($parentTerm, 1)[0], -1, 1) == 's' ? $inflector->singularize(str_word_count($parentTerm, 1)[0]) : null ?>
 <?php $flip = isset($flip) && $flip ?>
 <?php if(!isset($url)) $url = function($page) { return $page->url(); } ?>
 <?php if(!isset($target)) $target = function($page) { return '_self'; } ?>

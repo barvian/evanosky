@@ -31,11 +31,25 @@
   @include leading(massive);
   @include retina-background("../images/footer.png", 1349px 50px, bottom center);
 
+  &__address {
+    .page--home & { text-align: center; }
+
+    @include query(bravo) {
+      &, .page & {
+        text-align: left;
+      }
+    }
+  }
+
   &__tax {
     @extend %small;
 
+    .page--home & { text-align: center; }
+
     @include query(bravo) {
-      text-align: right;
+      &, .page & {
+        text-align: right;
+      }
     }
   }
 

@@ -4,6 +4,20 @@
 // Articles represent self-contained, often user-entered pieces of content.
 //
 
+%article__left {
+  clear: left;
+  float: left;
+  margin-left: 0;
+  margin-right: size(spacing);
+}
+
+%article__right {
+  clear: right;
+  float: right;
+  margin-left: size(spacing);
+  margin-right: 0;
+}
+
 .article {
   > .layout:first-of-type > .layout__unit > p {
     overflow: hidden;
@@ -13,16 +27,28 @@
     }
   }
 
-  :not(li) > ul {
+  > ul:not([class]),
+  :not(li) > ul:not([class]) {
     @extend .unordered-list;
   }
 
-  :not(li) > ol {
+  > ol:not([class]),
+  :not(li) > ol:not([class]) {
     @extend .numbered-list;
+  }
+
+  dl:not([class]) {
+    @extend .faq-list;
+
+    // + figure:nth-child(n) {
+    //   @extend %article__right;
+    // }
   }
 
   figure {
     @include query(alpha) {
+      @extend %article__right;
+
       margin-bottom: size(spacing);
       max-width: 33.333%;
 
@@ -41,17 +67,13 @@
         @include trailing(0);
       }
 
-      &:nth-of-type(odd) {
-        clear: right;
-        float: right;
-        margin-left: size(spacing);
-      }
-
-      &:nth-of-type(even) {
-        clear: left;
-        float: left;
-        margin-right: size(spacing);
-      }
+      // &:nth-of-type(odd) {
+      //   @extend %article__right;
+      // }
+      //
+      // &:nth-of-type(even) {
+      //   @extend %article__left;
+      // }
     }
   }
 

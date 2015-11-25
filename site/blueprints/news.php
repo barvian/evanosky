@@ -20,6 +20,9 @@ fields:
     mode: single
     types:
       - document
+  ref:
+    label: Reference
+    type: text
   image:
     label: Featured image
     type: selector

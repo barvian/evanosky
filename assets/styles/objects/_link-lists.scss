@@ -41,9 +41,28 @@ $link-list-caret-width: 2.5rem !default;
   &__meta {
     @extend %label;
 
+    color: desaturate(lighten($blue, 25%), 10%);
     display: block;
 
     @include trailing(0.35em);
+    @include horizontal(size(spacing)/2);
+
+    > * {
+      display: inline-block;
+    }
+
+    > * + * {
+      &::before {
+        background-color: currentColor;
+        border-radius: 100%;
+        content: '';
+        display: inline-block;
+        height: 0.25em;
+        margin-right: size(spacing)/2;
+        vertical-align: middle;
+        width: 0.25em;
+      }
+    }
   }
 
   &__title {

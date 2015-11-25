@@ -54,32 +54,42 @@ ol, ul { @extend %list; }
 
   > li {
     padding-left: size(spacing);
-    position: relative;
+    text-indent: -1*size(spacing);
 
     @include query(alpha) {
       padding-left: size(spacing)*2;
+      text-indent: -2*size(spacing);
     }
 
     &::before {
-      position: absolute;
+      display: inline-block;
+      margin-right: size(spacing)/2;
+      vertical-align: middle;
+    }
+
+    > :first-child {
+      display: inline;
+
+      ~ * {
+        text-indent: 0;
+      }
     }
   }
 }
 
 /*ul*/.unordered-list {
-  > li {
-    &::before {
-      background-color: $list-marker-color;
-      border-radius: 100%;
-      content: '';
-      height: 0.5rem;
-      left: (size(spacing) - 0.5rem) / 4;
-      top: 0.5rem;
-      width: 0.5rem;;
+  > li::before {
+    background-color: $list-marker-color;
+    border-radius: 100%;
+    content: '';
+    height: 0.5rem;
+    margin-left: size(spacing) - 0.5rem - size(spacing)/2;
+    position: relative;
+    top: -0.1em;
+    width: 0.5rem;
 
-      @include query(alpha) {
-        left: size(spacing);
-      }
+    @include query(alpha) {
+      margin-left: size(spacing)*2 - 0.5rem - size(spacing)/2;
     }
   }
 }
@@ -96,15 +106,55 @@ ol, ul { @extend %list; }
       color: $list-marker-color;
       content: counter(numbered-list);
       height: size(medium);
-      left: (size(spacing) - size(medium)) / -2;
       line-height: strip-units(size(medium)-0.1rem);
+      margin-left: size(spacing) - size(medium) - size(spacing)/2;
+      position: relative;
       text-align: center;
-      top: 0.125rem;
+      text-indent: 0;
+      top: -0.3em;
       width: size(medium);
 
       @include font($sans, $weight: bold, $size: small);
       @include query(alpha) {
-        left: size(spacing) - size(medium)/2;
+        margin-left: size(spacing)*2 - size(medium) - size(spacing)/2;
+      }
+    }
+  }
+}
+
+/*dl*/.faq-list {
+  > dt {
+    @include font($sans, $weight: semibold, $size: medium);
+    @include trailing(1em);
+  }
+
+  > dd {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.logo-list {
+  @extend %unstyled-list;
+
+  > li {
+    > %link {
+      @extend %unstyled-link;
+
+      display: block;
+    }
+
+    img {
+      backface-visibility: hidden;
+      display: block;
+      filter: grayscale(100%) opacity(35%);
+      transform: translateZ(0); // FIXME: hack
+      transition: all 175ms ease-in-out;
+    }
+
+    @include attention {
+      img {
+        filter: grayscale(0%) opacity(100%);
       }
     }
   }

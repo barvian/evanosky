@@ -120,6 +120,19 @@
     <div class="layout">
       <article class="layout__unit article">
         <?php echo $page->text()->kirbytext() ?>
+
+        <h2>Matching gifts</h2>
+        <?php echo $page->prematching()->kirbytext() ?>
+        <ul class="block-grid-3 block-grid-5@bravo has-centered-items is-tight logo-list"><!--
+          <?php foreach($page->companies()->yaml() as $company): ?>
+          --><li>
+            <a href="<?php echo $company['url'] ?>">
+              <img src="<?php echo $page->file($company['logo'])->url() ?>" alt="<?php echo $company['name'] ?>" />
+            </a>
+          </li><!--
+          <?php endforeach ?>
+        --></ul>
+        <?php echo $page->postmatching()->kirbytext() ?>
       </article>
     </div>
 

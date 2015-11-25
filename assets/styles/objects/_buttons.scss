@@ -14,8 +14,9 @@
 
     background-color: lighten($purple, 6.25%);
     background-image: linear-gradient(to bottom, lighten($purple, 12.5%), $purple);
-    border-image: linear-gradient(to bottom, lighten($purple, 5%), darken($purple, 7.5%));
     border-image-slice: 1;
+    border-image-source: linear-gradient(to bottom, lighten($purple, 5%), darken($purple, 7.5%));
+    border-style: solid;
     border-width: 1px;
     box-shadow: inset 0 1px 1px lighten($purple, 25%);
     color: #fff;
@@ -48,8 +49,9 @@
   &--secondary {
     background-color: lighten($purple, 6.25%);
     background-image: linear-gradient(to bottom, lighten($light, 48.5%), lighten($light, 40%));
-    border-image: linear-gradient(to bottom, lighten($light, 27.5%), lighten($light, 20%));
     border-image-slice: 1;
+    border-image-source: linear-gradient(to bottom, lighten($light, 27.5%), lighten($light, 20%));
+    border-style: solid;
     border-width: 1px;
     box-shadow: inset 0 1px 1px #fff;
     color: $blue;

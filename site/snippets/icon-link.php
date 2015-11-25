@@ -3,7 +3,7 @@
   <?php if($link['icon']->extension() == 'svg'): ?>
     <?php echo $link['icon']->read() ?>
   <?php else: ?>
-    <img src="<?php echo $icon->url() ?>" alt="" />
+    <img src="<?php echo $link['icon']->url() ?>" alt="" />
   <?php endif ?>
   </div>
   <div class="icon-link__label">
