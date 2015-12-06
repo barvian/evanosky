@@ -66,6 +66,10 @@
       &:first-child {
         @include trailing(0);
       }
+
+      + p:first-of-type {
+        overflow: visible !important;
+      }
     }
 
     // &:nth-of-type(odd) {
