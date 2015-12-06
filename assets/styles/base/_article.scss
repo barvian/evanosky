@@ -4,18 +4,30 @@
 // Articles represent self-contained, often user-entered pieces of content.
 //
 
+%article__left, %article__right {
+  > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 %article__left {
-  clear: left;
-  float: left;
-  margin-left: 0;
-  margin-right: size(spacing);
+  @include query(alpha) {
+    clear: left;
+    float: left;
+    margin-left: 0;
+    margin-right: size(spacing);
+  }
 }
 
 %article__right {
-  clear: right;
-  float: right;
-  margin-left: size(spacing);
-  margin-right: 0;
+  @include query(alpha) {
+    clear: right;
+    float: right;
+    margin-left: size(spacing);
+    margin-right: 0;
+  }
 }
 
 .article {
@@ -46,35 +58,23 @@
   }
 
   figure {
+    @extend %article__right;
     @include query(alpha) {
-      @extend %article__right;
-
       margin-bottom: size(spacing);
       max-width: 33.333%;
-
-      > img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-
-        @include query(alpha) {
-          margin-left: 0;
-          margin-right: 0;
-        }
-      }
 
       &:first-child {
         @include trailing(0);
       }
-
-      // &:nth-of-type(odd) {
-      //   @extend %article__right;
-      // }
-      //
-      // &:nth-of-type(even) {
-      //   @extend %article__left;
-      // }
     }
+
+    // &:nth-of-type(odd) {
+    //   @extend %article__right;
+    // }
+    //
+    // &:nth-of-type(even) {
+    //   @extend %article__left;
+    // }
   }
 
   %heading {
