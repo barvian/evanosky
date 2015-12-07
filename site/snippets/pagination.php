@@ -1,20 +1,18 @@
-<?php if(!isset($filter)) $filter = function($page) { return true; } ?>
-<?php $hasPrevVisible = $currentPage->hasPrevVisible() && $filter($currentPage->prevVisible()) ?>
-<?php $hasNextVisible = $currentPage->hasNextVisible() && $filter($currentPage->nextVisible()) ?>
-
-<?php if($currentPage->depth() > 1 && ($hasPrevVisible || $hasNextVisible)): ?>
+<?php if(!isset($collection)) $collection = $currentPage->siblings() ?>
+<?php $flip = isset($flip) && $flip ?>
+<?php $next = $collection->nth($collection->indexOf($currentPage)+($flip ? 1 : -1)) ?>
+<?php $prev = $collection->nth($collection->indexOf($currentPage)+($flip ? -1 : 1)) ?>
+<?php if($currentPage->depth() > 1 && ($prev || $next)): ?>
 <?php $inflector = \ICanBoogie\Inflector::get(\ICanBoogie\Inflector::DEFAULT_LOCALE) ?>
 <?php $parentTerm = $currentPage->parent()->title() ?>
 <?php if (!isset($term)) $term = str_word_count($parentTerm) == 1 && substr(str_word_count($parentTerm, 1)[0], -1, 1) == 's' ? $inflector->singularize(str_word_count($parentTerm, 1)[0]) : null ?>
-<?php $flip = isset($flip) && $flip ?>
 <?php if(!isset($url)) $url = function($page) { return $page->url(); } ?>
 <?php if(!isset($target)) $target = function($page) { return '_self'; } ?>
 <nav class="pagination <?php echo isset($class) ? $class : '' ?> <?php echo isset($mod) ? 'pagination--'.$mod : '' ?>">
   <div class="layout"><div class="layout__unit">
     <ul class="pagination__menu">
-      <?php if($flip ? $hasNextVisible : $hasPrevVisible): ?>
+      <?php if($prev): ?>
       <li class="pagination__prev">
-        <?php $prev = $flip ? $currentPage->nextVisible() : $currentPage->prevVisible() ?>
         <a class="pagination__link" href="<?php e($prev->template() == 'external', $prev->external(), $url($prev)) ?>">
           <?php snippet('sprite', [
             'class' => 'pagination__caret',
@@ -25,9 +23,8 @@
         </a>
       </li>
       <?php endif ?>
-      <?php if($flip ? $currentPage->hasPrevVisible() : $currentPage->hasNextVisible()): ?>
+      <?php if($next): ?>
       <li class="pagination__next">
-        <?php $next = $flip ? $currentPage->prevVisible() : $currentPage->nextVisible() ?>
         <a class="pagination__link" href="<?php e($next->template() == 'external', $next->external(), $url($next)) ?>" target="<?php echo $target($next) ?>">
           <?php snippet('sprite', [
             'class' => 'pagination__caret',

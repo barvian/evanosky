@@ -24,7 +24,8 @@
     </article>
 
     <?php snippet('pagination', [
-      'currentPage' => $page
+      'currentPage' => $page,
+      'flip' => true
     ]) ?>
   </main>
 

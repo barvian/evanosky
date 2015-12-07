@@ -19,10 +19,10 @@
     </article>
 
     <?php snippet('pagination', [
+      'collection' => $page->siblings()->filter(function($page) {
+        return $page->intendedTemplate() == 'event';
+      }),
       'currentPage' => $page,
-      'filter' => function($page) {
-        return $page->template() == 'event';
-      },
       'term' => 'Event',
       'url' => function($page) {
         return $page->article()->empty() ? $page->url() : $page->article()->toFile()->url();
