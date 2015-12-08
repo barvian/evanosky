@@ -8,14 +8,7 @@
     ]) ?>
     <?php if($page->hasVisibleChildren()): ?>
     <div class="dropdown">
-      <ul class="dropdown__menu">
-        <?php foreach($page->children()->visible() as $page): ?>
-        <li>
-          <a href="<?php echo $page->url() ?>"><?php echo $page->title()->html() ?></a>
-
-        </li>
-        <?php endforeach ?>
-      </ul>
+      <?php snippet('dropdown-menu', ['pages' => $page->children()->visible()]) ?>
     </div>
     <?php endif ?>
   </li>

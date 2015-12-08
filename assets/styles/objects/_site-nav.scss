@@ -88,6 +88,7 @@ body {
 
         > %link {
           display: block;
+          white-space: nowrap;
 
           @include font($sans, $weight: semibold, $size: medium);
         }
@@ -96,7 +97,7 @@ body {
           > %link {
             @extend %unstyled-link;
 
-            padding: 0.5em;
+            padding: 0.75em;
           }
 
           &.is-active {
@@ -112,6 +113,38 @@ body {
             transition: none;
           }
         }
+
+        &.has-sub {
+          @include attention {
+            box-shadow: $dropdown-box-shadow;
+
+            > %link {
+              background-color: $dropdown-bg;
+              box-shadow: inset 0 -1px 0 $dropdown-menu-border-color;
+              color: $dropdown-menu-link-color;
+              position: relative;
+              z-index: $dropdown-z-index + 1;
+
+              @include attention {
+                background-color: $dropdown-hover-bg;
+                color: $dropdown-menu-link-color-attention;
+              }
+            }
+
+            > .dropdown {
+              left: 0;
+            }
+          }
+        }
+
+        &:last-of-type {
+          @include attention {
+            > .dropdown {
+              left: auto;
+              right: 0;
+            }
+          }
+        }
       }
 
       .page--hidden & {
@@ -122,9 +155,7 @@ body {
     }
 
     > li {
-      > .dropdown {
-        display: none;
-      }
+      position: relative;
     }
   }
 
@@ -134,7 +165,7 @@ body {
     height: 1.75em;
     left: 50%;
     margin-left: -1.75em;
-    margin-top: -0.75em !important;
+    margin-top: -0.55em !important;
     position: absolute;
     top: 100%;
     width: 3.5em;
@@ -152,6 +183,27 @@ body {
       border-bottom-width: 2px;
       color: $purple;
       padding-bottom: 0.15em;
+      transition: padding 115ms ease-in-out;
+    }
+
+    > .dropdown {
+      @extend .dropdown--purple;
+    }
+
+    &.has-sub.has-sub {
+      @include attention {
+        > %link {
+          background-color: $dropdown-purple-bg;
+          border-bottom: none;
+          color: $dropdown-menu-link-color;
+          padding: 0.75em;
+
+          @include attention {
+            background-color: $dropdown-purple-hover-bg;
+            color: $dropdown-menu-link-color-attention;
+          }
+        }
+      }
     }
   }
 }

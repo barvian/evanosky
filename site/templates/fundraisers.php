@@ -10,7 +10,7 @@
         <?php echo $page->text()->kirbytext() ?>
 
         <nav class="link-list">
-          <?php foreach($page->children()->visible()->sortBy('date', 'desc') as $fundraiser): ?>
+          <?php foreach($page->children()->sortBy('date', 'desc') as $fundraiser): ?>
           <article>
             <a class="link-list__link" href="<?php echo $fundraiser->article()->empty() ? $fundraiser->url() : $fundraiser->article()->toFile()->url() ?>" target="<?php e($fundraiser->article()->empty(), '_self', '_blank') ?>">
               <time class="link-list__meta" datetime="<?php echo date('Y-m-d', $fundraiser->date()) ?>"><?php echo date('F j, Y', $fundraiser->date()) ?></time>

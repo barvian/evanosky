@@ -42,7 +42,7 @@ class MultiStepItem {
   static get defaultOptions() {
     return {
       progressButton: (item) => {
-        return `<button>Next</button>`
+        return `<a>Next</a>`
       }
     };
   };
@@ -85,9 +85,9 @@ class MultiStep {
     this.$items = this.$el.find(this.options.itemSelector)
       .multistepItem($.extend({}, this.options, {
         progressButton: (item) => {
-          return `<button class="btn btn--full btn--secondary btn--next">
+          return `<a class="btn btn--full btn--secondary btn--next">
               ${this.next(item) && this.next(item).$legend.text()}
-            </button>`
+            </a>`
         }
       }));
     this.items = this.$items
@@ -128,7 +128,7 @@ class MultiStep {
 
   _initNav() {
     this.$nav = $(`<nav class="${this.options.navClass}" />`);
-    this.$navPrev = $(`<button class="${this.options.navPrevClass}"></button>`);
+    this.$navPrev = $(`<a class="${this.options.navPrevClass}"></a>`);
 
     this.$nav.append(this.$navPrev);
     this.$steps.before(this.$nav);

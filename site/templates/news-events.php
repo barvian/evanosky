@@ -12,7 +12,7 @@
         <section id="news">
           <h2>News</h2>
           <?php snippet('link-list', array(
-            'pages' => $page->children()->visible()->filter(function($child) {
+            'pages' => $page->children()->filter(function($child) {
               return $child->intendedTemplate() == 'news';
             })->sortBy('date', 'desc')
           )) ?>
@@ -21,7 +21,7 @@
         <section id="annual-reports">
           <h2>Annual Reports</h2>
           <?php snippet('link-list', array(
-            'pages' => $page->children()->visible()->filter(function($child) {
+            'pages' => $page->children()->filter(function($child) {
               return $child->intendedTemplate() == 'annual-report';
             })->sortBy('date', 'desc'),
             'date' => false
@@ -31,7 +31,7 @@
         <section id="events">
           <h2>Events</h2>
           <?php snippet('link-list', array(
-            'pages' => $page->children()->visible()->filter(function($child) {
+            'pages' => $page->children()->filter(function($child) {
               return $child->intendedTemplate() == 'event';
             })->sortBy('date', 'desc')
           )) ?>

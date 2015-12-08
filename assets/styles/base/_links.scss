@@ -47,6 +47,7 @@
 %link {
   color: scale-color($blue, $lightness: -15%, $saturation: 10%);
   border-bottom: 1px solid currentColor;
+  cursor: pointer;
   text-decoration: none;
 
   &[href^="#"] {

@@ -92,7 +92,7 @@ $form-multistep-transition-duration: 250ms !default;
       @extend .form__item;
     }
 
-    + button, + input[type="submit"] {
+    + button, + input[type="submit"], + %link {
       margin-top: 0.75rem;
     }
   }
