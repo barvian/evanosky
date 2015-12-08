@@ -3,5 +3,9 @@
   <?php snippet('site-nav-menu', ['pages' => $pages->visible()->limit(ceil($count/2))]) ?>
   <div class="site-nav__logo visible@alpha" data-set="site-logo"></div>
   <?php snippet('site-nav-menu', ['pages' => $pages->visible()->offset(ceil($count/2))]) ?>
-  </ul>
+  <a class="site-nav__close js-close-nav hidden@site-nav-spread">
+    <?php snippet('sprite', [
+      'sprite' => 'cross-thin'
+    ]) ?>
+  </a>
 </nav>

@@ -114,7 +114,7 @@ ol, ul { @extend %list; }
       top: -0.3em;
       width: size(medium);
 
-      @include font($sans, $weight: bold, $size: small);
+      @include font($sans, $weight: semibold, $size: small);
       @include query(alpha) {
         margin-left: size(spacing)*2 - size(medium) - size(spacing)/2;
       }

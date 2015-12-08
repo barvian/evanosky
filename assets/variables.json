@@ -4,6 +4,8 @@
     "bravo": "screen and (min-width: 780px)",
     "charlie": "screen and (min-width: 1240px)",
     "short": "screen and (min-width: 780px) and (max-height: 740px)",
-    "site-nav-spread": "screen and (min-width: 940px)"
+    "site-nav-spread": "screen and (min-width: 940px)",
+    "overlay-short": "screen and (max-height: 520px)",
+    "overlay-xshort": "screen and (max-height: 380px)"
   }
 }

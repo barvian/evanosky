@@ -10,9 +10,8 @@ import enquire from 'enquire';
 
 $(function() {
   $('.js-aa').wsol_appendAround();
-  $('.js-site-nav').on('click', function(event) {
-    $('html, body').toggleClass('has-open-nav').animate({ scrollTop: 0 }, 150);
-    $('.site-nav').css('top', $('.site-header').height());
+  $('.js-open-nav, .js-close-nav').on('click', function(event) {
+    $('html').toggleClass('has-open-nav');
   });
 
   // Queries
