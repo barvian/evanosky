@@ -57,7 +57,6 @@ gulpfile(gulp, {
 
   scripts: {
     src: `${src}/scripts/evanosky.js`,
-    babelIgnore: new RegExp(`(${bower.config.directory})|(${src}/${vendor})`),
     dest: `${dist}/scripts`,
     bundle: 'evanosky',
   },
@@ -89,7 +88,7 @@ gulpfile(gulp, {
   ],
 
   watch: {
-    needsReload: `{content,site}/**/*`,
+    promptsReload: `{content,site}/**/*`,
     browserSync: {
       notify: true,
       logPrefix: 'Evanosky',
