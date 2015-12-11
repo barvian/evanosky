@@ -1,19 +1,21 @@
 import gulp from 'gulp';
 import bower from 'bower';
-import tasks from 'gulpfile';
+import gulpfile from 'gulpfile';
 import fs from 'fs';
 import yaml from 'js-yaml';
 
-const secrets = yaml.safeLoad(fs.readFileSync('./secrets.yml', 'utf8')),
-  prod = secrets.servers.prod;
+// Secrets
+const {
+  servers: { prod: prod }
+} = yaml.safeLoad(fs.readFileSync('./secrets.yml', 'utf8'));
 
 // Project paths
 const src     = 'assets';
 const tmp     = 'tmp';
-const vendor  = `${src}/scripts/vendor`;
+const vendor  = 'scripts/vendor';
 const dist    = 'public';
 
-gulp.tasks = tasks({
+gulpfile(gulp, {
   deploy: {
     src: '.',
     username: prod.username,
@@ -55,7 +57,7 @@ gulp.tasks = tasks({
 
   scripts: {
     src: `${src}/scripts/evanosky.js`,
-    babelIgnore: new RegExp(`(${bower.config.directory})|(${vendor})`),
+    babelIgnore: new RegExp(`(${bower.config.directory})|(${src}/${vendor})`),
     dest: `${dist}/scripts`,
     bundle: 'evanosky',
   },
@@ -83,12 +85,8 @@ gulp.tasks = tasks({
     dest: dist
   },
 
-  clean: {
-    target: [
-      '.sass-cache/',
-      dist,
-    ]
-  },
+  clean: [
+  ],
 
   watch: {
     needsReload: `{content,site}/**/*`,
