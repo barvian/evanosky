@@ -17,6 +17,7 @@ const dist    = 'public';
 
 gulpfile(gulp, {
   deploy: {
+    type: 'rsync',
     src: '.',
     username: prod.username,
     host: prod.host,
