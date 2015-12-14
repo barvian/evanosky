@@ -13,7 +13,7 @@ const {
 const src     = 'assets';
 const tmp     = 'tmp';
 const vendor  = 'scripts/vendor';
-const dist    = 'public';
+const dest    = 'public';
 
 gulpfile(gulp, {
   deploy: {
@@ -24,15 +24,15 @@ gulpfile(gulp, {
     dest: prod.root,
     excludeFirst: [
       '/site/accounts/*',
-      `/${dist}/avatars/*`,
-      `/${dist}/thumbs/*`,
+      `/${dest}/avatars/*`,
+      `/${dest}/thumbs/*`,
       '.DS_Store'
     ],
     include: [ // everything not already excluded
       '/content/***',
       '/kirby/***',
       '/panel/***',
-      `/${dist}/***`,
+      `/${dest}/***`,
       '/site/***',
       '/vendor/***',
       '/.htaccess',
@@ -49,7 +49,7 @@ gulpfile(gulp, {
     src: `${src}/styles/evanosky.scss`,
     all: [`${src}/styles/**/*.scss`, `${src}/variables.json`],
     includePaths: [bower.config.directory],
-    dest:`${dist}/styles`,
+    dest:`${dest}/styles`,
     autoprefixer: {
       browsers: ['> 5%', 'last 2 versions'],
       cascade: false
@@ -58,7 +58,7 @@ gulpfile(gulp, {
 
   scripts: {
     src: `${src}/scripts/evanosky.js`,
-    dest: `${dist}/scripts`,
+    dest: `${dest}/scripts`,
     bundle: 'evanosky',
   },
 
@@ -67,22 +67,22 @@ gulpfile(gulp, {
     src: [
       `${vendor}/modernizr*.js`
     ],
-    dest: dist,
+    dest: dest,
   },
 
   fonts: {
     src: `${src}/fonts/**/*`,
-    dest: `${dist}/fonts`
+    dest: `${dest}/fonts`
   },
 
   images: {
     src: `${src}/images/**/*`,
-    dest: `${dist}/images`,
+    dest: `${dest}/images`,
   },
 
   sprites: {
     src: `${src}/sprites/**/*`,
-    dest: dist
+    dest: dest
   },
 
   clean: [

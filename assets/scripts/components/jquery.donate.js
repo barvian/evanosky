@@ -52,6 +52,7 @@ class DonationForm {
 
   _stripeResponseHandler(status, response) {
     if (response.error) {
+      this.$el.addClass(this.options.errorClass);
       // Show the errors on the form
       this.$errors.text(response.error.message);
       this.$submit.prop('disabled', false);
@@ -83,6 +84,7 @@ class DonationForm {
 
   static get defaultOptions() {
     return {
+      errorClass: 'has-errors',
       errorsSelector: '.form__errors',
       submitSelector: '[type="submit"]',
       amountSelector: '.form__choices',

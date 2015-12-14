@@ -1,0 +1,33 @@
+// Statuses
+// ========
+
+.status {
+  padding: size(big);
+  text-align: center;
+
+  &__icon {
+    animation: bounceIn 1s linear 1 normal both;
+    border: 3px solid currentColor;
+    border-radius: 100%;
+    display: inline-block;
+    fill: currentColor;
+    height: 5rem;
+    padding: 1rem;
+    width: 5rem;
+
+    @include query(alpha) {
+      border-width: 5px;
+      height: 10rem;
+      padding: size(spacing);
+      width: 10rem;
+    }
+  }
+
+  &--complete {
+    .status__heading,
+    .status__icon {
+      color: lighten(saturate($purple, 10%), 10%);
+
+    }
+  }
+}

@@ -5,6 +5,10 @@ $form-or-color: lighten($light, 10%) !default;
 $form-multistep-transition-duration: 250ms !default;
 
 .form {
+  &.has-errors {
+    animation: errorShake 400ms ease-in-out 1;
+  }
+
   &__errors {
     background-color: lighten($red, 45%);
     border: 1px solid $red;
@@ -19,35 +23,6 @@ $form-multistep-transition-duration: 250ms !default;
     }
 
     @include trailing;
-  }
-
-  &__completed, &__fatal {
-    padding: size(big);
-    text-align: center;
-
-    > .sprite {
-      animation: bounceIn 1s linear 1 normal both;
-      border: 3px solid currentColor;
-      border-radius: 100%;
-      display: inline-block;
-      fill: currentColor;
-      height: 5rem;
-      padding: 1rem;
-      width: 5rem;
-
-      @include query(alpha) {
-        border-width: 5px;
-        height: 10rem;
-        padding: size(spacing);
-        width: 10rem;
-      }
-    }
-  }
-
-  &__completed {
-    > %heading, > .sprite {
-      color: lighten(saturate($purple, 10%), 10%);
-    }
   }
 
   &__item {
