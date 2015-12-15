@@ -78,16 +78,14 @@ class InputCustom {
     });
   }
 
-  static get defaultOptions() {
-    return {
-      choicesSelector: '> *',
-      focusClass: 'has-focus',
-      optionsGroup: 'amount',
-      customOptionValue: 'custom',
-      customSelector: '#custom'
-    };
-  };
-};
+  static defaultOptions = {
+    choicesSelector: '> *',
+    focusClass: 'has-focus',
+    optionsGroup: 'amount',
+    customOptionValue: 'custom',
+    customSelector: '#custom'
+  }
+}
 
 // jQuery plugin
 // -------------

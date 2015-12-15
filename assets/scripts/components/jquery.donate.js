@@ -82,24 +82,22 @@ class DonationForm {
     }, this._stripeResponseHandler.bind(this));
   }
 
-  static get defaultOptions() {
-    return {
-      errorClass: 'has-errors',
-      errorsSelector: '.form__errors',
-      submitSelector: '[type="submit"]',
-      amountSelector: '.form__choices',
-      zipSelector: '#zip',
-      ccNumberSelector: '#cc-number',
-      ccExpirySelector: '#cc-expiry',
-      ccCVCSelector: '#cc-cvc',
-      submitButton: (val = null) => {
-        return `<button type="submit" class="btn btn--full btn--primary">
-            Donate${val == '' || val == null ? '' : ' $'+val}
-          </button>`
-      }
-    };
-  };
-};
+  static defaultOptions = {
+    errorClass: 'has-errors',
+    errorsSelector: '.form__errors',
+    submitSelector: '[type="submit"]',
+    amountSelector: '.form__choices',
+    zipSelector: '#zip',
+    ccNumberSelector: '#cc-number',
+    ccExpirySelector: '#cc-expiry',
+    ccCVCSelector: '#cc-cvc',
+    submitButton: (val = null) => {
+      return `<button type="submit" class="btn btn--full btn--primary">
+          Donate${val == '' || val == null ? '' : ' $'+val}
+        </button>`
+    }
+  }
+}
 
 // jQuery plugin
 // -------------

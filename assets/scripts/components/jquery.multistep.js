@@ -39,14 +39,12 @@ class MultiStepItem {
     }
   }
 
-  static get defaultOptions() {
-    return {
-      progressButton: (item) => {
-        return `<a>Next</a>`
-      }
-    };
-  };
-};
+  static defaultOptions = {
+    progressButton: (item) => {
+      return `<a>Next</a>`
+    }
+  }
+}
 
 
 // jQuery plugin
