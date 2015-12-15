@@ -3,5 +3,6 @@
     "assets/bower_components",
     "assets/scripts/vendor"
   ],
+  "presets": ["es2015", "stage-0"],
   "retainLines": true
 }
