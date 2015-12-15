@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import bower from 'bower';
+import Bower from 'bower'; const bower = Bower.config.directory;
 import gulpfile from 'gulpfile';
 import fs from 'fs';
 import yaml from 'js-yaml';
@@ -48,7 +48,7 @@ gulpfile(gulp, {
   styles: {
     src: `${src}/styles/evanosky.scss`,
     all: [`${src}/styles/**/*.scss`, `${src}/variables.json`],
-    includePaths: [bower.config.directory],
+    includePaths: [bower],
     dest:`${dest}/styles`,
     autoprefixer: {
       browsers: ['> 5%', 'last 2 versions'],
@@ -58,8 +58,7 @@ gulpfile(gulp, {
 
   scripts: {
     src: `${src}/scripts/evanosky.js`,
-    dest: `${dest}/scripts`,
-    bundle: 'evanosky',
+    dest: `${dest}/scripts`
   },
 
   copy: {
