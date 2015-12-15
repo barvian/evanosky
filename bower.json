@@ -4,15 +4,13 @@
   "dependencies": {
     "picturefill": "~2.3.1",
     "enquire": "~2.1.2",
+    "normalize-css": "normalize.css#~3.0.3",
+    "modular-scale": "~2.1.1",
+    "quantity-queries": "~0.4.0",
+    "SassyLists": "~2.2.4",
     "wsol-append-around": "websolutions/append-around#~2.0.1",
     "jquery.payment": "mbarvian/jquery.payment#umd",
     "animate.css": "~3.4.0",
     "autoNumeric": "mbarvian/autoNumeric#umd"
-  },
-  "devDependencies": {
-    "modular-scale": "~2.1.1",
-    "normalize-css": "normalize.css#~3.0.3",
-    "quantity-queries": "~0.4.0",
-    "SassyLists": "~2.2.4"
   }
 }
