@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import Bower from 'bower'; const bower = Bower.config.directory;
+import _bower from 'bower'; const bower = _bower.config.directory;
 import gulpfile from 'gulpfile';
 import fs from 'fs';
 import yaml from 'js-yaml';
@@ -16,6 +16,22 @@ const vendor  = 'scripts/vendor';
 const dest    = 'public';
 
 gulpfile(gulp, {
+  browserSync: {
+    files: ['content/**/*', 'site/**/*'],
+    notify: true,
+    logPrefix: 'Evanosky',
+    scrollElementMapping: ['[role="main"]'],
+    proxy: 'evanosky.dev',
+    snippetOptions: {
+      rule: {
+        match: /<\/html>/i,
+        fn: function (snippet, match) {
+          return snippet + match;
+        }
+      }
+    }
+  },
+
   deploy: {
     type: 'rsync',
     src: '.',
@@ -58,7 +74,8 @@ gulpfile(gulp, {
 
   scripts: {
     src: `${src}/scripts/evanosky.js`,
-    dest: `${dest}/scripts`
+    dest: `${dest}/scripts`,
+    bundle: 'evanosky.js'
   },
 
   copy: {
@@ -82,26 +99,5 @@ gulpfile(gulp, {
   sprites: {
     src: `${src}/sprites/**/*`,
     dest: dest
-  },
-
-  clean: [
-  ],
-
-  watch: {
-    promptsReload: `{content,site}/**/*`,
-    browserSync: {
-      notify: true,
-      logPrefix: 'Evanosky',
-      scrollElementMapping: ['[role="main"]'],
-      proxy: 'evanosky.dev',
-      snippetOptions: {
-        rule: {
-          match: /<\/html>/i,
-          fn: function (snippet, match) {
-            return snippet + match;
-          }
-        }
-      }
-    }
   }
 });

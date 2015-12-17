@@ -4,7 +4,7 @@
   "description": "Website for the Evanosky Foundation.",
   "private": "true",
   "scripts": {
-    "deploy": "gulp deploy",
+    "deploy": "gulp deploy --env production",
     "sync": "gulp sync",
     "gulp": "gulp",
     "build": "gulp build",
