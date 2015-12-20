@@ -9,8 +9,8 @@
     "quantity-queries": "~0.4.0",
     "SassyLists": "~2.2.4",
     "wsol-append-around": "websolutions/append-around#~2.0.1",
-    "jquery.payment": "mbarvian/jquery.payment#umd",
+    "jquery.payment": "barvian/jquery.payment#umd",
     "animate.css": "~3.4.0",
-    "autoNumeric": "mbarvian/autoNumeric#umd"
+    "autoNumeric": "BobKnothe/autoNumeric#~1.9.43"
   }
 }

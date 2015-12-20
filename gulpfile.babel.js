@@ -1,6 +1,6 @@
 import gulp from 'gulp';
 import _bower from 'bower'; const bower = _bower.config.directory;
-import gulpfile from 'gulpfile';
+import tasks from 'barvian-tasks';
 import fs from 'fs';
 import yaml from 'js-yaml';
 
@@ -15,11 +15,10 @@ const tmp     = 'tmp';
 const vendor  = 'scripts/vendor';
 const dest    = 'public';
 
-gulpfile(gulp, {
+tasks(gulp, {
   browserSync: {
     files: ['content/**/*', 'site/**/*'],
     notify: true,
-    logPrefix: 'Evanosky',
     scrollElementMapping: ['[role="main"]'],
     proxy: 'evanosky.dev',
     snippetOptions: {
