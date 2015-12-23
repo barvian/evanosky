@@ -13,12 +13,12 @@ class DonationForm {
     this.el = el;
 
     this.options = $.extend({}, DonationForm.defaultOptions, options);
-    this.$el.data("donate", this);
+    this.$el.data('donate', this);
 
     this.$errors = this.$el.find(this.options.errorsSelector);
     this.$amount = this.$el.find(this.options.amountSelector).inputCustom();
     this.amount = this.$amount.data('inputCustom');
-    this.amount.$custom.autoNumeric('init', { vMin: '0', vMax: '100000' });
+    this.amount.$custom.autoNumeric('init', {vMin: '0', vMax: '100000'});
     this.$zip = this.$el.find(this.options.zipSelector);
     this.$ccNumber = this.$el.find(this.options.ccNumberSelector).payment('formatCardNumber');
     this.$ccExpiry = this.$el.find(this.options.ccExpirySelector).payment('formatCardExpiry');
@@ -45,9 +45,7 @@ class DonationForm {
       this.submit();
     });
 
-    this.$amount.on('change.inputCustom', (event) => {
-      this._refreshSubmitButton();
-    });
+    this.$amount.on('change.inputCustom', () => this._refreshSubmitButton());
   }
 
   _stripeResponseHandler(status, response) {
@@ -82,6 +80,7 @@ class DonationForm {
     }, this._stripeResponseHandler.bind(this));
   }
 
+  // jshint ignore:start
   static defaultOptions = {
     errorClass: 'has-errors',
     errorsSelector: '.form__errors',
@@ -92,11 +91,12 @@ class DonationForm {
     ccExpirySelector: '#cc-expiry',
     ccCVCSelector: '#cc-cvc',
     submitButton: (val = null) => {
-      return `<button type="submit" class="btn btn--full btn--primary">
-          Donate${val == '' || val == null ? '' : ' $'+val}
-        </button>`
+      return '<button type="submit" class="btn btn--full btn--primary">' +
+        'Donate' + (val == null || val === '' ? '' : ` $${val}`) +
+        '</button>';
     }
   }
+  // jshint ignore:end
 }
 
 // jQuery plugin
@@ -107,7 +107,6 @@ $.fn.donate = function(options) {
     new DonationForm(input, options);
   });
 };
-
 
 // Attribute bootstrap
 // -------------------

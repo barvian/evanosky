@@ -1,17 +1,17 @@
 import gulp from 'gulp';
-import _bower from 'bower'; const bower = _bower.config.directory;
 import tasks from 'barvian-tasks';
+import _bower from 'bower'; const bower = _bower.config.directory;
+import path from 'path';
 import fs from 'fs';
 import yaml from 'js-yaml';
 
 // Secrets
 const {
-  servers: { prod: prod }
+  servers: {prod: prod}
 } = yaml.safeLoad(fs.readFileSync('./secrets.yml', 'utf8'));
 
 // Project paths
 const src     = 'assets';
-const tmp     = 'tmp';
 const vendor  = 'scripts/vendor';
 const dest    = 'public';
 
@@ -24,9 +24,7 @@ tasks(gulp, {
     snippetOptions: {
       rule: {
         match: /<\/html>/i,
-        fn: function (snippet, match) {
-          return snippet + match;
-        }
+        fn: (snippet, match) => snippet + match
       }
     }
   },
@@ -43,7 +41,8 @@ tasks(gulp, {
       `/${dest}/thumbs/*`,
       '.DS_Store'
     ],
-    include: [ // everything not already excluded
+    // everything not already excluded
+    include: [
       '/content/***',
       '/kirby/***',
       '/panel/***',
@@ -54,8 +53,9 @@ tasks(gulp, {
       '/index.php',
       '/site.php'
     ],
+    // everything not included
     exclude: [
-      '*' // everything not included
+      '*'
     ],
     syncable: true
   },
@@ -64,15 +64,16 @@ tasks(gulp, {
     src: `${src}/styles/evanosky.scss`,
     all: [`${src}/styles/**/*.scss`, `${src}/variables.json`],
     includePaths: [bower],
-    dest:`${dest}/styles`,
-    autoprefixer: {
-      browsers: ['> 5%', 'last 2 versions'],
-      cascade: false
-    }
+    dest: `${dest}/styles`
   },
 
   scripts: {
     src: `${src}/scripts/evanosky.js`,
+    all: [
+      `${src}/scripts/**/*.js`,
+      `!${src}/${vendor}/**/*`,
+      path.basename(__filename)
+    ],
     dest: `${dest}/scripts`,
     bundle: 'evanosky.js'
   },
