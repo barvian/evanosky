@@ -11,9 +11,9 @@ const {
 } = yaml.safeLoad(fs.readFileSync('./secrets.yml', 'utf8'));
 
 // Project paths
-const src     = 'assets';
-const vendor  = 'scripts/vendor';
-const dest    = 'public';
+const src = 'assets';
+const vendor = 'scripts/vendor';
+const dest = 'public';
 
 tasks(gulp, {
   browserSync: {
@@ -83,7 +83,7 @@ tasks(gulp, {
     src: [
       `${vendor}/modernizr*.js`
     ],
-    dest: dest,
+    dest: dest
   },
 
   fonts: {
@@ -93,7 +93,7 @@ tasks(gulp, {
 
   images: {
     src: `${src}/images/**/*`,
-    dest: `${dest}/images`,
+    dest: `${dest}/images`
   },
 
   sprites: {

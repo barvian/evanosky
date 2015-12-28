@@ -9,24 +9,23 @@ class InputCustom {
     this.el = el;
 
     this.options = $.extend({}, InputCustom.defaultOptions, options);
-    const {
-      choicesSelector, optionsGroup, customSelector, customOptionValue, focusClass
-    } = this.options;
     this.$el.data('inputCustom', this);
 
-    this.$choices = this.$el.find(choicesSelector);
-    this.$_items = this.$el.find(`input[name="${optionsGroup}"]`);
-    this.$customOption = this.$_items.filter(`[value="${customOptionValue}"]`);
-    this.$options = this.$_items.not(this.$customOption);
-    this.$custom = this.$el.find(customSelector);
+    /* eslint-disable max-len */
+    this.$choices = this.$el.find(this.options.choicesSelector);
+    this.$items = this.$el.find(`input[name="${this.options.optionsGroup}"]`);
+    this.$customOption = this.$items.filter(`[value="${this.options.customOptionValue}"]`);
+    this.$options = this.$items.not(this.$customOption);
+    this.$custom = this.$el.find(this.options.customSelector);
+    /* eslint-enable max-len */
 
     if (this.$options.filter(':checked').length > 0) {
       this.$el.addClass('has-choice');
-      this.$options.closest(this.$choices).addClass(focusClass);
+      this.$options.closest(this.$choices).addClass(this.options.focusClass);
       this._value = this.$options.filter(':checked').val();
     } else if (this.$customOption.is(':checked')) {
       this.$el.addClass('has-choice');
-      this.$custom.closest(this.$choices).addClass(focusClass);
+      this.$custom.closest(this.$choices).addClass(this.options.focusClass);
       this._value = this.$custom.val();
     }
 
@@ -39,14 +38,14 @@ class InputCustom {
 
   listen() {
     this.$custom.on({
-      focus: (event) => {
+      focus: event => {
         const $target = $(event.currentTarget);
 
         this.$el.addClass('has-choice');
         this.$choices.removeClass(this.options.focusClass);
         $target.closest(this.$choices).addClass(this.options.focusClass);
       },
-      input: (event) => {
+      input: event => {
         const $target = $(event.currentTarget);
 
         this._value = $target.val();
@@ -55,7 +54,7 @@ class InputCustom {
           this.$customOption.prop('checked', true);
         }
       },
-      blur: (event) => {
+      blur: event => {
         const $target = $(event.currentTarget);
 
         if ($target.val().length <= 0 || $target.val() === 0) {
@@ -71,18 +70,18 @@ class InputCustom {
     });
 
     this.$options.on({
-      change: (event) => {
+      change: event => {
         const $target = $(event.currentTarget);
 
         this._value = $target.val();
-        this.$el.trigger('change.inputCustom', [$target.val()]).addClass('has-choice');
+        this.$el.trigger('change.inputCustom', [$target.val()])
+          .addClass('has-choice');
         this.$choices.removeClass(this.options.focusClass);
         $target.closest(this.$choices).addClass(this.options.focusClass);
       }
     });
   }
 
-  // jshint ignore:start
   static defaultOptions = {
     choicesSelector: '> *',
     focusClass: 'has-focus',
@@ -90,7 +89,6 @@ class InputCustom {
     customOptionValue: 'custom',
     customSelector: '#custom'
   }
-  // jshint ignore:end
 }
 
 // jQuery plugin
@@ -98,7 +96,7 @@ class InputCustom {
 
 $.fn.inputCustom = function(options) {
   return this.each((index, input) => {
-    new InputCustom(input, options);
+    new InputCustom(input, options); // eslint-disable-line no-new
   });
 };
 
@@ -107,6 +105,6 @@ $.fn.inputCustom = function(options) {
 
 $(() => {
   $('[data-input-custom]').each((index, input) => {
-    new InputCustom(input, $(input).data('inputCustom'));
+    new InputCustom(input, $(input).data('inputCustom')); // eslint-disable-line no-new
   });
 });

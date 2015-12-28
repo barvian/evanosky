@@ -1,5 +1,8 @@
 import $ from 'jquery';
 
+const animationEnd =
+  'animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd';
+
 // Multistep item
 // ==============
 
@@ -37,7 +40,7 @@ class MultiStepItem {
 
       this.$progressButton = $(this.options.progressButton(this))
         .appendTo(this.$el)
-        .on('click', (event) => {
+        .on('click', event => {
           event.preventDefault();
 
           this.$el.trigger('progress.multistep', [this]);
@@ -45,11 +48,9 @@ class MultiStepItem {
     }
   }
 
-  // jshint ignore:start
   static defaultOptions = {
-    progressButton: (item) => `<a>Next</a>`
+    progressButton: item => `<a>Next</a>` // eslint-disable-line no-unused-vars
   }
-  // jshint ignore:end
 }
 
 // jQuery plugin
@@ -57,7 +58,7 @@ class MultiStepItem {
 
 $.fn.multistepItem = function(options) {
   return this.each(function() {
-    new MultiStepItem(this, options);
+    new MultiStepItem(this, options); // eslint-disable-line no-new
   });
 };
 
@@ -65,7 +66,7 @@ $.fn.multistepItem = function(options) {
 // -------------------
 
 $('[data-multistep-item]').each((index, item) => {
-  new MultiStepItem(item, $(item).data('multistepItem'));
+  new MultiStepItem(item, $(item).data('multistepItem')); // eslint-disable-line no-new
 });
 
 // Multistep
@@ -85,7 +86,7 @@ class MultiStep {
 
     this.$items = this.$el.find(this.options.itemSelector)
       .multistepItem($.extend({}, this.options, {
-        progressButton: (item) => {
+        progressButton: item => {
           return '<a class="btn btn--full btn--secondary btn--next">' +
             (this.next(item) && this.next(item).$legend.text()) +
             '</a>';
@@ -113,7 +114,7 @@ class MultiStep {
   }
 
   listen() {
-    this.$navPrev.on('click', (event) => {
+    this.$navPrev.on('click', event => {
       event.preventDefault();
 
       this.goTo(this.prev());
@@ -121,8 +122,8 @@ class MultiStep {
     this.$items.on('progress.multistep', (event, item) => {
       this.goTo(this.next(item));
     });
-    $(window).on('resize.multistep', (event) => {
-      this.$steps.height('auto').height(this.$steps.height() + 2); // + 2 for borders
+    $(window).on('resize.multistep', () => {
+      this.$steps.height('auto').height(this.$steps.height() + 2);
     }).trigger('resize');
   }
 
@@ -138,7 +139,8 @@ class MultiStep {
 
   _refreshNav() {
     if (this.hasPrev()) {
-      this.$navPrev.removeClass(this.options.inactiveClass).text(this.prev().$legend.text());
+      this.$navPrev.removeClass(this.options.inactiveClass)
+        .text(this.prev().$legend.text());
     } else {
       this.$navPrev.addClass(this.options.inactiveClass);
     }
@@ -150,9 +152,10 @@ class MultiStep {
     }
 
     const next = typeof index === 'object' ? index : this.items.get(index);
-    const animatingClass = this.items.index(this.active) < this.items.index(next) ?
-      this.options.animatingForwardClass :
-      this.options.animatingBackwardClass;
+    const animatingClass =
+      this.items.index(this.active) < this.items.index(next) ?
+        this.options.animatingForwardClass :
+        this.options.animatingBackwardClass;
 
     this.active.$el.addClass(this.options.inactiveClass);
     next.$el.removeClass(this.options.inactiveClass);
@@ -160,7 +163,7 @@ class MultiStep {
       .removeClass(this.options.animatingForwardClass)
       .removeClass(this.options.animatingBackwardClass)
       .addClass(animatingClass)
-      .one('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', (event) => {
+      .one(animationEnd, event => {
         $(event.currentTarget).removeClass(animatingClass);
       });
 
@@ -181,11 +184,13 @@ class MultiStep {
   }
 
   prev(item = this.active) {
-    return this.hasPrev(item) ? this.items.get(this.items.index(item) - 1) : null;
+    return this.hasPrev(item) ?
+      this.items.get(this.items.index(item) - 1) :
+      null;
   }
 
   hasNext(item = this.active) {
-    if (this.items == null) { // jshint
+    if (this.items == null) {
       return false;
     }
 
@@ -194,10 +199,11 @@ class MultiStep {
   }
 
   next(item = this.active) {
-    return this.hasNext(item) ? this.items.get(this.items.index(item) + 1) : null;
+    return this.hasNext(item) ?
+      this.items.get(this.items.index(item) + 1) :
+      null;
   }
 
-  // jshint ignore:start
   static defaultOptions = {
     animatingForwardClass: 'is-animating-forward',
     animatingBackwardClass: 'is-animating-backward',
@@ -207,7 +213,6 @@ class MultiStep {
     navClass: 'form__nav',
     navPrevClass: 'form__prev'
   }
-  // jshint ignore:end
 }
 
 // jQuery plugin
@@ -215,7 +220,7 @@ class MultiStep {
 
 $.fn.multistep = function(options) {
   return this.each(function() {
-    new MultiStep(this, options);
+    new MultiStep(this, options); // eslint-disable-line no-new
   });
 };
 
@@ -224,6 +229,6 @@ $.fn.multistep = function(options) {
 
 $(() => {
   $('[data-multistep]').each((index, form) => {
-    new MultiStep(form, $(form).data('multistep'));
+    new MultiStep(form, $(form).data('multistep')); // eslint-disable-line no-new
   });
 });

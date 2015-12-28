@@ -1,8 +1,10 @@
 import $ from 'jquery';
+/* eslint-disable no-unused-vars */
 import maskMoney from 'autoNumeric';
 import inputCustom from './jquery.input-custom';
 import multistep from './jquery.multistep';
 import payment from 'jquery.payment';
+/* eslint-enable no-unused-vars */
 
 // Donation form
 // =============
@@ -15,6 +17,7 @@ class DonationForm {
     this.options = $.extend({}, DonationForm.defaultOptions, options);
     this.$el.data('donate', this);
 
+    /* eslint-disable max-len */
     this.$errors = this.$el.find(this.options.errorsSelector);
     this.$amount = this.$el.find(this.options.amountSelector).inputCustom();
     this.amount = this.$amount.data('inputCustom');
@@ -23,6 +26,7 @@ class DonationForm {
     this.$ccNumber = this.$el.find(this.options.ccNumberSelector).payment('formatCardNumber');
     this.$ccExpiry = this.$el.find(this.options.ccExpirySelector).payment('formatCardExpiry');
     this.$ccCVC = this.$el.find(this.options.ccCVCSelector).payment('formatCardCVC');
+    /* eslint-enable max-len */
 
     this._initSubmitButton();
 
@@ -39,8 +43,8 @@ class DonationForm {
   }
 
   listen() {
-    this.$el.submit((event) => {
-      event.preventDefault(); // don't submit
+    this.$el.submit(event => {
+      event.preventDefault();
 
       this.submit();
     });
@@ -58,7 +62,8 @@ class DonationForm {
       // response contains id and card, which contains additional card details
       var token = response.id;
       // Insert the token into the form so it gets submitted to the server
-      this.$el.append($('<input type="hidden" name="stripeToken" />').val(token));
+      this.$el.append($('<input type="hidden" name="stripeToken" />')
+        .val(token));
       this.$el.append($('<input type="hidden" name="customInt" />')
         .val(this.amount.$custom.autoNumeric('get')));
       // and submit
@@ -71,16 +76,17 @@ class DonationForm {
     this.$submit.prop('disabled', true);
 
     const expiration = this.$ccExpiry.payment('cardExpiryVal');
+    /* eslint-disable camelcase */
     Stripe.card.createToken({
       number: this.$ccNumber.val(),
       cvc: this.$ccCVC.val(),
       exp_month: (expiration.month || 0),
       exp_year: (expiration.year || 0),
-      address_zip: this.$zip.val(),
+      address_zip: this.$zip.val()
     }, this._stripeResponseHandler.bind(this));
+    /* eslint-enable camelcase */
   }
 
-  // jshint ignore:start
   static defaultOptions = {
     errorClass: 'has-errors',
     errorsSelector: '.form__errors',
@@ -96,7 +102,6 @@ class DonationForm {
         '</button>';
     }
   }
-  // jshint ignore:end
 }
 
 // jQuery plugin
@@ -104,7 +109,7 @@ class DonationForm {
 
 $.fn.donate = function(options) {
   return this.each((index, input) => {
-    new DonationForm(input, options);
+    new DonationForm(input, options); // eslint-disable-line no-new
   });
 };
 
@@ -113,6 +118,6 @@ $.fn.donate = function(options) {
 
 $(() => {
   $('[data-donate]').each((index, form) => {
-    new DonationForm(form, $(form).data('donate'));
+    new DonationForm(form, $(form).data('donate')); // eslint-disable-line no-new
   });
 });

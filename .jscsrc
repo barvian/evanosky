@@ -1,9 +1,0 @@
-{
-  "esnext": true,
-  "preset": "google",
-  "requireCamelCaseOrUpperCaseIdentifiers": null,
-  "disallowSpacesInAnonymousFunctionExpression": null,
-  "disallowTrailingWhitespace": null,
-  "maximumLineLength": 100,
-  "excludeFiles": ["node_modules/**"]
-}
