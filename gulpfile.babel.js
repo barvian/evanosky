@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import tasks from 'barvian-tasks';
+import CommonRegistry from 'barvian-registry';
 import _bower from 'bower'; const bower = _bower.config.directory;
 import path from 'path';
 import fs from 'fs';
@@ -15,7 +15,7 @@ const src = 'assets';
 const vendor = 'scripts/vendor';
 const dest = 'public';
 
-tasks(gulp, {
+gulp.registry(new CommonRegistry({
   browserSync: {
     files: ['content/**/*', 'site/**/*'],
     notify: true,
@@ -100,4 +100,4 @@ tasks(gulp, {
     src: `${src}/sprites/**/*`,
     dest: dest
   }
-});
+}));
