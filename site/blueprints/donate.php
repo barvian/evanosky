@@ -11,6 +11,9 @@ fields:
   title:
     label: Title
     type: text
+  tax:
+    label: Tax information
+    type: textarea
   text:
     label: Text
     type: textarea

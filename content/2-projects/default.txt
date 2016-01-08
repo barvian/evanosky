@@ -6,7 +6,7 @@ Text:
 
 (image: img_6525-20cropped.gif)
 
-The Evanosky Foundation’s first project was the (file: duke-laptop-project.pdf popup: true text: donation of 19 laptops and a color laser printer to the Duke University Children’s Hospital in the fall of 2006).  Since then, The Evanosky Foundation has come forward as a strong player in research and family support for children and families battling MLD as well as other lysosomal storage disorders.  We are active on a number of fronts including:
+The Evanosky Foundation’s first project was the (file: duke-laptop-project.pdf text: donation of 19 laptops and a color laser printer to the Duke University Children’s Hospital in the fall of 2006).  Since then, The Evanosky Foundation has come forward as a strong player in research and family support for children and families battling MLD as well as other lysosomal storage disorders.  We are active on a number of fronts including:
 
 * focusing on early detection of MLD through (link: projects/newborn-screening text: newborn screening)
 * (link: projects/medical-research text: finding a cure for MLD through medical research)

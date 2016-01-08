@@ -10,7 +10,7 @@ Text:
 
 Various hospitals in the country currently perform bone marrow and stem cell transplants.  Duke University is a leader in performing stem cell transplants in children with MLD, while University of Minnesota has performed many bone marrow transplants for MLD patients. Click here for a slide show of Jack Evanosky's stem cell transplant journey.
 
-The advantage that stem cell transplants have over bone marrow transplants is that stem cells do not have to match as closely as bone marrow, and therefore are much easier to obtain.  In addition, doctors have found that patients who receive stem cell transplants seem to show more improvement than patients who receive bone marrow transplants.  (file: 205.pdf popup: true text: Click here to read a paper on the effectiveness of umbilical cord stem cell transplants) for children with inherited metabolic disorders such as MLD.
+The advantage that stem cell transplants have over bone marrow transplants is that stem cells do not have to match as closely as bone marrow, and therefore are much easier to obtain.  In addition, doctors have found that patients who receive stem cell transplants seem to show more improvement than patients who receive bone marrow transplants.  (file: 205.pdf text: Click here to read a paper on the effectiveness of umbilical cord stem cell transplants) for children with inherited metabolic disorders such as MLD.
 
 (link: http://www.corduse.com/ text: Click here to view a video of Dr. Joanne Kurtzberg) discussing stem cell transplants (click on "Dr. Joanne Kurtzberg" in the lower right-hand corner of the page that appears).  Click on "Cord Blood Transplants" to hear MLD mother Jane Trimper discuss the benefits of using cord blood for stem cell transplant.
 
@@ -21,7 +21,7 @@ Click here to read about the latest efforts in MLD research.
 * (link: http://www.worldmag.com/articles/10284 text: Article) describing Dr. Joanne Kurtzberg's cord blood transplant program at Duke.
 * (link: http://www.babyzone.com/pregnancy/labor_birth/cordblood/article/cord-blood-donation text: What is cord blood?)
 * This (link: http://www.mysanantonio.com/news/MYSA090306_01A_cordblood_30ed2f8_html1369.html text: article on umbilical cord blood) discusses the benefits of cord blood donation, the donation process, and reviews private versus public donation
-* An article that appeared in the (link: http://http//www.evanoskyfoundation.org/PDF%20Articles/Unlikely%20Transplant%20Gives%20New%20Life.pdf text: Summer 2008 issue of Cancer Center Notes) tells the story of the longest surviving cord blood transplant recipient.
+* An article that appeared in the (file: unlikely-transplant.pdf text: Summer 2008 issue of Cancer Center Notes) tells the story of the longest surviving cord blood transplant recipient.
 
 ## Who should I contact for more information?
 
@@ -35,8 +35,8 @@ For developmental evaluations and questions regarding the progression of MLD sym
 
 ## Published research on transplant effectiveness for leukodystrophies 
 
-* (file: 205.pdf popup: true text: Click here to read a paper on the effectiveness of umbilical cord stem cell transplants) for children with inherited metabolic disorders such as MLD.
-* (file: transplant-outcomes-in-leukodystrophies-jan2010.pdf popup: true text: Transplant Outcomes in Leukodystophies) was published in January 2010 and authored by Paul Orchard and Jakub Tolar.  It discusses the effectiveness of stem cell transplants for Krabbe disease, ALD, and MLD at various points of disease progression.
+* (file: 205.pdf text: Click here to read a paper on the effectiveness of umbilical cord stem cell transplants) for children with inherited metabolic disorders such as MLD.
+* (file: transplant-outcomes-in-leukodystrophies-jan2010.pdf text: Transplant Outcomes in Leukodystophies) was published in January 2010 and authored by Paul Orchard and Jakub Tolar.  It discusses the effectiveness of stem cell transplants for Krabbe disease, ALD, and MLD at various points of disease progression.
 
 ## Other organizations and resources
 

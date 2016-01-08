@@ -14,7 +14,7 @@ fields:
     type: date
     format: MM/DD/YYYY
     required: true
-  report:
+  article:
     label: Report
     type: selector
     mode: single

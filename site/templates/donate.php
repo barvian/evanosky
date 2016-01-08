@@ -123,6 +123,9 @@
 
     <div class="layout">
       <article class="layout__unit article">
+        <a id="tax" class="invisible"></a>
+        <?php echo $page->tax()->kirbytext() ?>
+
         <?php echo $page->text()->kirbytext() ?>
 
         <h2>Matching gifts</h2>

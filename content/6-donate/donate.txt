@@ -4,12 +4,6 @@ Title: Donate
 
 Text: 
 
-The Evanosky Foundation is certified as a 501(c)(3) nonprofit organization, and all donations are tax-deductible.  A copy of the Foundation's IRS tax letter can be viewed by clicking here.  You may send your check to:
-
-The Evanosky Foundation
-234 Aspen Lane
-Aurora, IL  60504
-
 ## What will my donation be used for?
 
 Your donation will be used to support:
@@ -96,3 +90,13 @@ Companies:
   name: Bank of America
   logo: gam-bank-of-america-logo.png
   url: http://bankofamerica.com
+
+----
+
+Tax: 
+
+The Evanosky Foundation is certified as a 501(c)(3) nonprofit organization, and all donations are tax-deductible.  A copy of the Foundation's IRS tax letter can be viewed by clicking (file: 501c3.pdf text: here).  You may send your check to:
+
+The Evanosky Foundation
+234 Aspen Lane
+Aurora, IL  60504

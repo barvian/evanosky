@@ -56,6 +56,10 @@ ol, ul { @extend %list; }
     padding-left: size(spacing);
     text-indent: -1*size(spacing);
 
+    > * {
+      text-indent: 0;
+    }
+
     @include query(alpha) {
       padding-left: size(spacing)*2;
       text-indent: -2*size(spacing);

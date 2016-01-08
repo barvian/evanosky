@@ -23,12 +23,9 @@ fields:
   ref:
     label: Reference
     type: text
-  image:
-    label: Featured image
-    type: selector
-    mode: single
-    types:
-      - image
   teaser:
     label: Teaser
+    type: textarea
+  text:
+    label: Text
     type: textarea

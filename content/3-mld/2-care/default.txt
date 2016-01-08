@@ -8,6 +8,6 @@ Text:
 
 We are often asked about our experiences in caring for three children with MLD.  We have put together some information about what has worked well for our boys.  Please click below for information on specific topics.
 
-(file: mld-care-plan-031408.pdf popup: true text: If you would like to download the entire document, please click here).
+(file: mld-care-plan-031408.pdf text: If you would like to download the entire document, please click here).
 
 Before implementing any of these suggestions or changing your child's care, please consult with your medical professional.
