@@ -32,7 +32,7 @@ $hero-shadow-color: $hero-dark-color !default;
       max-width: $layout - $gutter*2;
     }
 
-    &:hover {
+    @include attention {
       box-shadow: 0 1.4rem 0.93rem 0 rgba($hero-shadow-color, 0.35);
       transform: translateY(-0.2rem);
 

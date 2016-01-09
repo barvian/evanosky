@@ -55,6 +55,10 @@
   }
 }
 
+@mixin tight {
+  @include vertical(size(spacing) / 2);
+}
+
 @mixin compact {
   @include vertical(0);
 }

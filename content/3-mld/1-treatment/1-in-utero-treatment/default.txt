@@ -9,7 +9,9 @@ Duke University Medical Center issued the following press release on Tuesday, Oc
 > Researchers say a new development in cord blood transplants for inherited metabolic disorders may be curative for some babies who are treated while still in the womb. 
 
 Joanne Kurtzberg, M.D., professor of pediatrics and pathology and director of the pediatric blood and marrow transplant program at Duke University Medical Center, says the new approach uses a small, select number of therapeutic stem cells that have been treated to hasten and improve the process of engraftment. 
- 
+
+(fact: random)
+
 Kurtzberg is formally studying the procedure in a pilot trial open to newly pregnant mothers known to be at risk for having children with lethal metabolic disorders. 
 
 Metabolic disorders - also known as lysosomal storage disorders - include several dozen rare, inherited genetic diseases  marked by the absence of specific enzymes the body needs to break down and get rid of metabolic byproducts of energy production. Left untreated, metabolic disorders can lead to bone, brain, and central nervous system problems and early death. 

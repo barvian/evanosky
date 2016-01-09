@@ -9,10 +9,10 @@
       ]
     ]) ?>
 
-    <article class="article">
+    <article>
     <?php if(!$page->intro()->empty()): ?>
       <div class="layout">
-        <div class="layout__unit"><?php echo $page->intro()->kirbytext() ?></div>
+        <div class="layout__unit article"><?php echo $page->intro()->kirbytext() ?></div>
       </div>
     <?php endif ?>
       <div class="landmark layout layout--wide">
@@ -32,7 +32,7 @@
       </div>
     <?php if(!$page->text()->empty()): ?>
       <div class="layout">
-        <div class="layout__unit"><?php echo $page->text()->kirbytext() ?></div>
+        <div class="layout__unit article"><?php echo $page->text()->kirbytext() ?></div>
       </div>
     <?php endif ?>
     </article>

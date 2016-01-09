@@ -27,6 +27,8 @@ How long will it take to pick up my vehicle?
 Do I have to be with the vehicle at the time of pick up?
 :  No.  Special arrangements can be made by calling our representatives.
 
+(fact: random)
+
 What paperwork do I need?
 :  The only paperwork needed is a signed, clear title.  Have your title with you when you call in your donation.  Please note:  a clear title indicates the title is in the name of the donor without a lien.
 
@@ -41,10 +43,10 @@ What if I receive legal notices?
 
 ## Tax-related frequently asked questions
 
-(image: motorcycle.gif)
-
 How does the new law effect my tax deduction?
 :  Donors are no longer responsible for determining the deductible value of their donation.  Instead, they will receive IRS Form 1098-C, Contributions of Motor Vehicles, Boats, and Airplanes, if the proceeds from the sale exceed $500, stating the amount of the gross proceeds from the sale of the donated vehicle.  The amount listed on IRS Form 1098-C, Contributions of Motor Vehicles, Boats, and Airplanes will be the gross proceeds of the deductible donation.
+
+(image: motorcycle.gif)
 
 Will I get a tax receipt for my donation?
 :  Yes.  Our driver will issue a receipt at the time of pick up.  This is not your final tax receipt unless the sale of your vehicle does not exceed $500.  This initial acknowledgement will indicate your name as well as the year, make, model, and condition of the car you are donating.  It will be your only receipt if your vehicle sells for less than $500.

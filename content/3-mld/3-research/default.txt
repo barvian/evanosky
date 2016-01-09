@@ -17,6 +17,8 @@ patients) for clinical  application.  In 2008, Zymenex's ASA technology was purc
 
 ## Duke studies new approach in fetal transplants for metabolic disorders
 
+(fact: random)
+
 Duke University Medical Center is conducting a study of transplants in unborn babies that have metabolic disorders (October 2009).
 
 "Researchers say a new development in cord blood transplants forinherited metabolic disorders may be curative for some babies who are treated while still in the womb. 

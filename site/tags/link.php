@@ -1,7 +1,7 @@
 <?php
 
 // override to target="_blank" if external link
-kirbytext::$tags['link'] = array(
+kirbytext::$tags['link'] = [
   'attr' => array(
     'text',
     'class',
@@ -20,11 +20,11 @@ kirbytext::$tags['link'] = array(
     if(str::isURL($text)) {
       $text = url::short($text);
     }
-    return html::a($link, $text, array(
+    return html::a($link, $text, [
       'rel'    => $tag->attr('rel'),
       'class'  => $tag->attr('class'),
       'title'  => $tag->attr('title'),
       'target' => str::isURL($tag->attr('link')) ? "_blank" : $tag->target(),
-    ));
+    ]);
   }
-);
+];

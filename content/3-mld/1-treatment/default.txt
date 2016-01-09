@@ -8,13 +8,15 @@ Text:
 
 **(link: mld/treatment/in-utero-treatment text: For information on treating unborn babies who may be affected by MLD, please click here).**
 
-Various hospitals in the country currently perform bone marrow and stem cell transplants.  Duke University is a leader in performing stem cell transplants in children with MLD, while University of Minnesota has performed many bone marrow transplants for MLD patients. Click here for a slide show of Jack Evanosky's stem cell transplant journey.
+(fact: random)
+
+Various hospitals in the country currently perform bone marrow and stem cell transplants.  Duke University is a leader in performing stem cell transplants in children with MLD, while University of Minnesota has performed many bone marrow transplants for MLD patients. (file: jack-s-transplant-journey.pdf text: Click here for a slide show of Jack Evanosky's stem cell transplant journey).
 
 The advantage that stem cell transplants have over bone marrow transplants is that stem cells do not have to match as closely as bone marrow, and therefore are much easier to obtain.  In addition, doctors have found that patients who receive stem cell transplants seem to show more improvement than patients who receive bone marrow transplants.  (file: 205.pdf text: Click here to read a paper on the effectiveness of umbilical cord stem cell transplants) for children with inherited metabolic disorders such as MLD.
 
 (link: http://www.corduse.com/ text: Click here to view a video of Dr. Joanne Kurtzberg) discussing stem cell transplants (click on "Dr. Joanne Kurtzberg" in the lower right-hand corner of the page that appears).  Click on "Cord Blood Transplants" to hear MLD mother Jane Trimper discuss the benefits of using cord blood for stem cell transplant.
 
-Click here to read about the latest efforts in MLD research.
+(link: mld/research text: Click here to read about the latest efforts in MLD research.)
 
 ## What is cord blood?
 

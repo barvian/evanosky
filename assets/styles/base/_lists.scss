@@ -48,7 +48,7 @@ ol, ul { @extend %list; }
 // Misc
 // ----
 
-/*ul*/.unordered-list,
+/*ul*/.bulleted-list,
 /*ol*/.numbered-list {
   @extend %unstyled-list;
 
@@ -71,7 +71,8 @@ ol, ul { @extend %list; }
       vertical-align: middle;
     }
 
-    > :first-child {
+    > p:first-of-type,
+    > %heading:first-of-type {
       display: inline;
 
       ~ * {
@@ -81,13 +82,14 @@ ol, ul { @extend %list; }
   }
 }
 
-/*ul*/.unordered-list {
+/*ul*/.bulleted-list {
   > li::before {
     background-color: $list-marker-color;
     border-radius: 100%;
     content: '';
     height: 0.5rem;
     margin-left: size(spacing) - 0.5rem - size(spacing)/2;
+    opacity: 0.85;
     position: relative;
     top: -0.1em;
     width: 0.5rem;

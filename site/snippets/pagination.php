@@ -7,13 +7,13 @@
 <?php $parentTerm = $currentPage->parent()->title() ?>
 <?php if (!isset($term)) $term = str_word_count($parentTerm) == 1 && substr(str_word_count($parentTerm, 1)[0], -1, 1) == 's' ? $inflector->singularize(str_word_count($parentTerm, 1)[0]) : null ?>
 <?php if(!isset($url)) $url = function($page) { return $page->url(); } ?>
-<?php if(!isset($target)) $target = function($page) { return '_self'; } ?>
+<?php if(!isset($target)) $target = function($page) { return $page->intendedTemplate() === 'external' ? '_blank' : '_self'; } ?>
 <nav class="pagination <?php echo isset($class) ? $class : '' ?> <?php echo isset($mod) ? 'pagination--'.$mod : '' ?>">
   <div class="layout"><div class="layout__unit">
     <ul class="pagination__menu">
       <?php if($prev): ?>
       <li class="pagination__prev">
-        <a class="pagination__link" href="<?php e($prev->template() == 'external', $prev->external(), $url($prev)) ?>">
+        <a class="pagination__link" href="<?php e($prev->intendedTemplate() == 'external', $prev->external(), $url($prev)) ?>">
           <?php snippet('sprite', [
             'class' => 'pagination__caret',
             'sprite' => 'chevron-thin-left'
@@ -25,7 +25,7 @@
       <?php endif ?>
       <?php if($next): ?>
       <li class="pagination__next">
-        <a class="pagination__link" href="<?php e($next->template() == 'external', $next->external(), $url($next)) ?>" target="<?php echo $target($next) ?>">
+        <a class="pagination__link" href="<?php e($next->intendedTemplate() == 'external', $next->external(), $url($next)) ?>" target="<?php echo $target($next) ?>">
           <?php snippet('sprite', [
             'class' => 'pagination__caret',
             'sprite' => 'chevron-thin-right'

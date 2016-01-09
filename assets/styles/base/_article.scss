@@ -5,10 +5,24 @@
 //
 
 %article__left, %article__right {
+  display: block !important;
+
   > img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @include query(alpha) {
+    margin-bottom: size(spacing);
+
+    &:first-child {
+      @include trailing(0);
+    }
+
+    + p:first-of-type {
+      overflow: visible !important;
+    }
   }
 }
 
@@ -31,25 +45,23 @@
 }
 
 .article {
-  > .layout:first-of-type > .layout__unit > p {
+  > p:first-of-type {
     overflow: hidden;
 
-    &:first-of-type::first-letter {
+    &::first-letter {
       @extend %drop-cap;
     }
   }
 
-  > ul:not([class]),
-  :not(li) > ul:not([class]) {
-    @extend .unordered-list;
+  > ul:not([class]) {
+    @extend .bulleted-list;
   }
 
-  > ol:not([class]),
-  :not(li) > ol:not([class]) {
+  > ol:not([class]) {
     @extend .numbered-list;
   }
 
-  dl:not([class]) {
+  > dl:not([class]) {
     @extend .faq-list;
 
     // + figure:nth-child(n) {
@@ -60,16 +72,7 @@
   figure {
     @extend %article__right;
     @include query(alpha) {
-      margin-bottom: size(spacing);
       max-width: 33.333%;
-
-      &:first-child {
-        @include trailing(0);
-      }
-
-      + p:first-of-type {
-        overflow: visible !important;
-      }
     }
 
     // &:nth-of-type(odd) {
@@ -81,7 +84,29 @@
     // }
   }
 
-  %heading {
+  > aside {
+    @extend %article__right;
+    @include query(alpha) {
+      max-width: 45%;
+    }
+    @include query(bravo) {
+      max-width: 40%;
+    }
+    @media screen and (min-width: #{$wide / 1rem * 1em}) {
+      margin-right: -($wide - $layout)/2 !important;
+    }
+  }
+
+  > .fast-fact {
+    @extend .landmark;
+
+    margin-left: size(spacing);
+    margin-right: size(spacing);
+
+    @include leading(xxxlarge);
+  }
+
+  > %heading {
     clear: both;
   }
 }

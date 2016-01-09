@@ -13,11 +13,10 @@
       'currentPage' => $page
     ]) ?>
 
-    <article class="article">
+    <article>
       <div class="layout">
-        <div class="layout__unit">
+        <div class="layout__unit article">
           <?php echo $page->text()->kirbytext() ?>
-
           <?php // snippet('fast-fact') ?>
         </div>
       </div>

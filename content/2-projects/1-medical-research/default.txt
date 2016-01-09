@@ -16,6 +16,8 @@ Exciting progress is being made on the first issue, which is providing the child
 * Bone marrow or umbilical cord stem cell transplants - currently the only available treatment - have been improving since the start of this decade due to better drugs and increased knowledge of how MLD progresses.
 *  (link: mld/research/natural-history-ert text: Enzyme replacement therapy).  Shire, a US-based pharmaceutical company with a history of working with enzyme replacement therapy and other drugs, purchased arylsulfatase-A (ASA), an Enzyme Replacement Therapy (ERT) for MLD from the Danish Company, Zymenex.  Shire decided to suspend the development of this therapy in favor of other treatments.  (link: mld/research/natural-history-ert text: Click here for more information).
 
+(fact: random)
+
 However, minimal progress has been made on issue #2 above in repairing damage that has already occurred to the brain and nervous system.  Because of this, many MLD children have not received transplants since doctors do not want to “trap” them in a damaged body.  Even the children who have received stem cell transplants live with residual damage and have many medical issues.  
 
 As we move forward, we have a goal of “rescuing” these children and will therefore focus most of our efforts on medical research on two projects:

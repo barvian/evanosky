@@ -1,0 +1,86 @@
+// Fast facts
+// ==========
+
+$fast-fact-border-width: 0.2rem !default;
+$fast-fact-border-color: $gold !default;
+$fast-fact-dark-color: desaturate(darken($fast-fact-border-color, 20%), 20%);
+$fast-fact-shadow-color: $fast-fact-dark-color !default;
+
+.fast-fact {
+  transition: transform 1.15s ease-out;
+
+  @include attention {
+    transform: translateY(-0.2rem);
+
+    .fast-fact__body {
+      box-shadow: 0 1.2rem 0.93rem 0 rgba($fast-fact-shadow-color, 0.35);
+    }
+  }
+
+  &__header {
+    color: $fast-fact-border-color;
+    margin-top: -1.25em;
+    overflow: hidden;
+    padding-left: size(spacing);
+    padding-right: size(spacing);
+    position: relative;
+
+    @include trailing(-2rem);
+
+    &::before {
+      border-left: $fast-fact-border-width solid $fast-fact-border-color;
+      border-right: $fast-fact-border-width solid $fast-fact-border-color;
+      content: '';
+      height: 35%;
+      left: 0;
+      position: absolute;
+      top: 1.25rem;
+      width: 100%;
+    }
+
+    %heading {
+      display: inline-block;
+      padding-bottom: 0.5em + 0.42em;
+      text-shadow: 0 0.3em 0.25em rgba($fast-fact-shadow-color, 0.22), 0 0.1em 0.17em rgba($fast-fact-shadow-color, 0.1);
+      position: relative;
+      white-space: nowrap;
+
+      @include font($script, $size: large);
+
+      &::before, &::after {
+        border-top: $fast-fact-border-width solid $fast-fact-border-color;
+        content: '';
+        position: absolute;
+        top: 1.25rem;
+      }
+
+      &::before {
+        margin-right: size(spacing)/2;
+        right: 100%;
+        width: size(spacing)/2;
+      }
+
+      &::after {
+        margin-left: size(spacing)/2;
+        left: 100%;
+        width: 200%;
+      }
+    }
+  }
+
+  &__body {
+    @extend %small;
+
+    &, > ul, > ol, > dl {
+      @include tight;
+    }
+
+    border: $fast-fact-border-width solid $fast-fact-border-color;
+    border-top: none;
+    box-shadow: 0 1rem 0.87rem 0 rgba($fast-fact-shadow-color, 0.27);
+    color: $fast-fact-dark-color;
+    display: block;
+    padding: size(spacing);
+    transition: box-shadow 1.15s ease-out;
+  }
+}
