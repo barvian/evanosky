@@ -2,7 +2,7 @@
 // ===========
 
 $site-header-max-height: 15vh;
-$site-header-hamburger-size: 2rem;
+$site-header-toolbar-size: 2rem;
 
 .site-header {
   @extend .clearfix;
@@ -18,7 +18,7 @@ $site-header-hamburger-size: 2rem;
   &__logo {
     display: inline-block;
     max-height: $site-header-max-height;
-    max-width: calc(100% - #{$site-header-hamburger-size}*2);
+    max-width: calc(100% - #{$site-header-toolbar-size}*2);
     position: relative;
 
     > .site-logo {
@@ -40,14 +40,11 @@ $site-header-hamburger-size: 2rem;
     @include trailing(0);
   }
 
-  &__hamburger {
+  &__hamburger, &__search > .site-search {
     @extend %unstyled-button;
 
-    color: $blue;
-    float: right;
-    margin-top: -$site-header-hamburger-size/2;
+    margin-top: -$site-header-toolbar-size/2;
     position: absolute;
-    right: size(spacing);
     top: 50%;
 
     @include compact;
@@ -63,9 +60,23 @@ $site-header-hamburger-size: 2rem;
     > .sprite {
       display: inline-block;
       fill: currentColor;
-      height: $site-header-hamburger-size;
+      height: $site-header-toolbar-size;
       vertical-align: top;
-      width: $site-header-hamburger-size;
+      width: $site-header-toolbar-size;
+    }
+  }
+
+  &__hamburger {
+    color: $blue;
+    left: size(spacing);
+  }
+
+  &__search {
+    @include removed;
+    
+    > .site-search {
+      color: $light;
+      right: size(spacing);
     }
   }
 }

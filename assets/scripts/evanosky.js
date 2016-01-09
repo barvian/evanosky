@@ -15,6 +15,9 @@ $(function() {
   $('.js-open-nav, .js-close-nav').on('click', () => {
     $('html').toggleClass('has-open-nav');
   });
+  $('.js-open-search, .js-close-search').on('click', () => {
+    $('html').toggleClass('has-open-search');
+  });
 
   // Queries
   enquire.register(breakpoints['site-nav-spread'], {
