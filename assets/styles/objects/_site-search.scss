@@ -22,6 +22,7 @@
     background-color: $bg;
     box-shadow: 0 0 size(huge) size(xxlarge) $bg;
     padding-top: size(spacing);
+    position: relative;
 
     @include query(site-nav-spread) {
       padding-top: size(xxxlarge);
@@ -45,7 +46,7 @@
 
   &__close {
     bottom: size(spacing) + 0.3rem;
-    right: size(spacing)*2;
+    right: size(spacing);
 
     @include overlay__close($light);
     @include removed;
