@@ -31,6 +31,9 @@ RewriteRule ^assets/(.*) error [R=301,L]
 # block secrets from being accessed directly
 RewriteRule ^secrets\.yml$ error [R=301,L]
 
+# block site.php from being accessed directly
+RewriteRule ^site\.php$ error [R=301,L]
+
 # block all files in the vendor folder from being accessed directly
 RewriteRule ^vendor/(.*) error [R=301,L]
 

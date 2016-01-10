@@ -1,51 +1,16 @@
 // Site nav
 // ========
 
-$overlay-bg: rgba($blue, 0.975) !default;
-
-body {
-  @include query(site-nav-spread, true) {
-    &::before {
-      background-color: $overlay-bg;
-      content: '';
-      height: 100%;
-      left: 0;
-      opacity: 0;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      transition: opacity 175ms ease-in-out;
-      visibility: hidden;
-      z-index: $dropdown-z-index;
-    }
-
-    .has-open-nav &::before {
-      opacity: 0.95;
-      visibility: visible;
-    }
-  }
-}
+$site-nav-overlay-bg: $blue !default;
 
 .site-nav {
   @include compact;
   @include query(site-nav-spread, true) {
-    bottom: 0;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    left: 0;
-    perspective: 1200px;
-    position: fixed;
-    top: 0;
-    visibility: hidden;
-    width: 100%;
-    z-index: $dropdown-z-index + 1;
 
-    @include removed;
-
-    .has-open-nav & {
-      visibility: visible;
-    }
+    @include overlay(nav, rgba($site-nav-overlay-bg, 0.925));
   }
   @include query(site-nav-spread) {
     align-items: center;
@@ -108,7 +73,7 @@ body {
       align-items: baseline;
       display: flex;
       flex: 1;
-      justify-content: space-around;
+      justify-content: space-between;
       padding-bottom: 65px;
 
       > li {
@@ -123,7 +88,7 @@ body {
           @include font($sans, $weight: semibold, $size: medium);
         }
 
-        &:not(.site-nav__donate) {
+        &:not(.site-nav__donate):not(.site-nav__search) {
           > %link {
             @extend %unstyled-link;
 
@@ -168,6 +133,9 @@ body {
 
           &.site-nav__donate {
             @include attention {
+              margin-left: 0;
+              margin-right: 0;
+
               > %link {
                 background-color: $dropdown-purple-bg;
                 border-bottom: none;
@@ -218,19 +186,10 @@ body {
   }
 
   &__close {
-    @extend %unstyled-link;
-
-    height: size(large);
-    position: absolute;
     left: size(spacing);
     top: 7.5%;
-    width: size(large);
 
-    > .sprite {
-      fill: $bg;
-      height: 100%;
-      width: 100%;
-    }
+    @include overlay__close;
   }
 
   &__logo {
@@ -239,7 +198,21 @@ body {
   }
 
   &__donate {
+    margin-left: 0.75em;
+    margin-right: 0.75em;
     opacity: 1 !important;
+    transition: margin 115ms ease-in-out, opacity 175ms ease-in-out;
+
+    @include attention {
+      transition: margin 115ms ease-in-out;
+
+      @include query(site-nav-spread) {
+        > .dropdown.dropdown.dropdown {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
 
     > %link {
       border-bottom-width: 2px;
@@ -250,6 +223,43 @@ body {
 
     > .dropdown {
       @extend .dropdown--purple;
+    }
+  }
+
+  &__search {
+    align-self: center;
+    opacity: 1 !important;
+    margin-left: 0.65em;
+
+    > %link {
+      @extend %unstyled-link;
+
+      background: none;
+      border: 0.125rem solid currentColor !important;
+      border-radius: 100%;
+      color: lighten($light, 25%);
+      height: size(xxlarge);
+      padding: 0.4em 0.5em 0.5em;
+      transition: all 175ms ease-in-out;
+      width: size(xxlarge);
+
+      > span {
+        @include hidden;
+      }
+
+      > .sprite {
+        fill: currentColor;
+        height: 100%;
+        width: 100%;
+      }
+
+      @include attention {
+        color: $light;
+        transition: none;
+      }
+      @include pressed {
+        transform: translateY(0.2rem);
+      }
     }
   }
 }

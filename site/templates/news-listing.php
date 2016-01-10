@@ -5,6 +5,10 @@
       <h1 class="hero__text layout__unit"><?php echo $page->title()->html() ?></h1>
     </header>
 
+    <?php snippet('section-nav', [
+      'currentPage' => $page
+    ]) ?>
+
     <div class="layout">
       <div class="layout__unit">
         <?php echo $page->text()->kirbytext() ?>

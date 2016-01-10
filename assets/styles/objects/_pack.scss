@@ -15,6 +15,11 @@ $pack-border-color: $light;
     flex: 2;
   }
 
+  > %field + .btn {
+    position: relative;
+    left: -1px;
+  }
+
   &--equal {
     @include query(bravo) {
       flex-wrap: nowrap;

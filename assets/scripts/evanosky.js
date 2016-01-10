@@ -3,7 +3,9 @@ import $ from 'jquery';
 /* eslint-disable no-unused-vars */
 import pictureFill from 'picturefill';
 import payment from 'jquery.payment';
+import inputDelay from './components/jquery.input-delay';
 import inputCustom from './components/jquery.input-custom';
+import overlaySearch from './components/jquery.overlay-search';
 import multistep from './components/jquery.multistep';
 import donate from './components/jquery.donate';
 import appendAround from 'wsol-append-around';
@@ -12,11 +14,17 @@ import enquire from 'enquire';
 
 $(function() {
   $('.js-aa').wsol_appendAround();
-  $('.js-open-nav, .js-close-nav').on('click', () => {
+  $('.js-open-nav, .js-close-nav').on('click', event => {
+    event.preventDefault();
     $('html').toggleClass('has-open-nav');
   });
-  $('.js-open-search, .js-close-search').on('click', () => {
-    $('html').toggleClass('has-open-search');
+  $('.js-open-search').on('click', event => {
+    event.preventDefault();
+    $('html').addClass('has-open-search');
+  });
+  $('.js-close-search').on('click', event => {
+    event.preventDefault();
+    $('html').removeClass('has-open-search');
   });
 
   // Queries

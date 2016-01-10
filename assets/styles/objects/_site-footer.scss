@@ -9,18 +9,16 @@
    *    letting these items shrink to smaller than their content's default
    *    minimum size.
    */
-  @include supports(flexbox) {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;  /* 1 */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;  /* 1 */
 
-    > [role="main"] {
-      flex: 1 0 auto; /* 2 */
-    }
+  > [role="main"] {
+    flex: 1 0 auto; /* 2 */
+  }
 
-    > :not([role="main"]) {
-      flex-shrink: 0; /* 2 */
-    }
+  > :not([role="main"]) {
+    flex-shrink: 0; /* 2 */
   }
 }
 

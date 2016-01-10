@@ -1,0 +1,35 @@
+// Overlays
+// ========
+
+@mixin overlay($name, $bg) {
+  background-color: transparent;
+  bottom: 0;
+  perspective: 1200px;
+  position: fixed;
+  right: 100%;
+  top: 0;
+  transition: background-color 175ms ease-in-out;
+  width: 100%;
+  z-index: $dropdown-z-index + 1;
+
+  @include removed;
+
+  .has-open-#{$name} & {
+    background-color: $bg;
+    right: 0;
+  }
+}
+
+@mixin overlay__close($color: $bg) {
+  @extend %unstyled-button;
+
+  height: size(large);
+  position: absolute;
+  width: size(large);
+
+  > .sprite {
+    fill: $color;
+    height: 100%;
+    width: 100%;
+  }
+}

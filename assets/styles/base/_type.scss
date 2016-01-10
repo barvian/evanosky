@@ -5,6 +5,8 @@ $hr-color: lighten($light, 33.333%) !default;
 $hr-style: solid !default;
 $hr-size: 1px !default;
 
+$mark-color: lighten($gold, 28.5%);
+
 // Base
 // ----
 
@@ -165,4 +167,9 @@ figcaption {
   @extend %caption;
 
   @include leading(small);
+}
+
+mark {
+  background-color: $mark-color;
+  box-shadow: -0.2em 0 0 $mark-color, 0.2em 0 0 $mark-color;
 }

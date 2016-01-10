@@ -1,0 +1,66 @@
+// Site search
+// ===========
+
+.has-open-search {
+  overflow: hidden;
+}
+
+.site-search {
+  text-align: left;
+
+  @include overlay(search, rgba($bg, 0.95));
+  @include compact;
+
+  &__input-wrapper {
+    left: 0;
+    position: absolute;
+    padding-top: size(spacing);
+    top: 0;
+    width: 100%;
+
+    @include query(site-nav-spread) {
+      padding-top: size(xxxlarge);
+    }
+  }
+
+  &__input {
+    background-color: $bg;
+    box-shadow: 0 0 size(huge) size(xxlarge) $bg;
+  }
+
+  &__field.site-search__field {
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-width: 0.125rem;
+    color: darken($light, 20%);
+    padding: size(spacing);
+
+    @include font($sans, $size: large);
+    @include query(alpha, true) {
+      font-size: size(big);
+    }
+  }
+
+  &__close {
+    bottom: size(spacing) + 0.3rem;
+    right: size(spacing)*2;
+
+    @include overlay__close($light);
+    @include removed;
+  }
+
+  &__results {
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: size(spacing);
+    padding-top: 8rem;
+
+    @include query(site-nav-spread) {
+      padding-bottom: size(xxxlarge);
+      padding-top: 10rem;
+    }
+  }
+}

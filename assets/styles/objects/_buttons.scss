@@ -8,6 +8,12 @@
   padding: 0.35em 0.75em;
   text-align: center;
 
+  > .sprite {
+    fill: currentColor;
+    height: 1em;
+    width: 1em;
+  }
+
   &--primary {
     @extend %uppercase;
 

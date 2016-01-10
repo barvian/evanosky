@@ -12,7 +12,11 @@ $site-header-toolbar-size: 2rem;
 
   @include trailing(xlarge);
   @include query(site-nav-spread, true) {
-    padding: size(spacing) size(spacing) 0;
+    padding: size(xxlarge) size(spacing) 0;
+  }
+
+  > .site-nav {
+    margin-top: 0;
   }
 
   &__logo {
@@ -33,16 +37,14 @@ $site-header-toolbar-size: 2rem;
   }
 
   @include query(site-nav-spread) {
-    padding-top: size(large);
+    padding-top: size(xxxlarge);
   }
 
   .page--home &, .page--donate & {
     @include trailing(0);
   }
 
-  &__hamburger, &__search > .site-search {
-    @extend %unstyled-button;
-
+  &__hamburger, &__search > a {
     margin-top: -$site-header-toolbar-size/2;
     position: absolute;
     top: 50%;
@@ -67,14 +69,18 @@ $site-header-toolbar-size: 2rem;
   }
 
   &__hamburger {
+    @extend %unstyled-button;
+
     color: $blue;
     left: size(spacing);
   }
 
   &__search {
     @include removed;
-    
-    > .site-search {
+
+    > a {
+      @extend %unstyled-link;
+
       color: $light;
       right: size(spacing);
     }
