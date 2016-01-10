@@ -11,7 +11,7 @@
   <div class="site-search__input-wrapper">
     <div class="layout">
       <div class="layout__unit site-search__input">
-        <input type="text" class="site-search__field" placeholder="Search..." />
+        <input type="text" class="site-search__field" placeholder="Search..." autocomplete="off" spellcheck="false" />
         <button class="site-search__close js-close-search">
           <?php snippet('sprite', [
             'sprite' => 'cross-thin'
