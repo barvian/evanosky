@@ -88,7 +88,7 @@ class InputCustom {
     optionsGroup: 'amount',
     customOptionValue: 'custom',
     customSelector: '#custom'
-  }
+  };
 }
 
 // jQuery plugin

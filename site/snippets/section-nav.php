@@ -8,7 +8,7 @@
   <ul class="section-nav__menu">
     <?php foreach($currentPage->children()->visible() as $page): ?>
     <li<?php e($page->intendedTemplate() == 'external', ' class="is-external"') ?>>
-      <a href="<?php e($page->intendedTemplate() == 'external', $page->external(), $page->url()) ?>">
+      <a <?php e($page->intendedTemplate() == 'external', 'target="_blank" href="'.$page->external().'"', 'href="'.$page->url().'"') ?>>
         <?php snippet('sprite', [
           'class' => 'section-nav__caret',
           'sprite' => 'chevron-thin-right'

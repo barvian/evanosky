@@ -14,18 +14,18 @@
   &__input-wrapper {
     left: 0;
     position: absolute;
-    padding-top: size(spacing);
     top: 0;
     width: 100%;
-
-    @include query(site-nav-spread) {
-      padding-top: size(xxxlarge);
-    }
   }
 
   &__input {
     background-color: $bg;
     box-shadow: 0 0 size(huge) size(xxlarge) $bg;
+    padding-top: size(spacing);
+
+    @include query(site-nav-spread) {
+      padding-top: size(xxxlarge);
+    }
   }
 
   &__field.site-search__field {

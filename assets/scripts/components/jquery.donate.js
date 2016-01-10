@@ -101,7 +101,7 @@ class DonationForm {
         'Donate' + (val == null || val === '' ? '' : ` $${val}`) +
         '</button>';
     }
-  }
+  };
 }
 
 // jQuery plugin

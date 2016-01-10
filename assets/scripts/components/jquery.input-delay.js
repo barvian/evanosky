@@ -35,7 +35,7 @@ class InputDelay {
     on: 'input',
     callback: input => {}, // eslint-disable-line no-unused-vars
     delay: 400
-  }
+  };
 }
 
 // jQuery plugin

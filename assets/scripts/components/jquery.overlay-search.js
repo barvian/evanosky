@@ -32,7 +32,7 @@ class OverlaySearch {
   static defaultOptions = {
     fieldSelector: '.site-search__field',
     resultsSelector: '.site-search__items'
-  }
+  };
 }
 
 // jQuery plugin

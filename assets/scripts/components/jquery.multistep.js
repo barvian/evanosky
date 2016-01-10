@@ -50,7 +50,7 @@ class MultiStepItem {
 
   static defaultOptions = {
     progressButton: item => `<a>Next</a>` // eslint-disable-line no-unused-vars
-  }
+  };
 }
 
 // jQuery plugin
@@ -212,7 +212,7 @@ class MultiStep {
     itemSelector: '> fieldset',
     navClass: 'form__nav',
     navPrevClass: 'form__prev'
-  }
+  };
 }
 
 // jQuery plugin
