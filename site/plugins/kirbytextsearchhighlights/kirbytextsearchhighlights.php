@@ -1,9 +1,10 @@
 <?php
 
-kirbytext::$pre[] = function($kirbytext, $value) {
+kirbytext::$post[] = function($kirbytext, $value) {
   if (get('matches')) {
-    $words = implode('|', explode(' ', get('matches')));
-    return preg_replace("/(".$words.")(?![^\(]*\))/i", "<mark>$0</mark>", $value);
+    $q = call(kirby::instance()->option('smartypants.parser'), get('matches'));
+    $words = implode('|', explode(' ', $q));
+    return preg_replace("/(".$words.")(?![^\<]*\>)/ui", "<mark>$0</mark>", $value);
   }
   return $value;
 };

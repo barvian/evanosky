@@ -7,9 +7,19 @@
     $page->intendedTemplate() == 'event' ||
     $page->intendedTemplate() == 'annual-report';
 }) ?>
+<?php $url = function($page) {
+  return $page->article()->empty() ?
+    ($page->intendedTemplate() === 'external' ? $page->external() : $page->url().'?'.http_build_query(['matches' => get('q')])) :
+    $page->article()->toFile()->url();
+} ?>
+<?php $target = function($page) {
+  return !$page->article()->empty() || $page->intendedTemplate() === 'external' ?
+    '_blank' :
+    '_self';
+} ?>
 <?php foreach($pages as $page): ?>
 <article>
-  <a class="link-list__link" href="<?php echo $page->article()->empty() ? $page->url().'?'.http_build_query(['matches' => get('q')]) : $page->article()->toFile()->url() ?>" target="<?php e($page->article()->empty(), '_self', '_blank') ?>">
+  <a class="link-list__link" href="<?php echo $url($page) ?>" target="<?php echo $target($page) ?>">
     <?php if($page->parents()->count() > 0): ?>
     <header class="link-list__meta">
       <?php echo implode(' > ', $page->parents()->flip()->map(function($page) { return $page->title()->html(); })->toArray()) ?>
@@ -18,7 +28,6 @@
     <?php endif ?>
     <h1 class="link-list__title"><?php echo $page->title()->html() ?></h1>
     <p class="link-list__teaser">
-
       <?php echo preg_replace("/(".$words.")/ui", "<mark>$0</mark>", $page->text()->excerpt(150)) ?>
     </p>
     <?php snippet('sprite', array(

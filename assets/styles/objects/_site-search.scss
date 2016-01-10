@@ -42,14 +42,28 @@
     @include query(alpha, true) {
       font-size: size(big);
     }
+
+    &::-ms-clear {
+      width : 0;
+      height: 0;
+    }
   }
 
   &__close {
-    bottom: size(spacing) + 0.3rem;
-    right: size(spacing);
-
     @include overlay__close($light);
+
+    bottom: 0;
+    height: auto;
+    padding-left: size(spacing);
+    padding-right: size(spacing);
+    position: absolute;
+    right: 0;
+    top: size(spacing);
+
     @include removed;
+    @include query(site-nav-spread) {
+      top: size(xxxlarge);
+    }
   }
 
   &__results {

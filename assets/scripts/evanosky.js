@@ -12,9 +12,6 @@ import appendAround from 'wsol-append-around';
 /* eslint-enable no-unused-vars */
 import enquire from 'enquire';
 
-const transitionEnd =
-  'transitionend webkitTransitionEnd oTransitionEnd';
-
 $(function() {
   $('.js-aa').wsol_appendAround();
   $('.js-open-nav, .js-close-nav').on('click', event => {
@@ -22,12 +19,11 @@ $(function() {
     $('html').toggleClass('has-open-nav');
   });
 
-  // Site site
+  // Site search
   $('.js-open-search').on('click', event => {
     event.preventDefault();
-    $('html').addClass('has-open-search').one(transitionEnd, () => {
-      $('.site-search__field').focus();
-    });
+    $('html').addClass('has-open-search');
+    $('.site-search__field').focus();
   });
   $('.js-close-search').on('click', event => {
     event.preventDefault();

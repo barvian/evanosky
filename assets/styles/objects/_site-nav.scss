@@ -186,8 +186,10 @@ $site-nav-overlay-bg: $blue !default;
   }
 
   &__close {
-    left: size(spacing);
-    top: 7.5%;
+    left: 0;
+    padding: size(spacing);
+    position: absolute;
+    top: 5%;
 
     @include overlay__close;
   }

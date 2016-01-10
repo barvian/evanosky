@@ -46,6 +46,9 @@ $link-list-caret-width: 2.5rem !default;
 
     @include trailing(0.35em);
     @include horizontal(size(spacing)/2);
+    @include query(bravo, true) {
+      font-size: size(small);
+    }
 
     > * {
       display: inline-block;

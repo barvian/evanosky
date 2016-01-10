@@ -23,8 +23,8 @@
 @mixin overlay__close($color: $bg) {
   @extend %unstyled-button;
 
+  box-sizing: content-box;
   height: size(large);
-  position: absolute;
   width: size(large);
 
   > .sprite {

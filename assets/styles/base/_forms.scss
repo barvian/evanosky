@@ -111,6 +111,11 @@ input[type="hidden"] {
 
   > %field {
     padding-right: 2em;
+    
+    &::-ms-clear {
+      width : 0;
+      height: 0;
+    }
   }
 }
 
