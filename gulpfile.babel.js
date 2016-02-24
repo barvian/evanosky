@@ -93,7 +93,8 @@ gulp.registry(new CommonRegistry({
 
   images: {
     src: `${src}/images/**/*`,
-    dest: `${dest}/images`
+    dest: `${dest}/images`,
+    minify: false
   },
 
   sprites: {
